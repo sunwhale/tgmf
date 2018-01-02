@@ -1,53 +1,3 @@
-%\documentclass[preprint,5p,twocolumn,11pt,sort&compress]{article}
-%\usepackage{amssymb}
-%\usepackage{amsthm}
-%\usepackage{tabularx}
-%\usepackage{graphicx}
-%\usepackage{epsfig}
-%\usepackage{textcomp}
-%\usepackage{subfigure}
-%\usepackage{natbib}
-%\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=blue]{hyperref}
-%\usepackage{color,soul}
-%\usepackage{multirow}
-%\usepackage{ctex}
-%
-%%\bibliographystyle{elsarticle-num}
-%
-%\begin{document}
-%
-%\title{镍基高温合金热梯度机械疲劳条件下的寿命预测}
-%
-%\author{Jingyu SUN\fnref{label1}}
-%\author{Huang YUAN\corref{cor1}\fnref{label1}}
-%
-%
-%\begin{abstract}
-%Turbine components are generally under mechanical and thermal loads. Recent works confirm significant effects of thermomechanical loads to fatigue life assessment. In the present work, extensive experiments are performed for a nickel-based superalloy under both iso-thermal and thermo-mechanical loading conditions to quantify influence of thermal phase angle and loading non-proportionality. Based on experimental data a thermomechanical loading parameter is introduced to assess fatigue failure. The thermomechanical fatigue life can be calibrated based on the present concept reasonably.
-%\end{abstract}
-%
-%%\include{debut}
-%\begin{keyword}
-%% keywords here, in the form: keyword \sep keyword
-%Thermomechanical Fatigue (TFM) \sep Multi-Axial Fatigue \sep Fatigue Damage \sep Fatigue Life \sep Nickel-based super alloy
-%
-%% PACS codes here, in the form: \PACS code \sep code
-%% \PACS
-%\end{keyword}
-%
-%
-%% main text
-%\section{Introduction}
-%\section{Experiments}
-%\subsection{Material specification}
-%\section*{Acknowledgement:}
-%
-%\bibliographystyle{unsrt}            % bibliography style
-%%\bibliographystyle{plain}            % bibliography style
-%\bibliography{bibliography}          % personal bibliography file
-%
-%\end{document}
-
 \documentclass{article}
 \usepackage{hypernat}              % ensure cooperation of natbib and hyperref
 \usepackage{booktabs}
@@ -67,8 +17,6 @@
 
 \begin{document}
 \title{镍基高温合金热梯度机械疲劳条件下的寿命预测}
-
-
 
 \author{袁荒，孙经雨}
 \date{\today}
@@ -105,7 +53,6 @@
 每根灯管对应一面反射镜，反射镜的几何形状为椭圆柱面，每根灯管位于其对应的椭圆柱面其中一个焦点，试件位于所有椭圆柱面的公共焦点，通过镜面反射将光线聚焦在试件表面进行加热。
 通过聚光辐射的方法加热试件外表面，同时内表面通过压缩空气冷却来实现温度梯度。
 该系统可以在空心试件表上实现受控的温度梯度循环，同时施加机械载荷，适用于金属和非金属材料。
-
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=12cm]{Radiation_Furnace2.pdf}}
@@ -170,43 +117,89 @@
 \label{Fig:plot_exp_fatigue_life}
 \end{figure}
 
+\section{试验结果}
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_pv_TCIPTGMF.pdf}}
+\caption{同相位TGMF应力均值与峰谷值.}
+\label{Fig:plot_exp_pv_TCIPTGMF}
+\end{figure}
 
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_pv_TCOPTGMF.pdf}}
+\caption{反相位TGMF应力均值与峰谷值.}
+\label{Fig:plot_exp_pv_TCOPTGMF}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_half_life_cycle_TCIPTGMF.pdf}}
+\caption{同相位TGMF稳定滞后回线.}
+\label{Fig:plot_exp_half_life_cycle_TCIPTGMF}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_half_life_cycle_TCOPTGMF.pdf}}
+\caption{反相位TGMF稳定滞后回线.}
+\label{Fig:plot_exp_half_life_cycle_TCOPTGMF}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_mean_TCIPTGMF.pdf}}
+\caption{同相位TGMF循环应力均值.}
+\label{Fig:plot_exp_mean_TCIPTGMF}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_exp_mean_TCOPTGMF.pdf}}
+\caption{反相位TGMF循环应力均值.}
+\label{Fig:plot_exp_mean_TCOPTGMF}
+\end{figure}
+
+图\ref{Fig:plot_exp_half_life_cycle_TCIPTGMF}和图\ref{Fig:plot_exp_half_life_cycle_TCOPTGMF}分别是同相位和反相位热梯度机械疲劳的稳定滞后回线。
+由于热梯度机械疲劳的温度循环与载荷循环之间有相位差,导致其拉伸半周和压缩半周具有不同的循环软化行为。
+对于同相位热梯度机械疲劳试验,合金在拉伸半周表现出较强的循环软化，而对于反相位热梯度机械疲劳试验则相反,合金在压缩半周表现出较强的循环软化。
+
+
+图\ref{Fig:plot_exp_pv_TCIPTGMF}和图\ref{Fig:plot_exp_pv_TCOPTGMF}分别是同相位和反相位热梯度机械疲劳的循环应力峰谷值和均值。
+在所有的试验条件下,合金在最终断裂前循环应力峰谷值快速下降,这实际上是宏观裂纹的形成以及随后的失稳扩展至断裂的结果。
+同相位和反相位热梯度机械疲劳试验均表现为循环软化，但温度循环与载荷循环之间的相位差，导致循环软化的程度不同，在300~650$^{\circ}$C，温度越高，材料的循环软化越明显，因此对于同相位的情况，材料在拉伸半周的循环软化更强烈，反应在平均应力的演化上则表现为平均应力随着循环的增加，产生越来越大的平均压应力。
+
+平均应力是高温低周疲劳中不可忽视的因素,尤其对于强度较高而韧性较低的镍基高温合金而言,平均应力是影响疲劳寿命的重要因素,图所示为Inconel718合金在IP!OPTMF以及900eIF试验条件下的平均应力响应曲线"可见,对于IPTMF,平均应力为压应力,且随着机械应变幅的增加压缩平均应力幅度变大,当vem-/2二0.50\%时,半寿命时的压缩平均应力达一200.9MPa(表3.1);对于oPTMF,平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大,当v-耐/2=0.50\%时,半寿命时的拉伸平均应力约为102石MPa(3.2)"热机械疲劳中存在明显平均应力的原因是合金的强度随温度的不断变化"无论是同相位还是反相位热机械疲劳都经历低温到高温的温度循环,当试验温度较高时合金的强度较低,而当试验温度较低时合金的强度较高,因此造成了滞后回线的应力不对称性,平均应力总是偏向低温半周"而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加,合金在高温半周产生的塑性变形增加,这加剧了拉压应力的不对称性"此外,可以观察到在两种TMF试验条件下平均应力幅值均随循环的进行而逐渐增大,这可认为是M963合金在高温半周持续循环软化以及低温半周持续循环硬化的综合作用结果"而对于900eIF试验,平均应力数值普遍较小,当v气-/2二0.50\%时,半寿命的平均应力仅约为一32.SMPa(表3.3),而对于更小的应变幅则平均应力接近为零,因此平均应力对900eIF试验的影响可以忽略"
 
 \section{微观结构}
+
+\section{疲劳模型}
+(1)W-B模型
 1973年Brown和Miller根据疲劳裂纹扩展的物理解释提出了一种多轴疲劳模型，以最大剪切应变$\Delta\gamma_{max}$和最大剪切应变平面上的法向应变$\epsilon_{n,max}$作为疲劳损伤参量[110]。
 1977年Kanazawa等对一批不锈钢进行了不同幅值比值和相位角的双轴拉扭试验，对最大剪应变平面上的正应变幅进行了观察，认为其面上正应变和剪应变之间的相位差对疲劳寿命没影响，故采用正应变幅和剪应变幅作为寿命拟合参数[104]。
 1985年Jordan等对同样的材料和几何尺寸的试样进行试验，发现只有半个剪应变循环内的正应变变程有效[109]。
-1993年WangC.H.、BrownM.W.提出了一种考虑最大剪应变幅和最大剪应变幅平面上正应变程的多轴疲劳寿命模型，仅一个试验参数，可由单轴拉伸试验和扭转试验来确定
-[155]
-。其考虑正应变变程的寿命计算公式（简称WB模型）
-为：
-max*f
-neefppff
-[1(1)](2)[1(1)](2)
-2
-bc
-svvsNvvsN
-E
-Δγσ
-εε
-′
-+=++−+++−′（
-4.1）
-其中，/2
-max
-Δγ为最大剪应变平面上的剪应变幅，
-*
-n
-ε为垂直最大剪应变平面上的最大正应变
-程，s为材料常数，
-e
-v为弹性泊松比，
-p
-v为塑性泊松比。
-根据304不锈钢材料试验数据
-[106]
-得到s值随寿命的变化图，如图4.1(a)所示。由图可以看
-出，单轴试验数据得出的参数s不是常数，随疲劳寿命不同而改变。
+1993年Wang C. H.、Brown M. W.提出了一种考虑最大剪应变幅和最大剪应变幅平面上正应变程的多轴疲劳寿命模型，仅一个试验参数，可由单轴拉伸试验和扭转试验来确定[155]。
+其考虑正应变变程的寿命计算公式（简称WB模型）为：
+\[\frac{{\Delta {\gamma _{{\rm{max}}}}}}{2} + S{\varepsilon _{{\rm{n,max}}}} = \left[ {1 + {\nu _{\rm{e}}} + \left( {1 + {\nu _{\rm{e}}}} \right)S} \right]\frac{{{{\sigma '}_f}}}{E}{\left( {2{N_f}} \right)^b} + \left[ {1 + {\nu _{\rm{p}}} + \left( {1 + {\nu _{\rm{p}}}} \right)S} \right]{\varepsilon '_f}{\left( {2{N_f}} \right)^c}\]
+其中，$\Delta\gamma_{max}$为最大剪应变平面上的剪应变幅，$\epsilon_{n,max}$为垂直最大剪应变平面上的最大正应变程，$S$为材料常数，$\nu_e$为弹性泊松比，$\nu_p$为塑性泊松比。
+一般地，参数$S$不是常数，它会随疲劳寿命不同而改变。
+(2)F-S模型
+与应力准则相对应，早期的研究者Yokobori等将静强度理论应用到多轴应变准则中来。
+采用最大法向应变、最大剪应变、Von Mises等效应变等代替Manson-Coffin公式的应变，与单轴低周疲劳估算相似，进行多轴疲劳寿命预算。
+由于该方法没有考虑不同应力路径对材料响应和疲劳寿命的影响，因而不能用于预测多轴非比例加载下的疲劳寿命。
+
+Brown和Miller[31]根据疲劳裂纹萌生和扩展的物理解释提出了一种多轴疲劳理论，与Findley[17-20]提出的应力准则相类似，Brown和Miller认为
+最大剪平面上的剪应变和法向应变这两个参数都应该考虑。他们提出裂纹第一阶段沿最大剪切面生成，第二阶段沿垂直于最大拉应变方向扩展。
+Brown和Miller准则由一系列由最大剪应变${\gamma _{\max }}$和最大剪应变平面上的法向应变${\varepsilon _n}$为坐标所组成的$\Gamma$平面上的等寿命曲线组成，对于给定寿命有
+\[{\gamma _{\max }} = f\left( {{\varepsilon _n}} \right)\]
+
+上式对于A、B两类裂纹有着不同的表达式。Brown和Miller将裂纹分为两种情况。在复合拉伸和扭转中，主应变${\varepsilon _1}$和${\varepsilon _3}$平行于表面，裂纹沿着表面扩展称为A类裂纹；对于正的双向拉伸，应变${\varepsilon _3}$垂直于自由表面，裂纹在自由表面上萌生进而沿纵深方向扩展称为B类裂纹。Kandil，Brown和Miller[32]给出A类裂纹表达式的简化形式：
+\[\frac{{\Delta {\gamma _{\max }}}}{2} + k\Delta {\varepsilon _n} = C\]
+其中，$\Delta {\varepsilon _n}$是临界面上的法向应变变幅，$k$和$C$是材料常数。这一准则被广泛讨论及应用[33-36]。
+
+Wang和Brown[37]用相邻两个最大剪应变折返点之间的法向应变变程${\varepsilon _n^*}$来代替法向应变变程$\Delta {\varepsilon _n}$，给出疲劳破坏模型
+\[\frac{{\Delta {\gamma _{\max }}}}{2} + k\varepsilon _n^* = C\]
+其中$k$和$C$是材料常数。
+
+Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的参数都是应变，没有考虑非比例加载下由于主轴旋转所产生的附加强化效
+应，所以预测的多轴非比例加载下的疲劳寿命偏于危险，建议以最大剪应变平面上的最大法向应力${\sigma _{n,\max }}$
+代替法向应变变程$\Delta {\varepsilon _n}$作为参数，提出准则如下：
+\[\frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,\max }}}}{{{\sigma _y}}}} \right) = C\]
+
 
 \section{微观结构}
 % \begin{figure}
