@@ -65,7 +65,6 @@
 \caption{TGMF试样示意图.}
 \label{Fig:Specimen}
 \end{figure}
-\section{试验结果}
 
 \begin{table}[htbp]
   \centering
@@ -118,52 +117,75 @@
 \end{figure}
 
 \section{试验结果}
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_pv_TCIPTGMF.pdf}}
-\caption{同相位TGMF应力均值与峰谷值.}
-\label{Fig:plot_exp_pv_TCIPTGMF}
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_half_life_cycle_TCIPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_half_life_cycle_TCOPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+    \end{overpic}
+  \end{minipage}
+
+  \caption{TGMF稳定滞后回线：(a)同相位，(b)反相位.}
+  \label{Fig:plot_exp_half_life_cycle_TCTGMF}
 \end{figure}
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_pv_TCOPTGMF.pdf}}
-\caption{反相位TGMF应力均值与峰谷值.}
-\label{Fig:plot_exp_pv_TCOPTGMF}
-\end{figure}
-
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_half_life_cycle_TCIPTGMF.pdf}}
-\caption{同相位TGMF稳定滞后回线.}
-\label{Fig:plot_exp_half_life_cycle_TCIPTGMF}
-\end{figure}
-
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_half_life_cycle_TCOPTGMF.pdf}}
-\caption{反相位TGMF稳定滞后回线.}
-\label{Fig:plot_exp_half_life_cycle_TCOPTGMF}
-\end{figure}
-
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_mean_TCIPTGMF.pdf}}
-\caption{同相位TGMF循环应力均值.}
-\label{Fig:plot_exp_mean_TCIPTGMF}
-\end{figure}
-
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_exp_mean_TCOPTGMF.pdf}}
-\caption{反相位TGMF循环应力均值.}
-\label{Fig:plot_exp_mean_TCOPTGMF}
-\end{figure}
-
-图\ref{Fig:plot_exp_half_life_cycle_TCIPTGMF}和图\ref{Fig:plot_exp_half_life_cycle_TCOPTGMF}分别是同相位和反相位热梯度机械疲劳的稳定滞后回线。
+图\ref{Fig:plot_exp_half_life_cycle_TCTGMF}分别是同相位和反相位热梯度机械疲劳的稳定滞后回线。
 由于热梯度机械疲劳的温度循环与载荷循环之间有相位差,导致其拉伸半周和压缩半周具有不同的循环软化行为。
 对于同相位热梯度机械疲劳试验,合金在拉伸半周表现出较强的循环软化，而对于反相位热梯度机械疲劳试验则相反,合金在压缩半周表现出较强的循环软化。
 
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_pv_TCIPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_pv_TCOPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+    \end{overpic}
+  \end{minipage}
 
-图\ref{Fig:plot_exp_pv_TCIPTGMF}和图\ref{Fig:plot_exp_pv_TCOPTGMF}分别是同相位和反相位热梯度机械疲劳的循环应力峰谷值和均值。
+  \caption{TGMF应力均值与峰谷值：(a)同相位，(b)反相位.}
+  \label{Fig:plot_exp_pv_TCTGMF}
+\end{figure}
+
+图\ref{Fig:plot_exp_pv_TCTGMF}分别是同相位和反相位热梯度机械疲劳的循环应力峰谷值和均值。
 在所有的试验条件下,合金在最终断裂前循环应力峰谷值快速下降,这实际上是宏观裂纹的形成以及随后的失稳扩展至断裂的结果。
 同相位和反相位热梯度机械疲劳试验均表现为循环软化，但温度循环与载荷循环之间的相位差，导致循环软化的程度不同，在300~650$^{\circ}$C，温度越高，材料的循环软化越明显，因此对于同相位的情况，材料在拉伸半周的循环软化更强烈，反应在平均应力的演化上则表现为平均应力随着循环的增加，产生越来越大的平均压应力。
 
-平均应力是高温低周疲劳中不可忽视的因素,尤其对于强度较高而韧性较低的镍基高温合金而言,平均应力是影响疲劳寿命的重要因素,图所示为Inconel718合金在IP!OPTMF以及900eIF试验条件下的平均应力响应曲线"可见,对于IPTMF,平均应力为压应力,且随着机械应变幅的增加压缩平均应力幅度变大,当vem-/2二0.50\%时,半寿命时的压缩平均应力达一200.9MPa(表3.1);对于oPTMF,平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大,当v-耐/2=0.50\%时,半寿命时的拉伸平均应力约为102石MPa(3.2)"热机械疲劳中存在明显平均应力的原因是合金的强度随温度的不断变化"无论是同相位还是反相位热机械疲劳都经历低温到高温的温度循环,当试验温度较高时合金的强度较低,而当试验温度较低时合金的强度较高,因此造成了滞后回线的应力不对称性,平均应力总是偏向低温半周"而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加,合金在高温半周产生的塑性变形增加,这加剧了拉压应力的不对称性"此外,可以观察到在两种TMF试验条件下平均应力幅值均随循环的进行而逐渐增大,这可认为是M963合金在高温半周持续循环软化以及低温半周持续循环硬化的综合作用结果"而对于900eIF试验,平均应力数值普遍较小,当v气-/2二0.50\%时,半寿命的平均应力仅约为一32.SMPa(表3.3),而对于更小的应变幅则平均应力接近为零,因此平均应力对900eIF试验的影响可以忽略"
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_mean_TCIPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{plot_exp_mean_TCOPTGMF.pdf}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+    \end{overpic}
+  \end{minipage}
+
+  \caption{TGMF循环应力均值：(a)同相位，(b)反相位.}
+  \label{Fig:plot_exp_mean_TCTGMF}
+\end{figure}
+
+平均应力是高温低周疲劳中不可忽视的因素,尤其对于强度较高而韧性较低的镍基高温合金而言,平均应力是影响疲劳寿命的重要因素,图\ref{Fig:plot_exp_mean_TCTGMF}所示为Inconel 718合金在同相位和反相位TGMF试验条件下的平均应力响应曲线。
+可见,对于TGMF-IP,平均应力为压应力,机械应变幅的增加对平均应力的影响不大,对于不同的机械应变幅值，平均应力演化的速率相近，平均应力的数值随着循环数的增加而增大，
+,当$\Delta_{\varepsilon}=0.4\%$时,半寿命时的压缩平均应力达65.9MPa(表3.1);对于oPTMF,平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大,当v-耐/2=0.50\%时,半寿命时的拉伸平均应力约为102石MPa(3.2)"热机械疲劳中存在明显平均应力的原因是合金的强度随温度的不断变化"无论是同相位还是反相位热机械疲劳都经历低温到高温的温度循环,当试验温度较高时合金的强度较低,而当试验温度较低时合金的强度较高,因此造成了滞后回线的应力不对称性,平均应力总是偏向低温半周"而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加,合金在高温半周产生的塑性变形增加,这加剧了拉压应力的不对称性"此外,可以观察到在两种TMF试验条件下平均应力幅值均随循环的进行而逐渐增大,这可认为是M963合金在高温半周持续循环软化以及低温半周持续循环硬化的综合作用结果"而对于900eIF试验,平均应力数值普遍较小,当v气-/2二0.50\%时,半寿命的平均应力仅约为一32.SMPa(表3.3),而对于更小的应变幅则平均应力接近为零,因此平均应力对900eIF试验的影响可以忽略"
 
 \section{微观结构}
 
