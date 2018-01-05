@@ -37,6 +37,9 @@
 常典型的热障涂层包括表面陶瓷层(TC：top coat)和金属粘结层(BC：bond coat)。在服役过程中，粘结层会发生氧化，在粘结层和陶瓷层界面形成厚度为1~10$\mu$m的热生长氧化物(TGO：thermally grown oxide)。TGO的形成是一个体积膨胀过程，界面会限制这种体积变化，因而在TGO内部会随之产生应力。而且，陶瓷层与金属基底的热膨胀系数相
 差较大，在热循环过程中会在热载荷的作用下产生较大的热应力，从而在界面缺陷处引起应力集中，促进裂纹的萌生与扩展。
 \section{试验}
+
+
+
 发动机涡轮叶片主要采用气膜冷却和内部流冷却，轮盘通常采用内部二次流冷却。
 服役过程中，涡轮叶片不仅受到较大的交变载荷，而且在叶片表面和内部分别受到高温高压燃气的冲击和冷却气体的作用，这样涡轮叶片就遭受载荷和温度同时变化带来的热机械疲劳损伤。
 此外，为了增强发动机冷却效果，提高发动机效率，先进的航空发动机和燃气轮机热端涡轮叶片多为薄壁多孔结构。
@@ -48,23 +51,24 @@
 电磁感应加热的优点在于加热效率高，试件升温迅速，通常热机械疲劳试验采用高频电磁感应设备进行加热，其中高频电磁感应加热厚度约为2mm，这意味着试件的内外表面是同时加热的，在内部冷却过程中，不利于产生内外表面的温度梯度，同时电磁感应方式只会对内部金属层加热，使得内部金属层温度高于外部陶瓷层温度，这不符合热障涂层构件实际工作状态下的温度分布。
 火焰喷射的优点在于接近真实发动机涡轮叶片的工作环境，但火焰的稳定性差，火焰形状难以控制，很难形成均匀的温度场。
 
-因此我们为热梯度机械疲劳（TGMF）测试设计开发了聚光辐射加热系统。
+\begin{figure}[!htp]
+\centering{\includegraphics[width=10cm]{IN718_Axial_Specimen_TGMF.pdf}}
+\caption{TGMF试样示意图.}
+\label{Fig:Specimen}
+\end{figure}
+
+因此我们为热梯度机械疲劳（TGMF）测试设计开发了聚光辐射加热系统，如\ref{Fig:Radiation_Furnace2}所示。
 该系统包括16根卤素灯管，灯丝的直径小于0.5mm，因此每根灯丝可以被抽象为一个线光源。
 每根灯管对应一面反射镜，反射镜的几何形状为椭圆柱面，每根灯管位于其对应的椭圆柱面其中一个焦点，试件位于所有椭圆柱面的公共焦点，通过镜面反射将光线聚焦在试件表面进行加热。
 通过聚光辐射的方法加热试件外表面，同时内表面通过压缩空气冷却来实现温度梯度。
 该系统可以在空心试件表上实现受控的温度梯度循环，同时施加机械载荷，适用于金属和非金属材料。
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{Radiation_Furnace2.pdf}}
-\caption{TGMF试样示意图.}
+\centering{\includegraphics[width=10cm]{Radiation_Furnace2.pdf}}
+\caption{聚光辐射加热系统.}
 \label{Fig:Radiation_Furnace2}
 \end{figure}
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{IN718_Axial_Specimen_TGMF.pdf}}
-\caption{TGMF试样示意图.}
-\label{Fig:Specimen}
-\end{figure}
 
 \begin{table}[htbp]
   \centering
@@ -156,7 +160,7 @@
 
 图\ref{Fig:plot_exp_pv_TCTGMF}分别是同相位和反相位热梯度机械疲劳的循环应力峰谷值和均值。
 在所有的试验条件下,合金在最终断裂前循环应力峰谷值快速下降,这实际上是宏观裂纹的形成以及随后的失稳扩展至断裂的结果。
-同相位和反相位热梯度机械疲劳试验均表现为循环软化，但温度循环与载荷循环之间的相位差，导致循环软化的程度不同，在300~650$^{\circ}$C，温度越高，材料的循环软化越明显，因此对于同相位的情况，材料在拉伸半周的循环软化更强烈，反应在平均应力的演化上则表现为平均应力随着循环的增加，产生越来越大的平均压应力。
+同相位和反相位热梯度机械疲劳试验均表现为循环软化，但温度循环与载荷循环之间的相位差，导致循环软化的程度不同，在300-650$^{\circ}$C范围内，温度越高，材料的循环软化越明显，因此对于同相位的情况，材料在拉伸半周的循环软化更强烈，反应在平均应力的演化上则表现为平均应力随着循环的增加，产生越来越大的平均压应力。
 
 \begin{figure}
   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
@@ -216,6 +220,120 @@ Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的
 代替法向应变变程$\Delta {\varepsilon _n}$作为参数，提出准则如下：
 \[\frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,\max }}}}{{{\sigma _y}}}} \right) = C\]
 
+\section{试件温度场计算}
+
+在TMF和TGMF测试中，温度控制是实现每个测试的可重复加载条件的关键问题，两种试验采用相似的温度控制方法。
+在测试过程中，使用接触式K型电偶测量试件外表面的温度，考虑到试验过程中温度变化速率很快，需要传感器对温度变化有迅速的响应，传感器体积越小，对温度的响应越迅速，因此我们选取测量点直径为0.25mm的热电偶，将试件中心点的温度作为控制量，以实现良好的温度控制，精度为±5°C。
+对于试件内表面，考虑到气体流动，在TGMF期间，内部点焊热电偶是不可能的，因为它们的信号受到内部冷却的影响。
+同时由于试件的尺寸很小，内孔直径只有6.5mm，也无法使用热像仪进行测量，因此在这里采用计算的方法来确定时间内表面的温度。
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=10cm]{inner_cooling.pdf}}
+\caption{Schematic of inner cooling air system.}
+\label{Fig:inner_cooling}
+\end{figure}
+
+Because of the small inner diameter 6.5mm of the specimen, it is difficult to measure the temperature of the specimen inner surface during the tests.
+A variety of measurement options were tried to measure the inner surface temperature.
+It was found that the internal cooling air has a significant effect on the temperature measurement of the inner surface of the specimen.
+%内部冷却空气对试件内壁的温度测量有很大的影响。
+The measured temperature is not the temperature of the inner surface, but the average temperature of the wall and the cooling air flow.
+%测量得到的温度不是壁面的温度，而是壁面和冷却气流的平均温度。
+Therefore we tried to calculate the temperature distribution of the specimen inner surface using the FEM method.
+
+%The internal diameter of the specimen is 6.5 mm, and .
+%试件的内部直径为6.5mm,。
+
+The inner surface of the hollow specimen can be considers as a pipe.
+%空心试件可以简化为圆管.
+According to the formula of convection in turbulent pipe flow, the convective heat transfer coefficient of the inner surface of the specimen can be calculated.
+%根据圆管内部的强制对流换热公式，我们计算试件内表面的对流换热系数。
+
+Nusselt number (Nu) is a dimensionless number, defined as the ratio of convective to conductive heat transfer across (normal to) the boundary.
+The Nusselt number is given as:
+\[{\rm{N}}{{\rm{u}}_L} = \frac{{hL}}{k},\]
+where $h$ is the convective heat transfer coefficient of the fluid, $L$ is the characteristic length, $k$ is the thermal conductivity of the fluid.
+
+Gnielinski's correlation for turbulent flow in tubes is given as:
+\[{\rm{N}}{{\rm{u}}_D} = \frac{{\left( {f/8} \right)\left( {{\rm{R}}{{\rm{e}}_D} - 1000} \right){\rm{Pr}}}}{{1 + 12.7{{(f/8)}^{1/2}}\left( {{\rm{P}}{{\rm{r}}^{2/3}} - 1} \right)}},\]
+where $f$ is the Darcy friction factor that can either be obtained from the Moody chart or for smooth tubes from correlation developed by Petukhov:
+\[f = {\left( {0.79\ln \left( {{\rm{R}}{{\rm{e}}_D}} \right) - 1.64} \right)^{ - 2}},\]
+with
+\[0.5 \le {\rm{Pr}} \le 2000,\]
+\[3000 \le {\rm{R}}{{\rm{e}}_D} \le 5 \times {10^6},\]
+
+The Prandtl number (Pr) is a dimensionless number, defined as the ratio of momentum diffusivity to thermal diffusivity.
+The Prandtl number is given as:
+\[{\rm{Pr}} = \frac{{{c_p}\mu }}{k},\]
+where
+$c_{p}$ is specific heat, $\mu$ is dynamic viscosity and $k$ is thermal conductivity.
+
+The Reynolds number (Re) is a dimensionless number, defined as the ratio of inertial forces to viscous forces within a fluid.
+The Reynolds number is given as:
+\[{\rm{Re}} = \frac{{\rho uL}}{\mu },\]
+where
+$\rho$ is density of the fluid, $u$ is the velocity of the fluid with respect to the object, $\mu$ is the dynamic viscosity of the fluid and $L$ is a characteristic dimension.
+
+It is noted that the dynamic viscosity $\mu$ of an ideal gas is a function of the temperature. It can be derived as Sutherland's formula:
+\[\mu  = {\mu _0}\frac{{{T_0} + C}}{{T + C}}{\left( {\frac{T}{{{T_0}}}} \right)^{\frac{3}{2}}},\]
+where $\mu$ is dynamic viscosity at input temperature $T$,
+$\mu_0$ is reference viscosity at reference temperature $T_0$,
+$C$ is Sutherland's constant dependent on the gaseous material.
+Table \ref{tab:SutherlandConstant} shows the Sutherland's constant and reference values of the air.
+\begin{table}[htbp]
+  \centering
+  \caption{Sutherland's constant and reference values of the air.}
+    \begin{tabular}{p{2cm}p{2cm}p{2cm}p{3cm}}
+    \toprule
+    Gas   & $C$(K) & $T_0$(K) & $\mu_0$($\rm{Pa\cdot s}$) \\
+    \midrule
+    air   & 120   & 291.15 & $1.827\times 10^{-5}$ \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:SutherlandConstant}%
+\end{table}%
+
+The density of dry air $\rho$ can be calculated using the ideal gas law, expressed as a function of temperature and pressure:
+\begin{equation}
+\rho  = \frac{p}{{RT}},
+\label{Equ:AirDensity}
+\end{equation}
+where
+$p$ is absolute pressure,
+$T$ is absolute temperature,
+$R$ is specific gas constant.
+
+According to the measurement results of the sensors, the average pressure and temperature of the cooling air are 6.5 bar and 288.15K, respectively.
+
+\begin{table}[htbp]
+  \begin{threeparttable}
+  \centering
+  \caption{Heat convection coefficients of the inner surface of the specimen.}
+    \begin{tabular}{llrrrr}
+    \toprule
+    $T$   & ${\rm{K}}$ & 288.15  & 288.15  & 288.15  & 288.15  \\
+    $p$   & ${\rm{bar}}$ & 6.5   & 6.5   & 6.5   & 6.5  \\
+    $\rho  = \frac{p}{{RT}}$ \tnote{*1} & ${\rm{kg/}}{{\rm{m}}^{\rm{3}}}$ & 7.724 & 7.724 & 7.724 & 7.724 \\
+    $\mu  = {\mu _0}\frac{{{T_0} + C}}{{T + C}}{\left( {\frac{T}{{{T_0}}}} \right)^{\frac{3}{2}}}$ \tnote{*2} & -     & 1.81E-05 & 1.81E-05 & 1.81E-05 & 1.81E-05 \\
+    ${\dot V}$ & ${\rm{l/min}}$ & 10    & 20    & 30    & 40  \\
+    $u = \frac{{4\dot V}}{{\pi {D^2}}}$ \tnote{*3} & ${\rm{m/}}{{\rm{s}}^2}$ & 5.02  & 10.05  & 15.07  & 20.09  \\
+    ${\rm{Re}} = \frac{{\rho uL}}{\mu }$ \tnote{*4} & -     & 13906  & 27812  & 41718  & 55624  \\
+    ${\rm{Pr}} = \frac{{{c_p}\mu }}{k}$ \tnote{*5} & -     & 0.63  & 0.63  & 0.63  & 0.63  \\
+    $f = {\left( {0.79\ln \left( {{\rm{R}}{{\rm{e}}_D}} \right) - 1.64} \right)^{ - 2}}$ & -     & 0.0288  & 0.0241  & 0.0219  & 0.0205  \\
+    ${\rm{N}}{{\rm{u}}_D} = \frac{{\left( {f/8} \right)\left( {{\rm{R}}{{\rm{e}}_D} - 1000} \right){\rm{Pr}}}}{{1 + 12.7{{(f/8)}^{1/2}}\left( {{\rm{P}}{{\rm{r}}^{2/3}} - 1} \right)}}$ & -     & 36.76  & 62.61  & 85.39  & 106.50  \\
+    $h = \frac{k}{{D{\rm{N}}{{\rm{u}}_D}}}$ & ${\rm{W/(}}{{\rm{m}}^{\rm{2}}} \cdot {\rm{K)}}$ & 146.03  & 248.74  & 339.24  & 423.10  \\
+    \bottomrule
+    \end{tabular}%
+    \begin{tablenotes}
+    \item[*1] $R = 287.058 {\rm{J/(kg}} \cdot {\rm{K}})$ for dry air.
+    \item[*2] Sutherland's constant and reference values of the air (see Table \ref{tab:SutherlandConstant}).
+    \item[*3] $D=0.65$mm.
+    \item[*4] $L=D$.
+    \item[*5] $c_{p}=903.3 {\rm{J/(kg}} \cdot {\rm{K}})$ and $k=0.0258 {\rm{W/(m}} \cdot {\rm{K}})$ at $288.15{\rm{K}}$.
+    \end{tablenotes}
+    \end{threeparttable}
+  \label{tab:addlabel}%
+\end{table}%
 
 \section{寿命预测}
 \begin{figure}[!htp]
@@ -223,9 +341,14 @@ Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的
 \caption{TMF与TGMF寿命比较.}
 \label{Fig:plot_exp_fatigue_life}
 \end{figure}
+
+TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试件径向与轴向产生额外应力，试件内表面的温度低，表现为多轴拉伸载荷，与之相反，试件外表面的温度高，表现为多轴压缩载荷。
+同时由于温度梯度的存在，导致材料的力学性能在径向方向有所区别，这会导致材料在试验过程中的塑性应变累积有所不同，我们无法通过试验观测，只能通过合适的本构模型进行计算。
+通过对疲劳端口的观察，我们发现裂纹的萌生都是由外表面开始的，
 如图\ref{Fig:plot_exp_fatigue_life}所示，我们发现对于无涂层的试件，TGMF的寿命要明显低于TMF的寿命，更大大低于恒温疲劳的寿命。
 
 \section{微观结构}
+
 % \begin{figure}
 %   \begin{minipage}[t]{0.5\linewidth}
 %   \nonumber
