@@ -216,9 +216,7 @@ Therefore we tried to calculate the temperature distribution of the specimen inn
 \subsection{Model description}
 TGMF试件的几何形状如图\ref{Fig:Specimen}所示，由于几何形状和外部环境的对称性，我们取出试样的标距段部分，建立轴对称有限元模型，如图\ref{Fig:FEM}所示，标距段长度为12mm，取试件的中心界面作为轴对称面。
 用以下物理边界条件进行辐射加热的TGMF试样几何形状的有限元分析：
-试件外表面为温度边界，随时间变化的温度分布可由试验测得，试件内表面为对流边界条件，对流换热系数由圆管强制对流换热公式计算，需要试验测量冷却空气的密度、温度和体积流量。由于试件的对称性，中心对称界面可假设为绝热边界。
-试件的上边界认为是热传导边界，热传导系数。
-试件表面的发射率$\varepsilon=0.75$
+试件外表面为温度边界，随时间变化的温度分布可由试验测得，试件内表面为对流边界条件，对流换热系数由圆管强制对流换热公式计算，需要试验测量冷却空气的密度、温度和体积流量。由于试件的对称性，中心对称界面可假设为绝热边界，试件的上边界认为是热传导边界，对于热辐射，我们去试件表面的发射率$\varepsilon=0.75$。
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=12cm]{FEM.pdf}}
@@ -232,6 +230,7 @@ TGMF试件的几何形状如图\ref{Fig:Specimen}所示，由于几何形状和�
 \label{Fig:plot_temperature_along_gauge_length}
 \end{figure}
 
+图\ref{Fig:plot_temperature_along_gauge_length}为试件内表面和外表面温度与
 \begin{figure}[!htp]
 \centering{\includegraphics[width=12cm]{plot_temperature_along_radial_direction.pdf}}
 \caption{Diagram of simulated radial temperature gradients and the resulting, thermally induced hoop stress components at maximum temprature (650$^{\circ}$C) during TGMF tests.}
@@ -306,19 +305,21 @@ According to the measurement results of the sensors, the average pressure and te
   \begin{threeparttable}
   \centering
   \caption{Heat convection coefficients of the inner surface of the specimen.}
-    \begin{tabular}{llrrrr}
+    \begin{tabular}{p{6cm}p{2.5cm}p{2.5cm}}
     \toprule
-    $T$   & ${\rm{K}}$ & 288.15  & 288.15  & 288.15  & 288.15  \\
-    $p$   & ${\rm{bar}}$ & 6.5   & 6.5   & 6.5   & 6.5  \\
-    $\rho  = \frac{p}{{RT}}$ \tnote{*1} & ${\rm{kg/}}{{\rm{m}}^{\rm{3}}}$ & 7.724 & 7.724 & 7.724 & 7.724 \\
-    $\mu  = {\mu _0}\frac{{{T_0} + C}}{{T + C}}{\left( {\frac{T}{{{T_0}}}} \right)^{\frac{3}{2}}}$ \tnote{*2} & -     & 1.81E-05 & 1.81E-05 & 1.81E-05 & 1.81E-05 \\
-    ${\dot V}$ & ${\rm{l/min}}$ & 10    & 20    & 30    & 40  \\
-    $u = \frac{{4\dot V}}{{\pi {D^2}}}$ \tnote{*3} & ${\rm{m/}}{{\rm{s}}^2}$ & 5.02  & 10.05  & 15.07  & 20.09  \\
-    ${\rm{Re}} = \frac{{\rho uL}}{\mu }$ \tnote{*4} & -     & 13906  & 27812  & 41718  & 55624  \\
-    ${\rm{Pr}} = \frac{{{c_p}\mu }}{k}$ \tnote{*5} & -     & 0.63  & 0.63  & 0.63  & 0.63  \\
-    $f = {\left( {0.79\ln \left( {{\rm{R}}{{\rm{e}}_D}} \right) - 1.64} \right)^{ - 2}}$ & -     & 0.0288  & 0.0241  & 0.0219  & 0.0205  \\
-    ${\rm{N}}{{\rm{u}}_D} = \frac{{\left( {f/8} \right)\left( {{\rm{R}}{{\rm{e}}_D} - 1000} \right){\rm{Pr}}}}{{1 + 12.7{{(f/8)}^{1/2}}\left( {{\rm{P}}{{\rm{r}}^{2/3}} - 1} \right)}}$ & -     & 36.76  & 62.61  & 85.39  & 106.50  \\
-    $h = \frac{k}{{D{\rm{N}}{{\rm{u}}_D}}}$ & ${\rm{W/(}}{{\rm{m}}^{\rm{2}}} \cdot {\rm{K)}}$ & 146.03  & 248.74  & 339.24  & 423.10  \\
+    Physical quantity   & Unit & Value  \\
+    \midrule
+    $T$   & ${\rm{K}}$ & 288.15  \\
+    $p$   & ${\rm{bar}}$ & 6.5   \\
+    $\rho  = \frac{p}{{RT}}$ \tnote{*1} & ${\rm{kg/}}{{\rm{m}}^{\rm{3}}}$ & 7.724 \\
+    $\mu  = {\mu _0}\frac{{{T_0} + C}}{{T + C}}{\left( {\frac{T}{{{T_0}}}} \right)^{\frac{3}{2}}}$ \tnote{*2} & -     & 1.81E-05 \\
+    ${\dot V}$ & ${\rm{l/min}}$ & 40  \\
+    $u = \frac{{4\dot V}}{{\pi {D^2}}}$ \tnote{*3} & ${\rm{m/}}{{\rm{s}}^2}$ & 20.09  \\
+    ${\rm{Re}} = \frac{{\rho uL}}{\mu }$ \tnote{*4} & -     & 55624  \\
+    ${\rm{Pr}} = \frac{{{c_p}\mu }}{k}$ \tnote{*5} & -     & 0.63  \\
+    $f = {\left( {0.79\ln \left( {{\rm{R}}{{\rm{e}}_D}} \right) - 1.64} \right)^{ - 2}}$ & -     & 0.0205  \\
+    ${\rm{N}}{{\rm{u}}_D} = \frac{{\left( {f/8} \right)\left( {{\rm{R}}{{\rm{e}}_D} - 1000} \right){\rm{Pr}}}}{{1 + 12.7{{(f/8)}^{1/2}}\left( {{\rm{P}}{{\rm{r}}^{2/3}} - 1} \right)}}$ & -     & 106.50  \\
+    $h = \frac{k}{{D{\rm{N}}{{\rm{u}}_D}}}$ & ${\rm{W/(}}{{\rm{m}}^{\rm{2}}} \cdot {\rm{K)}}$ & 423.10  \\
     \bottomrule
     \end{tabular}%
     \begin{tablenotes}
@@ -336,10 +337,14 @@ According to the measurement results of the sensors, the average pressure and te
 \subsection{试验结果}
 TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试件径向与轴向产生额外应力，试件内表面的温度低，表现为多轴拉伸载荷，与之相反，试件外表面的温度高，表现为多轴压缩载荷。
 同时由于温度梯度的存在，导致材料的力学性能在径向方向有所区别，这会导致材料在试验过程中的塑性应变累积有所不同，我们无法通过试验观测，只能通过合适的本构模型进行计算。
-通过对疲劳端口的观察，我们发现裂纹的萌生都是由外表面开始的，
+通过对疲劳断口的观察，我们发现裂纹的萌生都是由外表面开始的，
 如图\ref{Fig:plot_exp_fatigue_life}所示，我们发现对于无涂层的试件，TGMF的寿命要明显低于TMF的寿命，更大大低于恒温疲劳的寿命。
 
-在机械应变控制条件下,一般可以通过机械应变幅与疲劳寿命之间的关系来考查材料的热机械疲劳寿命行为。图\ref{Fig:plot_exp_fatigue_life}所示为同相位、反相位热机械疲劳和650$^{\circ}$C等温疲劳试验条件下机械应变与疲劳寿命之间的关系。可见300-650$^{\circ}$C的热机械疲劳比℃的等温疲劳具有更大的损伤。在同等机械应变幅下℃等温低周疲劳具有较高的疲劳寿命,而和则寿命较低,且、机械应变幅一寿命关系曲线存在相互交叉,交叉点的位置大概在机械应变幅为左右。当机械应变幅较高时,同相位热机械疲劳倾向于具有较低的疲劳寿命而当机械应变幅较低时,反相位热机械疲劳倾向于具有较低的疲劳寿命
+在机械应变控制条件下，一般可以通过机械应变幅与疲劳寿命之间的关系来考查材料的热机械疲劳寿命行为。图\ref{Fig:plot_exp_fatigue_life}所示为300-650$^{\circ}$C同相位、反相位热机械疲劳和热梯度机械疲劳试验条件下机械应变与疲劳寿命之间的关系，图中黑色实线为650$^{\circ}$C等温疲劳的Coffin-Masson疲劳寿命曲线。可见300-650$^{\circ}$C的热机械疲劳与热梯度机械疲劳比650$^{\circ}$C等温疲劳具有更大的损伤。在同等机械应变幅下650$^{\circ}$C等温低周疲劳具有较高的疲劳寿命。
+对于热机械疲劳（TMF），同相位和反相位试验的机械应变幅-寿命关系曲线存在相互交叉，交叉点的位置大概在机械应变幅为0.6\%左右。
+当机械应变幅较高时，同相位热机械疲劳倾向于具有较低的疲劳寿命而当机械应变幅较低时,反相位热机械疲劳倾向于具有较低的疲劳寿命。
+而对于热梯度机械疲劳（TGMF），同相位和反相位试验的机械应变幅-寿命关系曲线并没有存在相互交叉的趋势，同相位热梯度机械疲劳一直具有较低的疲劳寿命。
+
 \begin{figure}[!htp]
 \centering{\includegraphics[width=10cm]{plot_exp_fatigue_life.pdf}}
 \caption{恒温试验（IF）、热机械疲劳试验（TMF）和热梯度机械疲劳试验（TGMF）寿命比较.}
@@ -347,6 +352,120 @@ TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试�
 \end{figure}
 
 \subsection{微观结构}
+通过裂纹扩展区域的形貌和疲劳辉纹的方向我们可以推测出裂纹萌生的位置，如图\ref{Fig:crack_initiation}所示，图中箭头所示为裂纹萌生的位置。我们可以观测到显著的稳态裂纹扩展和裂纹失稳扩展区域，对于650$^{\circ}$C等温疲劳（IF）试验，试样断口比TMF和TGMF断口更加平整，疲劳扩展区面积较大。
+对于所有的等温疲劳（IF）和热机械疲劳（TMF）试验，疲劳裂纹都萌生于试样表面或近表面的缺陷处以及优先氧化区域并以沿枝晶和穿晶混合的方式在晶粒内部扩展。
+虽然温度梯度导致了TGMF试样外表面附加了一定程度的压应力，但对于本文中的试验参数，所有的热梯度机械疲劳（TGMF）试验，疲劳裂纹也都萌生于试样外表面。
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7112-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+      \put(50,40){\color{white}\thicklines\vector(1,1){15.5}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7047-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+      \put(50,40){\color{white}\thicklines\vector(3,1){25}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7033-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(45,40){\color{white}\thicklines\vector(1,0){18}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7206-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(d)}}
+      \put(70,40){\color{white}\thicklines\vector(3,-1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{720719.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(e)}}
+      \put(60,40){\color{white}\thicklines\vector(1,2){13}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{720932.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(f)}}
+      \put(60,40){\color{white}\thicklines\vector(1,2){15}}
+    \end{overpic}
+  \end{minipage}
+
+  \caption{Locations of crack initiation: (a)IF 0.45\%, (b)TMF-IP 0.6\%, (c)TMF-OP 0.65\%, (d)TGMF-IP 0.55\%, (e)TGMF-OP 0.55\%, (f)TGMF-OP 0.45\%.}
+  \label{Fig:crack_initiation}
+\end{figure}
+
+对五种不同试验条件下疲劳断口的扩展区和瞬间断裂区进行观察，如图\ref{Fig:fatigue_striations}所示，图中箭头为裂纹扩展方向。结果表明，TMF-OP和TGMF-OP的疲劳辉纹最为清晰（图\ref{Fig:fatigue_striations}(c,e,f)），650$^{\circ}$C IF,TMF-IP和TGMF-IP并未看到明显的疲劳辉纹（图\ref{Fig:fatigue_striations}(a),(b),(d)），这是由于在650$^{\circ}$C IF,TMF-IP和TGMF-IP试验条件下裂纹张开扩展时处于较高温度，断口表面经受了较多
+高温氧化损伤的原因。
+而三种载荷条件下的瞬间失稳断裂区则非常相似，与拉伸试样的断口形貌相似。
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7112-4.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7047-7.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7033-16.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,1){20}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7206-2.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(d)}}
+      \put(50,50){\color{white}\thicklines\vector(-2,1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{720721.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(e)}}
+      \put(50,50){\color{white}\thicklines\vector(-2,-3){15}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{720935.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(f)}}
+      \put(50,50){\color{white}\thicklines\vector(-2,-3){15}}
+    \end{overpic}
+  \end{minipage}
+
+  \caption{Observation of fatigue striations on fractures surface: (a)IF 0.45\%, (b)TMF-IP 0.6\%, (c)TMF-OP 0.65\%, (d)TGMF-IP 0.55\%, (e)TGMF-OP 0.55\%, (f)TGMF-OP 0.45\%.}
+  \label{Fig:fatigue_striations}
+\end{figure}
+
 
 \subsection{疲劳模型}
 (1)W-B模型
