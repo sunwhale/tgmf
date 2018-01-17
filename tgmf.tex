@@ -1,5 +1,9 @@
 \documentclass{article}
-\usepackage{hypernat}              % ensure cooperation of natbib and hyperref
+\usepackage[colorlinks,
+            linkcolor=blue,
+            anchorcolor=blue,
+            citecolor=blue]{hyperref}
+\usepackage{hypernat}
 \usepackage{booktabs}
 \usepackage[below]{placeins}
 \usepackage{fancyhdr}
@@ -12,6 +16,7 @@
 \usepackage{overpic}
 \usepackage{booktabs}
 \usepackage{ctex}
+\newcommand{\marked}[1]{\textcolor{red}{#1}}
 
 \graphicspath{{F:/Cloud/GitHub/tgmf/figs/}{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/GitHub/doctor/figs/test/}}
 
@@ -24,13 +29,28 @@
 \tableofcontents
 
 \section*{摘要}
-对于燃气轮机，内部冷却是降低零件温度，保证零件正常运转的重要手段。
-设计和开展中心冷却的镍基高温合金热梯度机械疲劳（TGMF）试验。
-与无温度梯度的热机械疲劳（TMF）寿命相比，TGMF的寿命要明显降低。
+\marked{Background/Introduction:}
+
+对于燃气轮机，内部冷却是降低零件温度，保证零件正常运转的重要手段。有研究表明，温度梯度对零件的应力分布和疲劳寿命有着很重要的影响。
+
+\marked{Subject of the paper:}
+
+热梯度机械载荷作用下材料的疲劳寿命预测对于燃气轮机热端部件的设计有着重要的意义。
+
+\marked{Techniques and methods used:}
+
+本文针对镍基高温合金Inconel 718，设计和开展中心冷却的镍基高温合金热梯度机械疲劳（TGMF）试验，获取材料在热梯度机械疲劳载荷作用下的应力应变曲线与疲劳寿命。
+
+\marked{Main Results:}
+
+温度梯度会导致应力场的变化，通过有限元计算，确定试件在每个循环内的温度场分布，同时基于循环塑性本构方程计算当前温度场下的应力应变曲线。
+试验表明与无温度梯度的热机械疲劳（TMF）寿命相比，TGMF的寿命要明显降低。
 考虑温度与机械载荷相位对TGMF寿命的影响，在低周疲劳的情况下，TGMF同相位（IP）的寿命要明显低于反相位（OP）的寿命。
 同时研究涂覆热障涂层（TBC）对镍基高温合金的热梯度机械疲劳性能的影响，结果表明，涂覆有热障涂层的试样寿命高于无涂层的试样寿命，但仍低于TMF试样寿命。
-温度梯度会导致应力场的变化，通过有限元计算，确定试件在每个循环内的温度场分布，同时基于循环塑性本构方程计算当前温度场下的应力应变曲线。
-选取多种多轴疲劳模型对试验数据进行预测，误差较大，引入温度梯度的修正项，建立热梯度机械疲劳寿命预测模型。
+
+\marked{Conclusions:}
+
+选取多种多轴疲劳模型对试验数据进行预测，误差较大，本文引入温度梯度的修正项，建立适用于热梯度机械疲劳的寿命预测模型。
 
 \section{概述}
 热障涂层涂覆于航空发动机和燃气轮机高温部件表面，具有防止高温腐蚀、延长热端部件使用寿命、提高发动机功率和减少燃油消耗等优点。
@@ -183,12 +203,8 @@
   \label{Fig:plot_exp_mean_TCTGMF}
 \end{figure}
 
-平均应力是高温低周疲劳中不可忽视的因素,尤其对于强度较高而韧性较低的镍基高温合金而言,平均应力是影响疲劳寿命的重要因素,图\ref{Fig:plot_exp_mean_TCTGMF}所示为Inconel 718合金在同相位和反相位TGMF试验条件下的平均应力响应曲线。
-可见,对于TGMF-IP,平均应力为压应力,机械应变幅的增加对平均应力的影响不大,对于不同的机械应变幅值，平均应力演化的速率相近，平均应力的数值随着循环数的增加而增大，
-,当$\Delta_{\varepsilon}=0.4\%$时,半寿命时的压缩平均应力达65.9MPa(表3.1);对于oPTMF,平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大,当v-耐/2=0.50\%时,半寿命时的拉伸平均应力约为102石MPa(3.2)"热机械疲劳中存在明显平均应力的原因是合金的强度随温度的不断变化"无论是同相位还是反相位热机械疲劳都经历低温到高温的温度循环,当试验温度较高时合金的强度较低,而当试验温度较低时合金的强度较高,因此造成了滞后回线的应力不对称性,平均应力总是偏向低温半周"而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加,合金在高温半周产生的塑性变形增加,这加剧了拉压应力的不对称性"此外,可以观察到在两种TMF试验条件下平均应力幅值均随循环的进行而逐渐增大,这可认为是M963合金在高温半周持续循环软化以及低温半周持续循环硬化的综合作用结果"而对于900eIF试验,平均应力数值普遍较小,当v气-/2二0.50\%时,半寿命的平均应力仅约为一32.SMPa(表3.3),而对于更小的应变幅则平均应力接近为零,因此平均应力对900eIF试验的影响可以忽略"
-
-\section{微观结构}
-
+平均应力是高温低周疲劳中不可忽视的因素，尤其对于强度较高而韧性较低的镍基高温合金而言，平均应力是影响疲劳寿命的重要因素，图\ref{Fig:plot_exp_mean_TCTGMF}所示为Inconel 718合金在同相位和反相位TGMF试验条件下的平均应力响应曲线。可见，对于TGMF-IP，平均应力为压应力，机械应变幅的增加对平均应力的影响不大，对于不同的机械应变幅值，平均应力演化的速率相近，平均应力的数值随着循环数的增加而增大，
+，当$\Delta_{\varepsilon}=0.4\%$时，半寿命时的压缩平均应力为66.7MPa。对于TGMF-OP，平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大，当$\Delta_{\varepsilon}=0.4\%$时，半寿命时的拉伸平均应力约为52.3MPa。TGMF中存在明显平均应力的原因是合金的强度随温度的不断变化，无论是同相位还是反相位热梯度机械疲劳都经历低温到高温的温度循环，当试验温度较高时合金的强度较低，而当试验温度较低时合金的强度较高，因此造成了滞后回线的应力不对称性，平均应力总是偏向低温半周，而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加，合金在高温半周产生的塑性变形增加，这加剧了拉压应力的不对称性。此外，可以观察到在两种TGMF试验条件下平均应力幅值均随循环的进行而逐渐增大，这可认为是IN718合金在高温半周循环软化更为强烈的结果。等温疲劳试验，平均应力数值普遍较小，因此平均应力对等温疲劳试验的影响可以忽略。
 
 
 \section{Thermal gradient mechanical FE-analysis}
@@ -200,23 +216,22 @@ TGMF试验的试件内表面采用压缩空气进行冷却，冷却系统的结�
 Because of the small inner diameter 6.5mm of the specimen, it is difficult to measure the temperature of the specimen inner surface during the tests.
 A variety of measurement options were tried to measure the inner surface temperature.
 It was found that the internal cooling air has a significant effect on the temperature measurement of the inner surface of the specimen.
-%内部冷却空气对试件内壁的温度测量有很大的影响。
+% 内部冷却空气对试件内壁的温度测量有很大的影响。
 The measured temperature is not the temperature of the inner surface, but the average temperature of the wall and the cooling air flow.
-%测量得到的温度不是壁面的温度，而是壁面和冷却气流的平均温度。
+% 测量得到的温度不是壁面的温度，而是壁面和冷却气流的平均温度。
 Therefore we tried to calculate the temperature distribution of the specimen inner surface using the FEM method.
 
-%The internal diameter of the specimen is 6.5 mm, and .
-%试件的内部直径为6.5mm,。
 \begin{figure}[!htp]
 \centering{\includegraphics[width=12cm]{inner_cooling.pdf}}
 \caption{Schematic of inner cooling air system.}
 \label{Fig:inner_cooling}
 \end{figure}
 
-\subsection{Model description}
+\subsection{有限元模型}
+% \subsection{Model description}
 TGMF试件的几何形状如图\ref{Fig:Specimen}所示，由于几何形状和外部环境的对称性，我们取出试样的标距段部分，建立轴对称有限元模型，如图\ref{Fig:FEM}所示，标距段长度为12mm，取试件的中心界面作为轴对称面。
 用以下物理边界条件进行辐射加热的TGMF试样几何形状的有限元分析：
-试件外表面为温度边界，随时间变化的温度分布可由试验测得，试件内表面为对流边界条件，对流换热系数由圆管强制对流换热公式计算，需要试验测量冷却空气的密度、温度和体积流量。由于试件的对称性，中心对称界面可假设为绝热边界，试件的上边界认为是热传导边界，对于热辐射，我们去试件表面的发射率$\varepsilon=0.75$。
+试件外表面为温度边界，随时间变化的温度分布可由试验测得，试件内表面为对流边界条件，对流换热系数由圆管强制对流换热公式计算，需要试验测量冷却空气的密度、温度和体积流量。由于试件的对称性，中心对称界面可假设为绝热边界，试件的上边界认为是热传导边界，对于热辐射，取试件表面的发射率为$\varepsilon=0.75$。
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=12cm]{FEM.pdf}}
@@ -224,22 +239,7 @@ TGMF试件的几何形状如图\ref{Fig:Specimen}所示，由于几何形状和�
 \label{Fig:FEM}
 \end{figure}
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_temperature_along_gauge_length.pdf}}
-\caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^{\circ}$C) during TGMF tests.}
-\label{Fig:plot_temperature_along_gauge_length}
-\end{figure}
-
-图\ref{Fig:plot_temperature_along_gauge_length}为试件内表面和外表面温度与
-\begin{figure}[!htp]
-\centering{\includegraphics[width=12cm]{plot_temperature_along_radial_direction.pdf}}
-\caption{Diagram of simulated radial temperature gradients and the resulting, thermally induced hoop stress components at maximum temprature (650$^{\circ}$C) during TGMF tests.}
-\label{Fig:plot_temperature_along_radial_direction}
-\end{figure}
-
-
-
-
+\subsection{圆管内部的强制对流换热}
 The inner surface of the hollow specimen can be considers as a pipe.
 %空心试件可以简化为圆管.
 According to the formula of convection in turbulent pipe flow, the convective heat transfer coefficient of the inner surface of the specimen can be calculated.
@@ -333,17 +333,26 @@ According to the measurement results of the sensors, the average pressure and te
   \label{tab:addlabel}%
 \end{table}%
 
-\section{寿命预测}
-\subsection{试验结果}
-TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试件径向与轴向产生额外应力，试件内表面的温度低，表现为多轴拉伸载荷，与之相反，试件外表面的温度高，表现为多轴压缩载荷。
-同时由于温度梯度的存在，导致材料的力学性能在径向方向有所区别，这会导致材料在试验过程中的塑性应变累积有所不同，我们无法通过试验观测，只能通过合适的本构模型进行计算。
-通过对疲劳断口的观察，我们发现裂纹的萌生都是由外表面开始的，
-如图\ref{Fig:plot_exp_fatigue_life}所示，我们发现对于无涂层的试件，TGMF的寿命要明显低于TMF的寿命，更大大低于恒温疲劳的寿命。
+\subsection{计算结果}
+图\ref{Fig:plot_temperature_along_gauge_length}为试件内、外表面温度和轴向应力在标距段内沿轴向的分布，横坐标为距离试件中心截面的距离，在TGMF-IP循环过程中，图中所示的温度与应变为温度最高点（650$^{\circ}$C）时的值。
+此时，试件外表面与内表面的温差为12.5$^{\circ}$C，
 
-在机械应变控制条件下，一般可以通过机械应变幅与疲劳寿命之间的关系来考查材料的热机械疲劳寿命行为。图\ref{Fig:plot_exp_fatigue_life}所示为300-650$^{\circ}$C同相位、反相位热机械疲劳和热梯度机械疲劳试验条件下机械应变与疲劳寿命之间的关系，图中黑色实线为650$^{\circ}$C等温疲劳的Coffin-Masson疲劳寿命曲线。可见300-650$^{\circ}$C的热机械疲劳与热梯度机械疲劳比650$^{\circ}$C等温疲劳具有更大的损伤。在同等机械应变幅下650$^{\circ}$C等温低周疲劳具有较高的疲劳寿命。
-对于热机械疲劳（TMF），同相位和反相位试验的机械应变幅-寿命关系曲线存在相互交叉，交叉点的位置大概在机械应变幅为0.6\%左右。
-当机械应变幅较高时，同相位热机械疲劳倾向于具有较低的疲劳寿命而当机械应变幅较低时,反相位热机械疲劳倾向于具有较低的疲劳寿命。
-而对于热梯度机械疲劳（TGMF），同相位和反相位试验的机械应变幅-寿命关系曲线并没有存在相互交叉的趋势，同相位热梯度机械疲劳一直具有较低的疲劳寿命。
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_temperature_along_gauge_length.pdf}}
+\caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^{\circ}$C) during TGMF tests.}
+\label{Fig:plot_temperature_along_gauge_length}
+\end{figure}
+
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=12cm]{plot_temperature_along_radial_direction.pdf}}
+\caption{Diagram of simulated radial temperature gradients and the resulting, thermally induced hoop stress components at maximum temprature (650$^{\circ}$C) during TGMF tests.}
+\label{Fig:plot_temperature_along_radial_direction}
+\end{figure}
+
+\section{试验结果}
+\subsection{疲劳寿命}
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=10cm]{plot_exp_fatigue_life.pdf}}
@@ -351,7 +360,14 @@ TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试�
 \label{Fig:plot_exp_fatigue_life}
 \end{figure}
 
-\subsection{微观结构}
+在机械应变控制条件下，一般可以通过机械应变幅与疲劳寿命之间的关系来考查材料的热机械疲劳寿命行为。图\ref{Fig:plot_exp_fatigue_life}所示为300-650$^{\circ}$C同相位、反相位热机械疲劳和热梯度机械疲劳试验条件下机械应变与疲劳寿命之间的关系，图中黑色实线为650$^{\circ}$C等温疲劳的Coffin-Masson疲劳寿命曲线。可见300-650$^{\circ}$C的热机械疲劳与热梯度机械疲劳比650$^{\circ}$C等温疲劳具有更大的损伤。在同等机械应变幅下650$^{\circ}$C等温低周疲劳具有较高的疲劳寿命。
+对于热机械疲劳（TMF），同相位和反相位试验的机械应变幅-寿命关系曲线存在相互交叉，交叉点的位置大概在机械应变幅为0.6\%左右。
+当机械应变幅较高时，同相位热机械疲劳倾向于具有较低的疲劳寿命而当机械应变幅较低时,反相位热机械疲劳倾向于具有较低的疲劳寿命。
+而对于热梯度机械疲劳（TGMF），同相位和反相位试验的机械应变幅-寿命关系曲线并没有存在相互交叉的趋势，同相位热梯度机械疲劳一直具有较低的疲劳寿命。
+
+
+
+\subsection{断口形貌}
 通过裂纹扩展区域的形貌和疲劳辉纹的方向我们可以推测出裂纹萌生的位置，如图\ref{Fig:crack_initiation}所示，图中箭头所示为裂纹萌生的位置。我们可以观测到显著的稳态裂纹扩展和裂纹失稳扩展区域，对于650$^{\circ}$C等温疲劳（IF）试验，试样断口比TMF和TGMF断口更加平整，疲劳扩展区面积较大。
 对于所有的等温疲劳（IF）和热机械疲劳（TMF）试验，疲劳裂纹都萌生于试样表面或近表面的缺陷处以及优先氧化区域并以沿枝晶和穿晶混合的方式在晶粒内部扩展。
 虽然温度梯度导致了TGMF试样外表面附加了一定程度的压应力，但对于本文中的试验参数，所有的热梯度机械疲劳（TGMF）试验，疲劳裂纹也都萌生于试样外表面。
@@ -467,45 +483,23 @@ TGMF是一个复杂的试验状态，对于圆管试件，温度梯度导致试�
 \end{figure}
 
 
-\subsection{疲劳模型}
-(1)W-B模型
-
-
-(2)F-S模型
-The following models have been selected to the analysis:
- non-energetic stress-strain Fatemi-Socie model, based on the critical plane approach [22,23]
-
-与应力准则相对应，早期的研究者Yokobori等将静强度理论应用到多轴应变准则中来。
-采用最大法向应变、最大剪应变、Von Mises等效应变等代替Manson-Coffin公式的应变，与单轴低周疲劳估算相似，进行多轴疲劳寿命预算。
-由于该方法没有考虑不同应力路径对材料响应和疲劳寿命的影响，因而不能用于预测多轴非比例加载下的疲劳寿命。
-
-Brown和Miller[31]根据疲劳裂纹萌生和扩展的物理解释提出了一种多轴疲劳理论，与Findley[17-20]提出的应力准则相类似，Brown和Miller认为最大剪平面上的剪应变和法向应变这两个参数都应该考虑。他们提出裂纹第一阶段沿最大剪切面生成，第二阶段沿垂直于最大拉应变方向扩展。
-Brown和Miller准则由一系列由最大剪应变${\gamma _{\max }}$和最大剪应变平面上的法向应变${\varepsilon _n}$为坐标所组成的$\Gamma$平面上的等寿命曲线组成，对于给定寿命有
-\[{\gamma _{\max }} = f\left( {{\varepsilon _n}} \right)\]
-
-上式对于A、B两类裂纹有着不同的表达式。Brown和Miller将裂纹分为两种情况。在复合拉伸和扭转中，主应变${\varepsilon _1}$和${\varepsilon _3}$平行于表面，裂纹沿着表面扩展称为A类裂纹；对于正的双向拉伸，应变${\varepsilon _3}$垂直于自由表面，裂纹在自由表面上萌生进而沿纵深方向扩展称为B类裂纹。
-Kandil，Brown和Miller[32]给出A类裂纹表达式的简化形式：
-\[\frac{{\Delta {\gamma _{\max }}}}{2} + k\Delta {\varepsilon _n} = C\]
-其中，$\Delta {\varepsilon _n}$是临界面上的法向应变变幅，$k$和$C$是材料常数。这一准则被广泛讨论及应用[33-36]。
-
-Wang和Brown[37]用相邻两个最大剪应变折返点之间的法向应变变程${\varepsilon _n^*}$来代替法向应变变程$\Delta {\varepsilon _n}$，给出疲劳破坏模型
-\[\frac{{\Delta {\gamma _{\max }}}}{2} + k\varepsilon _n^* = C\]
-其中$k$和$C$是材料常数。
-
-Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的参数都是应变，没有考虑非比例加载下由于主轴旋转所产生的附加强化效
-应，所以预测的多轴非比例加载下的疲劳寿命偏于危险，建议以最大剪应变平面上的最大法向应力${\sigma _{n,\max }}$
-代替法向应变变程$\Delta {\varepsilon _n}$作为参数，提出准则如下：
-\[\frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,\max }}}}{{{\sigma _y}}}} \right) = C\]
+\section{疲劳模型}
 
 \subsection{Brown-Miller Model}
-
-1973年Brown和Miller\cite{Brown1973}根据疲劳裂纹扩展的物理解释提出了一种多轴疲劳模型，以最大剪切应变$\Delta\gamma_{max}$和最大剪切应变平面上的法向应变$\varepsilon_{n,max}$作为疲劳损伤参量。
-1977年Kanazawa等\cite{KANAZAWA1979}对一批不锈钢进行了不同幅值比值和相位角的双轴拉扭试验，对最大剪应变平面上的正应变幅进行了观察，认为其面上正应变和剪应变之间的相位差对疲劳寿命没影响，故采用正应变幅和剪应变幅作为寿命拟合参数。
-1993年Wang C. H.、Brown M. W.提出了一种考虑最大剪应变幅和最大剪应变幅平面上正应变程的多轴疲劳寿命模型，仅一个试验参数，可由单轴拉伸试验和扭转试验来确定[155]。
-其考虑正应变变程的寿命计算公式（简称WB模型）为：
-\[\frac{{\Delta {\gamma _{{\rm{max}}}}}}{2} + S{\varepsilon _{{\rm{n,max}}}} = \left[ {1 + {\nu _{\rm{e}}} + \left( {1 + {\nu _{\rm{e}}}} \right)S} \right]\frac{{{{\sigma '}_f}}}{E}{\left( {2{N_f}} \right)^b} + \left[ {1 + {\nu _{\rm{p}}} + \left( {1 + {\nu _{\rm{p}}}} \right)S} \right]{\varepsilon '_f}{\left( {2{N_f}} \right)^c}\]
-其中，$\Delta\gamma_{max}$为最大剪应变平面上的剪应变幅，$\epsilon_{n,max}$为垂直最大剪应变平面上的最大正应变程，$S$为材料常数，$\nu_e$为弹性泊松比，$\nu_p$为塑性泊松比。
-一般地，参数$S$不是常数，它会随疲劳寿命不同而改变。
+Based on the critical plane concepts \cite{Brown1973}, Wang and Brown \cite{Wang1993} proposed that the Kandil, Brown and Miller fatigue parameter \cite{Kandil1982} can be reformulated as the equivalent shear strain amplitude:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{max}}}}{2} + S\Delta {\varepsilon _n},
+\label{Equ:ShearStrainBM}
+\end{equation}
+where $\frac{{\Delta \hat \gamma }}{2}$ is the equivalent shear strain range, $\Delta {\varepsilon _n}$ represents the normal strain excursion on the on the plane with the maximum strain range $\Delta {\gamma _{max}}$. The material dependent parameter S represents the influence of the normal strain on the crack propagation.
+The fatigue endurance is suggested as:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = A\frac{{{{\sigma '}_f}}}{E}{\left( {2{N_f}} \right)^b} + B{{\varepsilon '}_f}{\left( {2{N_f}} \right)^c},
+\end{equation}
+with
+\[A = 1 + {\nu _e} + \left( {1 - {\nu _e}} \right)S,\]
+and
+\[B = 1 + {\nu _p} + \left( {1 - {\nu _p}} \right)S.\]
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-BM.pdf}}
@@ -514,6 +508,25 @@ Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的
 \end{figure}
 
 \subsection{Fatemi-Socie Model}
+Based on the work of Brown and Miller, Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Equation (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
+The equivalent shear strain amplitude is developed as:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,max}}}}{{{\sigma _y}}}} \right),
+\end{equation}
+where
+$\sigma _{n,max}$ is the maximum normal stress on the critical plane suffering the maximum strain range $\Delta {\gamma _{max}}$, $k$ is a material parameter, the sensitivity of the material to normal stress is reflected in the ratio $k/\sigma_y$.
+They developed a damaging model oriented on the shear-based damage initiation:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{{{\tau '}_f}}}{G}{\left( {2{N_f}} \right)^{{b_0}}} + {{\gamma '}_f}{\left( {2{N_f}} \right)^{{c_0}}}.
+\end{equation}
+Furthermore, McClaflin and Fatemi \cite{McClaflin2004} proposed that the sensitivity parameter $k$ is varied with fatigue life and can be expressed by tension and torsion data, as
+\begin{equation}
+k =  \frac{{k_0 {\sigma _y}}}{{{{\sigma '}_f}{{\left( {2{N_f}} \right)}^b}}}
+\end{equation}
+with
+\[
+k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\gamma '}_f}{{\left( {2{N_f}} \right)}^{{c_0}}}}}{{\left( {1 + {\nu _e}} \right)\frac{{{{\sigma '}_f}}}{E}{{\left( {2{N_f}} \right)}^b} + \left( {1 + {\nu _p}} \right){{\varepsilon '}_f}{{\left( {2{N_f}} \right)}^c}}} - 1} .
+\]
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-FS.pdf}}
@@ -522,6 +535,7 @@ Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的
 \end{figure}
 
 \subsection{Smith-Watson-Topper Model}
+\[{\sigma _{n,max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + {\sigma '_f}{\varepsilon '_f}{\left( {2{N_f}} \right)^{b + c}}\]
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-SWT.pdf}}
@@ -530,7 +544,11 @@ Fatemi和Socie[38]研究后发现，由于Kandil、Brown和Miller破坏模型的
 \end{figure}
 
 \subsection{Liu’s Strain Energy Models}
-
+\begin{eqnarray*}
+{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)_{\max }} + \left( {\Delta \tau \Delta \gamma } \right) &=& \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}}
+\\
+& & + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
+\end{eqnarray*}
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-Liu1.pdf}}
 \caption{Liu Tension Strain Energy Model.}
