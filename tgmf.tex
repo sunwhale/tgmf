@@ -372,7 +372,7 @@ According to the measurement results of the sensors, the average pressure and te
 \subsection{断口形貌}
 通过裂纹扩展区域的形貌和疲劳辉纹的方向我们可以推测出裂纹萌生的位置，如图\ref{Fig:crack_initiation}所示，图中箭头所示为裂纹萌生的位置。我们可以观测到显著的稳态裂纹扩展和裂纹失稳扩展区域，对于650$^{\circ}$C等温疲劳（IF）试验，试样断口比TMF和TGMF断口更加平整，疲劳扩展区面积较大。
 对于所有的等温疲劳（IF）和热机械疲劳（TMF）试验，疲劳裂纹都萌生于试样表面或近表面的缺陷处以及优先氧化区域并以沿枝晶和穿晶混合的方式在晶粒内部扩展。
-虽然温度梯度导致了TGMF试样外表面附加了一定程度的压应力，但对于本文中的试验参数，所有的热梯度机械疲劳（TGMF）试验，疲劳裂纹也都萌生于试样外表面。
+虽然温度梯度导致了TGMF试样外表面附加了一定程度的压应力，但对于本文中的试验参数，所有的热梯度机械疲劳（TGMF）试验，疲劳裂纹都萌生于试样外表面。
 
 \begin{figure}
   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
@@ -505,7 +505,7 @@ and
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-BM.pdf}}
-\caption{Fatemi-Socie Model.}
+\caption{Brown-Miller Model.}
 \label{Fig:NF-NP-TGMF-BM}
 \end{figure}
 
@@ -564,6 +564,12 @@ k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\
 \end{figure}
 
 \subsection{Chu Strain Energy Model}
+
+\begin{eqnarray*}
+{\left( {{\tau _{n,\max }}\frac{{\Delta \gamma }}{2} + {\sigma _{n,\max }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} &=& 1.02\frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} \\
+&& + 1.04{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
+\end{eqnarray*}
+
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-Chu.pdf}}
 \caption{Chu Strain Energy Model.}
@@ -571,7 +577,9 @@ k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\
 \end{figure}
 
 \section{温度梯度的影响}
-
+图\ref{Fig:plot_exp_fatigue_life_TMF_TGMF}分别比较了TMF和TGMF在同相位和反相位时的疲劳寿命。
+可以发现，同相位和反相位的情况下TGMF寿命都要低于TMF寿命，由于两组试验的温度循环相同，唯一不同的是试件径向方向的温度梯度，因此可以认为温度梯度对材料寿命有不利的影响，同时比较图\ref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a)和(b)，在同相位的情况下，温度梯度导致的寿命减少比反向位试验更加明显。
+表\ref{Tab:FatigueCoefficient}列举出了Chu模型计算过程中的参数，
 \begin{figure}
   \centering{
     \begin{overpic}[width=8.0cm]{plot_exp_fatigue_life_IP.pdf}
@@ -606,10 +614,24 @@ k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\
     TGMF-OP & 0.9   & 45    & 2.58  & 543.5  & 302.8  & -6.4  & 0.044  & 128   & 273 \\
     \bottomrule
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{Tab:FatigueCoefficient}%
 \end{table}%
 
 
+\[f\left( {T,\nabla T} \right) = \left( {1 + \frac{{t\left\| {\nabla T} \right\|}}{{{T_{\max }} - {T_{{\sigma _{n,\max }}}} + {T_0}}}} \right)\]
+
+\[\left\| {\nabla T} \right\| = \sqrt {{{\left( {\frac{{\partial T}}{{\partial x}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial y}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial z}}} \right)}^2}} \]
+
+\begin{eqnarray*}
+f\left( {T,\nabla T} \right) {\left( {{\tau _{n,\max }}\frac{{\Delta \gamma }}{2} + {\sigma _{n,\max }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} &=& 1.02\frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} \\
+&& + 1.04{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
+\end{eqnarray*}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{NF-NP-TGMF-Our.pdf}}
+\caption{Our Strain Energy Model.}
+\label{Fig:NF-NP-TGMF-Our}
+\end{figure}
 
 % \begin{figure}
 %   \begin{minipage}[t]{0.5\linewidth}
