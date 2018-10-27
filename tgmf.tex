@@ -56,9 +56,9 @@
 
 % \graphicspath{{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/origin/}{F:/Cloud/GitHub/doctor/figs/tracepro/}{F:/Cloud/GitHub/doctor/figs/independent/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}{F:/Cloud/GitHub/fatigue/figs/}}
 
-\graphicspath{{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/origin/}{F:/Cloud/GitHub/doctor/figs/tracepro/}{F:/Cloud/GitHub/doctor/figs/independent/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/GitHub/doctor/figs/test/}{F:/Cloud/Database/IN718/SEM/}{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/furnace/figs/}{F:/Cloud/GitHub/tmf/figs/}{F:/Cloud/GitHub/tgmf/figs/}}
+% \graphicspath{{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/origin/}{F:/Cloud/GitHub/doctor/figs/tracepro/}{F:/Cloud/GitHub/doctor/figs/independent/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/GitHub/doctor/figs/test/}{F:/Cloud/Database/IN718/SEM/}{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/furnace/figs/}{F:/Cloud/GitHub/tmf/figs/}{F:/Cloud/GitHub/tgmf/figs/}}
 
-% \graphicspath{{figures/}}
+\graphicspath{{figures/}}
 
 \journal{International Journal of Fatigue}
 
@@ -104,16 +104,13 @@
 \author{Jingyu SUN\fnref{label1}}
 \author{Huang YUAN\corref{cor1}\fnref{label1}}
 
-%\address[authorlabel1]{Department of Mechanical Engineering, University of Wuppertal, Germany}
 \address[label1]{School of Aerospace Engineering, Tsinghua University, Beijing, China\fnref{label1}}
 \address[label2]{Department of Civil Engineering, Technical University of Darmstadt, Germany\fnref{label2}}
 \cortext[cor1]{Corresponding author.}
 \ead{yuan.huang@tsinghua.edu.cn}
 
 \begin{abstract}
-
 Turbine components are generally under thermomechanical loading. Recent investigations reveal a significant difference of thermomechanical fatigue from isothermal fatigue. In the present work, extensive experiments are performed for a nickel-based superalloy under both isothermal and thermomechanical loading conditions to quantify the influence of thermal phase angle and loading non-proportionality. Various multiaxial fatigue life models show significant deviations due to different loading configurations and seem not to catch effects of the thermomechanical features in fatigue. Based on the experiments a thermomechanical loading parameter is introduced to assess fatigue failure. The new thermomechanical model can calibrate non-proportional thermomechanical multiaxial fatigue reasonably.
-
 \end{abstract}
 
 %\include{debut}
@@ -127,14 +124,6 @@ Thermomechanical fatigue (TMF) \sep multiaxial loading \sep non-proportional loa
 \end{frontmatter}
 
 \section{Introduction}
-% 发动机涡轮叶片主要采用气膜冷却和内部流冷却，轮盘通常采用内部二次流冷却。
-% 服役过程中，涡轮叶片不仅受到较大的交变载荷，而且在叶片表面和内部分别受到高温高压燃气的冲击和冷却气体的作用，这样涡轮叶片就遭受载荷和温度同时变化带来的热机械疲劳损伤。
-% 此外，为了增强发动机冷却效果，提高发动机效率，先进的航空发动机和燃气轮机热端涡轮叶片多为薄壁多孔结构。
-% 因此，我们设计了薄壁圆管试件来模拟零件的冷却结构，同时试件外壁涂覆有热障涂层。
-% 在内部冷却气体作用下，试件内表面与外表面之间会产生很大的温度梯度，
-% 实验过程中，采用的常规感应加热设备只会对内部金属层加热，使得内部金属层温度高于外部陶瓷层温度，这不符合热障涂层构件实际工作状态下的温度分布。
-% 实际发动机启动阶段升温过程只需要几秒钟的时间，而且降温也相当迅速，这些都对涂覆热障涂层的热梯度机械疲劳试验设备提出了更高的要求，同时也制约了这方面的研究。
-% 由于热梯度机械疲劳是试验室中最接近涡轮叶片服役状态的模拟试验，因而这方面的研究对于理解涂覆热障涂层的叶片损伤机理具有重要意义。
 The turbine blades are mainly cooled by air film and internal flow, and the turbine discs are usually cooled by the secondary flow.
 In the course of service, the turbine blades are not only subjected to the large alternating loads but also subjected to the impact of high temperature and high-pressure gas and the effect of cooling air on the surface and inside of the blades, respectively. So the turbine blades suffer from the thermomechanical fatigue damage caused by the change of load and temperature.
 Moreover, the temperature gradient brings about multiaxial loads to the parts.
@@ -146,11 +135,54 @@ Microstructural changes, defects, phase evolution of the metal coatings and raft
 
 Because the thermal gradient mechanical fatigue test is much close to the service state of turbine blades and discs in the laboratory, the research was important to understand the damage mechanism of the turbine blades and discs as well as the coated thermal barrier coating.
 
-% 热障涂层涂覆于航空发动机和燃气轮机高温部件表面，具有防止高温腐蚀、延长热端部件使用寿命、提高发动机功率和减少燃油消耗等优点。
-% 通常典型的热障涂层包括表面陶瓷层(TC：top coat)和金属粘结层(BC：bond coat)。在服役过程中，粘结层会发生氧化，在粘结层和陶瓷层界面形成厚度为1~10$\mu$m的热生长氧化物(TGO：thermally grown oxide)。TGO的形成是一个体积膨胀过程，界面会限制这种体积变化，因而在TGO内部会随之产生应力。而且，陶瓷层与金属基底的热膨胀系数相
-% 差较大，在热循环过程中会在热载荷的作用下产生较大的热应力，从而在界面缺陷处引起应力集中，促进裂纹的萌生与扩展。
-
 \section{Experiment}
+
+\subsection{Specimen}
+Fatigue testing specimens were in thin-walled tubular shape. The geometry of the thin-walled tubular specimen is shown in \autoref{Fig:IN718_Axial_Specimen_TGMF}, 120 mm in the total length, a gauge length of 30 mm, an outer diameter of the gauge section of 8.5 mm and an inner diameter of the specimen of 6.5 mm. Thus, the wall thickness of the tubular specimen in the gauge section is 1 mm. All specimens were manufactured by a CNC machining center, and the surfaces were polished before testing. 
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8cm]{IN718_Axial_Specimen_TGMF.pdf}}
+\caption{Dimensions of the specimen for TGMF testing.}
+\label{Fig:IN718_Axial_Specimen_TGMF}
+\end{figure}
+
+\subsection{TGMF testing system}
+The TGMF testing system for the thin-walled tubular specimen is shown in \autoref{Fig:TGMF_Test_System}. The testing system includes multiple subsystems such as loading, heating,  air cooling, and water cooling. These subsystems work cooperatively to ensure the mechanical load and temperature over the specimen gauge section are simultaneously varied and independently controlled. 
+
+\begin{figure*}[!htp]
+	\centering
+	\includegraphics[width=12cm]{TGMF_Test_System.pdf}
+	\caption{Experimental apparatus of TGMF test system.}
+	\label{Fig:TGMF_Test_System}
+\end{figure*}
+
+A MTS hydraulic servo fatigue test machine was used to apply a tension/compression mechanical load. The mechanical load is transmitted to the specimen through a fixture. The cooling air can enter the internal of the tubular specimen through the fixture. In order to reduce the additional bending moments and the bending stress in the specimen, the fixture must provide a sufficiently high degree of coaxiality. Meanwhile, the frame of the MTS testing system provides an alignment device, and it can effectively reduce the additional bending moments in the specimen during the test. The total strain is measured by a extensometer with a gauge length of 10 mm and a measuring range of $\pm$20\%. 
+
+The temperature of the specimen was measured by the thermocouples. In practice, the choice of the diameter of the thermocouple wire is significant. A thick thermocouple wire will cause a delay in the temperature measurement. It leads to a temperature deviation between the thermocouple and the specimen, and it affects the response of the feedback control system. In order to improve the accuracy of temperature measurement and increase the response speed of thermocouples, the diameter of the thermocouple wire should be as smaller as possible. Therefore, the thermocouple wires with the diameter of 0.25 mm were used.
+
+The temperature controller was used to control the temperature of the specimen.
+The controller accepted the temperature sensor (thermocouple or infrared thermometer) as input and compare the actual temperature to the desired control temperature. It will then provide an output to the power regulator to control the luminance of the lamps. 
+The temperature controller of the radiation furnace is a proportional–integral–derivative (PID) controller. The values of proportional, integral, and derivative gains of the PID controller can be determined by the PID tuning process.
+However, the emissivity of the specimen and the temperature range will influence the PID gains of the temperature controller. Therefore, for the specimen with and without the TBC, the PID gains should be tuned respectively.
+
+The air cooling subsystem consists of two air compressors, an air dryer, metering valves, air pressure gauges and cooling passages. 
+The two air compressors were used to provide the cooling air of the specimen and the lamp holders, separately.
+Each air compressor has a power of 2.4 kW and provides the compressed air of 0.4 - 0.8 MPa. The compressed air with a pressure of 0.7 MPa is filtered through the air dryer and output to the metering valve. The air dryer is used for removing water vapor from the compressed air.
+During the TGMF testing, the pressure and the volume flow of the compressed air have to be kept as constants. The metering valve was used to control the volume flow of the compressed air.
+The air cooling subsystem also provides compressed air for the lamp holders.
+The duration of the TGMF test is usually long, so the lamp holders have to be cooled to ensure that they can work properly.
+
+\begin{figure}[!htp]
+\centering{\includegraphics[height=12.0cm]{tgmf_code.pdf}}
+\caption{The experimental procedures of thermal gradient mechanical fatigue test.}
+\label{Fig:tgmf_code}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[height=12.0cm]{tgmf_testing.pdf}}
+\caption{The experimental procedures of thermal gradient mechanical fatigue test.}
+\label{Fig:tgmf_testing}
+\end{figure}
 
 Recently, there are no relevant standards for TGMF testing. Because of the test processes of the TGMF and TMF are very similar, according to the testing process of TMF, the concepts in TGMF testing are defined as same as them in the TMF testing, such as:
 \begin{itemize}
@@ -162,7 +194,7 @@ Recently, there are no relevant standards for TGMF testing. Because of the test 
 
 % According to the standards discussed above, 
 
-The implemented steps of the strain-controlled TGMF testing is shown in \autoref{Fig:tgmf_code}, in the form of a flow diagram. The flow diagram similar to the flow diagram of TMF (see \autoref{Fig:tmf_code}). Comparing \autoref{Fig:tgmf_code} with \autoref{Fig:tmf_code}, based on the TMF test, the measurement and verification of the internal cooling air are added into the flow diagram, as well as the calibration of the radiation furnace.
+The implemented steps of the strain-controlled TGMF testing is shown in \autoref{Fig:tgmf_code}, in the form of a flow diagram.
 
 \begin{figure}[!htp]
 	\centering
@@ -173,11 +205,18 @@ The implemented steps of the strain-controlled TGMF testing is shown in \autoref
 
 \begin{figure}[!htp]
 	\centering
+	\includegraphics[width=8.0cm]{cooling.png}
+	\caption{Locations of the temperature monitors.}
+	\label{Fig:cooling}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
 	\begin{overpic}[width=8.0cm]{plot_thermal_stability_tgmf.pdf}
-		\put(88,65){\fcolorbox{white}{white}{(a)}}
+		\put(84,65){\fcolorbox{white}{white}{(a)}}
 	\end{overpic}
 	\begin{overpic}[width=8.0cm]{plot_thermal_stability_tgmf_deviation.pdf}
-		\put(88,65){\fcolorbox{white}{white}{(b)}}
+		\put(84,65){\fcolorbox{white}{white}{(b)}}
 	\end{overpic}
 	\caption{Varying temperatures in a tubular specimen with the gauge length of 15 mm, heated by the radiation furnace. (a) Temperature variations of three thermal elements during a loading cycle. (b) Temperature deviations in the axial direction.}
 	\label{Fig:thermal_stability_TGMF}
@@ -192,11 +231,7 @@ In order to obtain the temperature distribution of the specimen during the TGMF 
 \autoref{Fig:thermal_stability_TGMF}(a) shows the dynamic temperature measurement during a stable TGMF cycle and \autoref{Fig:thermal_stability_TGMF}(b) shows the temperature deviations between each thermocouple and the temperature command.
 It is observed that the maximum axial temperature gradients during the TMF test are less than $\pm30$$^\circ$C.
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8cm]{IN718_Axial_Specimen_TGMF.pdf}}
-\caption{Dimensions of the specimen for TGMF testing.}
-\label{Fig:IN718_Axial_Specimen_TGMF}
-\end{figure}
+
 
 Thermal gradients cause multiaxial loads in cooled components.
 In internal cooling, for example of rotors in the first stage of a jet engine, the thermal gradient induced stresses cannot be relaxed by macroscopic deformations.
@@ -244,7 +279,7 @@ Deutsches Zentrum f\"{u}r Luft- und Raumfahrt (DLR) \cite{BAUFELD2008219} has de
 % The test system needs to achieve high heating and cooling speed, so the power of heating system and the volume flow of the cooling air should be designed in detail.
 
 \section{Experimental results of TGMF tests}
-\noindent
+
 The experimental conditions and results of TGMF tests are summarized in Table \autoref{Tab:test_matrix_TGMF}. The load type TC-IP-TGMF is short for the tension-compression in-phase thermal gradient mechanical fatigue, and TC-OP-TGMF means the tension-compression out-of-phase thermal gradient mechanical fatigue. The abbreviation TBC means the specimen is covered with the thermal barrier coating.
 Because of the thermal gradients in radial and axial directions, the axial stress is not constant on the cross-section of the specimen.
 Therefore, the stress distribution of the specimen during the test has to be obtained by the finite element computation.
@@ -259,31 +294,28 @@ Since there is a phase difference between the temperature cycle and the load cyc
 For the TC-IP-TGMF test, an evident cyclic softening was observed during the tensile half-cycle, whereas for the TC-OP-TGMF test, the alloy performed a significant cyclic softening during the compression half-cycle.
 
 % 如果是右对齐，那么只需要将\centering换成\raggedleft，如果左对齐，那么换成\raggedright即可。
-\begin{table*}[htbp]
+\begin{table}[htbp]
   \centering
   \caption{Experimental conditions and results of thermal gradient mechanical fatigue tests.}
-    \begin{tabular}{p{4cm}p{1.5cm}<{\centering}p{3cm}<{\centering}p{1.5cm}<{\centering}p{1.5cm}<{\raggedleft}}
+    \begin{tabular}{p{2.0cm}p{1.0cm}<{\centering}p{2cm}<{\centering}p{0.8cm}<{\centering}p{1.0cm}<{\raggedleft}}
     \toprule
     Test Type & $\pm \varepsilon _{\rm{mech}}$ & $\dot \varepsilon _{\rm{mech}}$ & $\theta_{\rm{T-\varepsilon}}$ & $N_{\rm{f}}$ \\
           & [\%]  & [s$^{-1}$] & [$^\circ$] & [cycle] \\
     \midrule
-    TC-IP-TGMF & 0.80  & $1.67\times 10^{-4}$ & 0     & 48 \\
+    IP-TGMF & 0.80  & $1.67\times 10^{-4}$ & 0     & 48 \\
           & 0.70  & $1.33\times 10^{-4}$ & 0     & 50 \\
           & 0.60  & $1.22\times 10^{-4}$ & 0     & 107 \\
           & 0.50  & $1.11\times 10^{-4}$ & 0     & 208 \\
           & 0.425  & $0.89\times 10^{-4}$ & 0     & 1066 \\
     \midrule
-    TC-OP-TGMF & 0.80  & $1.67\times 10^{-4}$ & 180   & 128 \\
+    OP-TGMF & 0.80  & $1.67\times 10^{-4}$ & 180   & 128 \\
           & 0.60  & $1.22\times 10^{-4}$ & 180   & 375 \\
           & 0.50  & $1.11\times 10^{-4}$ & 180   & 864 \\
           & 0.425  & $0.89\times 10^{-4}$ & 180   & 3387 \\
-    \midrule
-    TC-IP-TGMF-TBC & 0.80  & $1.67\times 10^{-4}$ & 0     & 147 \\
-          & 0.60  & $1.22\times 10^{-4}$ & 0     & 624 \\
     \bottomrule
     \end{tabular}%
   \label{Tab:test_matrix_TGMF}%
-\end{table*}%
+\end{table}%
 
 \begin{figure*}[!htp]
   \centering
@@ -301,19 +333,11 @@ For the TC-IP-TGMF test, an evident cyclic softening was observed during the ten
     \put(84,13){\fcolorbox{white}{white}{(d)}}
   \end{overpic}
 
-  \begin{overpic}[width=8.0cm]{plot_exp_half_life_cycle_TCIPTGMFTBC.pdf}
-    \put(84,13){\fcolorbox{white}{white}{(e)}}
-  \end{overpic}
-  \begin{overpic}[width=8.0cm]{plot_exp_pv_TCIPTGMFTBC.pdf}
-    \put(84,13){\fcolorbox{white}{white}{(f)}}
-  \end{overpic}
   \caption{Experimental results of TGMF tests with varying temperature between 300$^\circ$C and 650$^\circ$C. Noting that, the vertical axis axial stress $\sigma$ is the nominal stress.
   (a) Half life stable hysteresis loops of TC-IP-TGMF tests.
   (b) Peak and valley stresses of TC-IP-TGMF tests.
   (c) Half life stable hysteresis loops of TC-OP-TGMF tests.
-  (d) Peak and valley stresses of TC-OP-TGMF tests.
-  (e) Half life stable hysteresis loops of TC-IP-TGMF-TBC tests.
-  (f) Peak, valley and mean stresses of TC-IP-TGMF-TBC tests.}
+  (d) Peak and valley stresses of TC-OP-TGMF tests.}
   \label{Fig:plot_exp_TCTGMF}
 \end{figure*}
 
@@ -331,16 +355,16 @@ Under both experimental conditions, the peak and valley value of the cyclic stre
 Cyclic softening were observed during both in-phase and out-of-phase thermal gradient mechanical fatigue tests, but the phase difference between the temperature cycle and the load cycle leads to the different cycle softening behavior. In the temperature range of 300$^\circ$C to 650$^\circ$C, the higher the temperature, the more obvious the cyclic softening of the material. Therefore, under TC-IP-TGMF loading condition, the cyclic softening of the superalloy in the tensile half-cycle is more evident, whereas, under TC-OP-TGMF loading condition, the cyclic softening behavior was observed more evident in the compression half-cycle. The asymmetry of cyclic softening in tension and compression results in an evolution of the mean stress during the fatigue test.
 
 % 平均应力是高温低周疲劳中不可忽视的因素，尤其对于强度较高而韧性较低的镍基高温合金而言，平均应力是影响疲劳寿命的重要因素，图\autoref{Fig:plot_exp_mean_TCTGMF}所示为Inconel 718合金在同相位和反相位TGMF试验条件下的平均应力响应曲线。可见，对于TGMF-IP，平均应力为压应力，机械应变幅的增加对平均应力的影响不大，对于不同的机械应变幅值，平均应力演化的速率相近，平均应力的数值随着循环数的增加而增大，
-The mean stress is a factor that can not be ignored in low-cycle fatigue. Especially for nickel-based superalloys with high strength and low toughness, the mean stress is an important factor affecting the fatigue life, as shown in \autoref{Fig:plot_exp_mean_TCTGMF}. The mean stress response curve for the Inconel 718 alloy under the in-phase and reverse phase TGMF test conditions. It can be seen that for TGMF-IP, the mean stress is compressive stress, and the increase of the mechanical strain amplitude has little effect on the mean stress. For different mechanical strain amplitudes, the mean stress evolution rate is similar, and the mean stress value increases with the number of cycles. Increase and increase
+The mean stress is a factor that can not be ignored in low-cycle fatigue. Especially for nickel-based superalloys with high strength and low toughness, the mean stress is an important factor affecting the fatigue life, as shown in \autoref{Fig:plot_exp_mean_TCTGMF}. The mean stress response curve for the Inconel 718 alloy under the in-phase and reverse phase TGMF test conditions. It can be seen that for TGMF-IP, the mean stress is compressive stress, and the increase of the mechanical strain amplitude has little effect on the mean stress. For different mechanical strain amplitudes, the mean stress evolution rate is similar, and the mean stress value increases with the number of cycles.
 
 % ，当$\Delta_{\varepsilon}=0.4\%$时，半寿命时的压缩平均应力为66.7MPa。对于TGMF-OP，平均应力为拉应力且随着机械应变幅的增加拉伸平均应力幅度变大，当$\Delta_{\varepsilon}=0.4\%$时，半寿命时的拉伸平均应力约为52.3MPa。
 For TC-OP-TGMF test, the mean stress becomes a tensile stress and the tensile stress increased with the increase of the mechanical strain amplitude.
 When $\Delta \varepsilon=0.8\%$, the mean stress at the half-life cycle is about 50 MPa. For TC-IP-TGMF test, the mean stress becomes a compression stress. When $\Delta \varepsilon=0.8\%$, the mean stress at the half-life cycle is about -30 MPa.
 
 % TGMF中存在明显平均应力的原因是合金的强度随温度的不断变化，无论是同相位还是反相位热梯度机械疲劳都经历低温到高温的温度循环，当试验温度较高时合金的强度较低，而当试验温度较低时合金的强度较高，因此造成了滞后回线的应力不对称性，平均应力总是偏向低温半周，而平均应力随机械应变幅增加而增大的原因是随着机械应变幅的增加，合金在高温半周产生的塑性变形增加，这加剧了拉压应力的不对称性。此外，可以观察到在两种TGMF试验条件下平均应力幅值均随循环的进行而逐渐增大，这可认为是IN718合金在高温半周循环软化更为强烈的结果。等温疲劳试验，平均应力数值普遍较小，因此平均应力对等温疲劳试验的影响可以忽略。
-The evolution of mean stress in TGMF is that the strength of the alloy changes with temperature. Both in-phase and out-of-phase TGMF tests, temperature cycles in the temperature interval of 300$^\circ$C to 650$^\circ$C. When the temperature is high, the strength of the alloy is low. On the contrary, when the temperature is low, the strength of the alloy becomes high. It results in the stress asymmetry of the hysteresis loop. The mean stress is always towards to the low-temperature half cycle, and the mean stress increases with the increase of the mechanical strain amplitude.
+The evolution of mean stress in TGMF is that the strength of the alloy changes with temperature. Both in-phase and out-of-phase TGMF tests, temperature cycles in the temperature interval of 300$^\circ$C to 650$^\circ$C. When the temperature is high, the strength of the alloy is low. On the contrary, when the temperature is low, the strength of the alloy becomes high. It results in the stress asymmetry of the hysteresis loop. The mean stress is always towards to the low-temperature half cycle.
 The reason is that with the increase of the mechanical strain amplitude, the plastic deformation of the alloy at the high-temperature half cycle increases, which aggravates the asymmetry of tensile and compressive stress.
-Besides, it can be observed that the amplitudes of the mean stresses increase gradually with the cycling in TGMF loading conditions, which can be considered as a result of the more intense softening of the superalloy Inconel 718 during the high-temperature half cycle. In the isothermal fatigue test, the mean stress value is generally small, so the mean stress has a negligible effect on the isothermal fatigue test.
+Besides, it can be observed that the absolute values of the mean stresses increase gradually with the cycling in TGMF loading conditions, which can be considered as a result of the more intense softening of the superalloy Inconel 718 during the high-temperature half cycle. In the isothermal fatigue test, the mean stress value is generally small, so the mean stress has a negligible effect on the isothermal fatigue test.
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8cm]{plot_exp_fatigue_life_TGMF.pdf}}
@@ -354,11 +378,11 @@ Besides, it can be observed that the amplitudes of the mean stresses increase gr
 % 而对于热梯度机械疲劳（TGMF），同相位和反相位试验的机械应变幅-寿命关系曲线并没有存在相互交叉的趋势，同相位热梯度机械疲劳一直具有较低的疲劳寿命。
 
 Under mechanical strain control, the fatigue life can generally be examined by the relationship between mechanical strain amplitude and fatigue life.
-\autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} shows the comparison of the fatigue lifetimes of TMF and TGMF tests under in-phase and out-of-phase loading conditions, respectively.
-The TC-IP-TGMF life is smaller than the TC-IP life as shown in \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a) and the TC-OP-TGMF life is smaller than the TC-OP life as shown in \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(b).
+\ref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC} shows the comparison of the fatigue lifetimes of TMF and TGMF tests under in-phase and out-of-phase loading conditions, respectively.
+The TC-IP-TGMF life is smaller than the TC-IP life as shown in \ref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(a) and the TC-OP-TGMF life is smaller than the TC-OP life as shown in \ref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(b).
 The temperature cycles of the TMF and TGMF tests are the same, the only difference between the TMF and TGMF tests is the temperature gradient in the specimen.
 Therefore, the temperature gradient is considered to have a significant effect on the fatigue life under the thermomechanical loading condition.
-Comparing \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a) with \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(b), the reduction of TC-IP-TGMF life due to the temperature gradient is more evident than the reduction of TC-OP-TGMF life.
+Comparing \ref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(a) with \ref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(b), the reduction of TC-IP-TGMF life due to the temperature gradient is more evident than the reduction of TC-OP-TGMF life.
 
 \begin{figure}
   \centering
@@ -369,13 +393,13 @@ Comparing \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a) with \autoref{Fig:plot
     \put(84,65){\fcolorbox{white}{white}{(b)}}
   \end{overpic}
   \caption{Comparison of fatigue lives of TMF and TGMF: (a) IP, (b) OP.}
-  \label{Fig:plot_exp_fatigue_life_TMF_TGMF}
+  \label{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}
 \end{figure}
 
 \section{Thermal gradient mechanical FE-analysis}
 
 \subsection{Internal cooling of the specimen}
-\noindent
+
 % TGMF试验的试件内表面采用压缩空气进行冷却，冷却系统的结构如图\autoref{Fig:inner_cooling}所示，包括空气压缩机、空气干燥器、流量计、压力表和流量控制器组成。
 The internal surface of the specimen was cooled with the compressed air. As shown in \autoref{Fig:inner_cooling}, the cooling system consists of the air compressor, air dryer, flow meter, pressure gauge and flow controller.
 Because of the small inner diameter 6.5 mm of the specimen, it is difficult to measure the temperature of the specimen inner surface during the tests.
@@ -393,16 +417,16 @@ Therefore we tried to calculate the temperature distribution of the specimen inn
 \end{figure}
 
 \subsection{FE-model}
-\noindent
+
 % TGMF试件的几何形状如图\autoref{Fig:Specimen}所示，由于几何形状和外部环境的对称性，我们取出试样的标距段部分，建立轴对称有限元模型，如图\autoref{Fig:FEM}所示，标距段长度为12mm，取试件的中心界面作为轴对称面。
 % 用以下物理边界条件进行辐射加热的TGMF试样几何形状的有限元分析：
 % 试件外表面为温度边界，随时间变化的温度分布可由试验测得，试件内表面为对流边界条件，对流换热系数由圆管强制对流换热公式计算，需要试验测量冷却空气的密度、温度和体积流量。由于试件的对称性，中心对称界面可假设为绝热边界，试件的上边界认为是热传导边界，对于热辐射，取试件表面的发射率为$\varepsilon=0.75$。
 The geometry of the TGMF specimen is shown in \autoref{Fig:IN718_Axial_Specimen_TGMF}, because of the symmetry of the geometry and the external environment, we took out the gauge section of the specimen and created an axisymmetric finite element model. As shown in \autoref{Fig:FE_model}, the gauge length is 12 mm, and the center cross-section of the specimen is taken as the symmetric plane.
-The outer surface of the specimen is defined as a temperature boundary condition. The temperature distribution of the outer surface was measured during the tests. The inner surface of the specimen is considered as a convection boundary condition. The inner surface of the specimen is considered as a convection boundary condition. The convective heat transfer coefficient can be calculated by an empirical formula for turbulent flow in tubes. The density, temperature and volume flow of the cooling air need to be measured. The specimen is symmetric about its central cross-section. Therefore, only half of the specimen is modeled, and a symmetry boundary condition is applied.
+The outer surface of the specimen is defined as a temperature boundary condition. The temperature distribution of the outer surface was measured during the tests. The inner surface of the specimen is considered as a convection boundary condition. The convective heat transfer coefficient can be calculated by an empirical formula for turbulent flow in tubes. The density, temperature and volume flow of the cooling air need to be measured. The specimen is symmetric about its central cross-section. Therefore, only half of the specimen is modeled, and a symmetry boundary condition is applied.
 The upper surface of the model is considered as a thermal conduction boundary. For radiation calculations, the emissivity of the surface of the specimen is defined as 0.75.
 
 \begin{figure}[!htp]
-  \centering{\includegraphics[width=10cm]{FE_model.pdf}}
+  \centering{\includegraphics[width=9cm]{FE_model.pdf}}
   \caption{Schematic diagram of the finite element model.}
   \label{Fig:FE_model}
 \end{figure}
@@ -447,7 +471,7 @@ Table \autoref{tab:SutherlandConstant} shows the Sutherland's constant and refer
 \begin{table}[htbp]
   \centering
   \caption{Sutherland's constant and reference values of the air.}
-    \begin{tabular}{p{2cm}p{2cm}p{2cm}p{3cm}}
+    \begin{tabular}{p{1.5cm}p{1.5cm}p{1.5cm}p{2cm}}
     \toprule
     Gas   & $C$ [K] & $T_0$ [K] & $\mu_0$ [$\rm{Pa\cdot s}$] \\
     \midrule
@@ -506,7 +530,7 @@ According to the measurement results of the sensors, the average pressure and te
 \subsection{Computational results}
 % 图\autoref{Fig:plot_temperature_along_gauge_length}为试件内、外表面温度和轴向应力在标距段内沿轴向的分布，横坐标为距离试件中心截面的距离，在TGMF-IP循环过程中，图中所示的温度与应变为温度最高点（650$^{\circ}$C）时的值。
 % 此时，试件外表面与内表面的温差为12.5$^{\circ}$C，
-\noindent
+
 The computational results are shown in this section. \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} (a) and (c) show the experimental and computational stress-strain responses of the TC-IP-TGMF and TC-OP-TGMF tests, respectively. The vertical coordinates are the nominal stress, and the horizontal coordinates are the nominal mechanical strain at the center cross-section of the specimen. Because of the thermal gradient, the cyclic plastic evolutions were asymmetric in the gauge section of the specimen during the TGMF tests. In \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} (a) and (c), additional tensile strains were observed from the computational results of the TC-IP-TGMF tests, and additional compressive strains were found from the computational results of the TC-OP-TGMF tests. \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} (b) and (d) show the experimental and computational peak, valley and mean nominal stresses of the TC-IP-TGMF and TC-OP-TGMF tests, respectively. The comparison of the experimental and computational results revealed that the proposed constitutive model could describe elastic-plastic mechanical behavior under the thermal gradient mechanical loading conditions. Therefore, the computed local stress-strain responses were used for the life assessment of TGMF.
 
 \begin{figure*}[htbp]
@@ -530,15 +554,15 @@ The computational results are shown in this section. \autoref{Fig:plot_exp_fatig
 
 \begin{figure*}[htbp]
   \centering{\includegraphics[width=14cm]{FEM_result.pdf}}
-  \caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^{\circ}$C) during the TC-IP-TGMF test with the mechanical strain amplitude of 0.8\%.}
+  \caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^{\circ}$C) during the TC-IP-TGMF test with the mechanical strain amplitude of 0.8\% (NT11: temperature in ℃, S22: axial stress in MPa, S33: hoop stress in MPa).}
   \label{Fig:FEM_result}
 \end{figure*}
 
-\begin{figure*}[htbp]
-  \centering{\includegraphics[width=15cm]{plot_temperature_along_gauge_length.pdf}}
+\begin{figure}[htbp]
+  \centering{\includegraphics[width=8cm]{plot_temperature_along_gauge_length.pdf}}
   \caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^\circ$C) during the TC-IP-TGMF test with the mechanical strain amplitude of 0.8\%.}
   \label{Fig:plot_temperature_along_gauge_length}
-\end{figure*}
+\end{figure}
 
 \begin{figure*}[htbp]
   \centering{\includegraphics[width=15cm]{plot_temperature_along_radial_direction.pdf}}
@@ -548,9 +572,9 @@ The computational results are shown in this section. \autoref{Fig:plot_exp_fatig
 
 Under TC-IP-TGMF loading condition, the mechanical load and temperature simultaneously reach their respective maximum or minimum values. \autoref{Fig:FEM_result} shows the computational results of TC-IP-TGMF test with the mechanical strain amplitude of 0.8\%. The maximum temperature occurs at the point B in \autoref{Fig:FE_model}.
 \autoref{Fig:plot_temperature_along_gauge_length} shows the temperature and axial stress distribution of the internal and external surface along the axial direction when the temperature reached its maximum value during the TC-IP-TGMF cycle.
-The horizontal axis is the distance from the center section of the test specimen ($y$-axis in \autoref{Fig:FE_model}). The temperature gradients induce an axial stress deviation of ca. 25 MPa between the inner and outer surface of the specimen.
+The abscissa axis is the distance from the center section of the test specimen ($y$-axis in \autoref{Fig:FE_model}). The temperature gradients induce an axial stress deviation of ca. 25 MPa between the inner and outer surface of the specimen.
 The temperature and axial stress distribution of the internal and external surface along the radial direction are displayed in \autoref{Fig:plot_temperature_along_radial_direction}, when the temperature reached its maximum value during the TC-IP-TGMF cycle.
-The horizontal axis is the distance from the center axis to the outer surface of the test specimen ($r$-axis in \autoref{Fig:FE_model}).
+The abscissa axis is the distance from the center axis to the outer surface of the test specimen ($r$-axis in \autoref{Fig:FE_model}).
 The temperature gradients induce a radial stress deviation of ca. 50 MPa between the inner and outer surface of the specimen.
 
 
@@ -560,14 +584,12 @@ The temperature gradients induce a radial stress deviation of ca. 50 MPa between
 % 通过裂纹扩展区域的形貌和疲劳辉纹的方向我们可以推测出裂纹萌生的位置，如图\autoref{Fig:crack_initiation}所示，图中箭头所示为裂纹萌生的位置。我们可以观测到显著的稳态裂纹扩展和裂纹失稳扩展区域，对于650$^{\circ}$C等温疲劳（IF）试验，试样断口比TMF和TGMF断口更加平整，疲劳扩展区面积较大。
 % 对于所有的等温疲劳（IF）和热机械疲劳（TMF）试验，疲劳裂纹都萌生于试样表面或近表面的缺陷处以及优先氧化区域并以沿枝晶和穿晶混合的方式在晶粒内部扩展。
 % 虽然温度梯度导致了TGMF试样外表面附加了一定程度的压应力，但对于本文中的试验参数，所有的热梯度机械疲劳（TGMF）试验，疲劳裂纹都萌生于试样外表面。
-\noindent
+
 We can infer the location of the crack initiation by the fractography of the crack propagation area and the direction of the fatigue striation.
 Typical fractographs in the region of crack initiation are shown in \autoref{Fig:crack_initiation_TGMF}, and the arrows show the locations of the crack initiation. For both TC-IP-TGMF and TC-OP-TGMF loadings, crack initiation, and subsequent failure have been identified as being initiated at the outer surface of the specimen.
 
-\autoref{Fig:fatigue_striations_TGMF} shows the fractography of stable crack propagation.
-For the TGMF tests, the SEM investigations reveal that the dominant failure mechanism is changing with the phase angle of the thermal loading and mechanical loading, $\theta_{T-\varepsilon}$.
+\autoref{Fig:fatigue_striations_TGMF} shows the fractography of stable crack propagation. For the TGMF tests, the SEM investigations reveal that the dominant failure mechanism is changing with the phase angle of the thermal loading and mechanical loading, $\theta_{T-\varepsilon}$.
 In \autoref{Fig:fatigue_striations_TGMF}(a) and (b), the fracture surfaces under TC-IP-TGMF loading displays evident grain boundaries and slight fatigue striations. Consequently, it can be concluded that a mixture of transgranular and intergranular fracture mode is present in the TC-IP-TGMF test, and the intergranular fracture plays a dominant role.
-\autoref{Fig:crack_propagation}(c) and (d) show the stable crack propagation regions under TC-OP-TGMF loading with the mechanical strain amplitude of 0.65\% and 0.50\%, respectively.
 Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striations_TGMF}(c) and (d), which reveal transgranular crack growth is predominant during out-of-phase thermomechanical tests.
 
 \begin{figure*}[ht]
@@ -576,21 +598,11 @@ Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striation
       \put(0,65){\fcolorbox{white}{white}{(a)}}
       \put(70,40){\color{white}\thicklines\vector(3,-1){20}}
     \end{overpic}
-    \begin{overpic}[width=8.0cm]{7301-7.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(b)}}
-      \put(65,35){\color{white}\thicklines\vector(-2,1){18}}
-    \end{overpic}\\
-
     \begin{overpic}[width=8.0cm]{7207-1.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
       \put(60,40){\color{white}\thicklines\vector(1,-1){13}}
     \end{overpic}
-    \begin{overpic}[width=8.0cm]{7209-1.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(d)}}
-      \put(60,40){\color{white}\thicklines\vector(1,-4){7}}
-    \end{overpic}
-
-  \caption{Locations of crack initiation from the TGMF tests: (a) TC-IP-TGMF 0.65\%, (b) TC-IP-TGMF-TBC 0.65\%, (c) TC-OP-TGMF 0.65\%, (d) TC-OP-TGMF 0.50\%. Arrows denote the crack initiation locations.}
+  \caption{Locations of crack initiation from the TGMF tests: (a) TGMF-IP 0.65\%, (b) TGMF-OP 0.65\%. Arrows denote the crack initiation locations.}
   \label{Fig:crack_initiation_TGMF}
 \end{figure*}
 
@@ -598,84 +610,63 @@ Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striation
 % 高温氧化损伤的原因。
 % 而三种载荷条件下的瞬间失稳断裂区则非常相似，与拉伸试样的断口形貌相似。
 
-\begin{figure*}[ht]
-  \centering
-    \begin{overpic}[width=8.0cm]{7206-2.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(a)}}
-      \put(25,10){\color{white}\thicklines\vector(-2,1){20}}
-
-      \put(66,50){\color{yellow}\thicklines\circle{15}}
-      \put(55,35){\color{yellow}Grain Boundaries}
-      \put(48,24){\color{white}\thicklines\circle{15}}
-      \put(55,12){\color{white}Fatigue Striations}
-    \end{overpic}
-    \begin{overpic}[width=8.0cm]{730109.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(b)}}
-      \put(15,30){\color{white}\thicklines\vector(-1,-2){10}}
-      \put(66,50){\color{yellow}\thicklines\circle{15}}
-      \put(55,62){\color{yellow}Grain Boundaries}
-      \put(48,34){\color{white}\thicklines\circle{15}}
-      \put(55,22){\color{white}Fatigue Striations}
-    \end{overpic}\\
-
-    \begin{overpic}[width=8.0cm]{7207-103.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(c)}}
-      \put(20,10){\color{white}\thicklines\vector(-1,1){15}}
-      \put(48,54){\color{white}\thicklines\circle{20}}
-      \put(55,42){\color{white}Fatigue Striations}
-    \end{overpic}
-    \begin{overpic}[width=8.0cm]{7209-105.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(d)}}
-      \put(10,25){\color{white}\thicklines\vector(0,-3){15}}
-      \put(38,30){\color{white}\thicklines\circle{30}}
-      \put(68,30){\color{white}\thicklines\circle{30}}
-      \put(35,45){\color{white}Fatigue Striations}
-    \end{overpic}
-
-  \caption{Fractographs of fracture surfaces from the TGMF tests: (a) TC-IP-TGMF 0.65\%, (b) TC-IP-TGMF-TBC 0.65\%, (c) TC-OP-TGMF 0.65\%, (d) TC-OP-TGMF 0.50\%. Arrows show the crack propagation direction.}
+\begin{figure*}[htbp]
+  \centering{\includegraphics[width=16cm]{Fractography.pdf}}
+  \caption{Fractographs of fracture surfaces from the area of stable crack propagation.}
   \label{Fig:fatigue_striations_TGMF}
 \end{figure*}
 
 \newpage
 \section{Fatigue life assessment of TGMF}
 \subsection{Fatigue life prediction based on the conventional fatigue models}
-\noindent
+
+\begin{equation}
+\begin{aligned}
+\left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
+= \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} + 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\end{aligned}
+\label{Equ:TMF_model}
+\end{equation}
+
 As introduced in chapter 6, the Brown-Miller's model, Fatemi-Socie's model, Smith-Watson-Topper's model, Chu-Conle-Bonnen's model, Liu's Energy model and Zamrik's model are tried to evaluate the thermal gradient mechanical fatigue.
 \autoref{Fig:life_prediction_TGMF} shows the comparison between predicted and experimental fatigue life of the TC-IF, TC-IP, TC-OP, TC-IP-TGMF and TC-OP-TGMF tests. It is observed that the predicted fatigue lives of all models are too much non-conservative for the thermal gradient mechanical fatigue tests.
 \begin{figure*}
    \centering
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-BM.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-BM.pdf}
      \put(65,20){\fcolorbox{white}{white}{(a) BM}}
    \end{overpic}
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-FS.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-FS.pdf}
      \put(70,20){\fcolorbox{white}{white}{(b) FS}}
    \end{overpic}
 
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-SWT.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-SWT.pdf}
      \put(70,20){\fcolorbox{white}{white}{(c) SWT}}
    \end{overpic}
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-Chu.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-Chu.pdf}
      \put(70,20){\fcolorbox{white}{white}{(d) CCB}}
    \end{overpic}
 
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-Liu1.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-Liu1.pdf}
      \put(70,20){\fcolorbox{white}{white}{(e) Liu I}}
    \end{overpic}
-   \begin{overpic}[width=7.5cm]{NF-NP-TGMF-Study.pdf}
+   \begin{overpic}[width=7.0cm]{NF-NP-TGMF-Study.pdf}
      \put(50,20){\fcolorbox{white}{white}{(f) Present TMF}}
    \end{overpic}
   \caption{Comparison between predicted fatigue life and experimental results of multiaxial thermomechanical fatigue tests. (a) Brown-Miller model; (b) Fatemi-Socie model; (c) Smith-Watson-Topper model; (d) Chu-Conle-Bonnen model; (e) Liu Tension Energy model; (f) Present TMF model (Equation (\eqref{Equ:TMF_model})).}
   \label{Fig:life_prediction_TGMF}
 \end{figure*}
 
-According to the analysis in chapter 6, the suggested TMF model (Equation (\autoref{Equ:TMF_model})) has good agreement in the prediction of multiaxial TMF tests.
+According to the analysis in chapter 6, the suggested TMF model (Equation \eqref{Equ:TMF_model}) has good agreement in the prediction of multiaxial TMF tests.
 % 图\autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}分别比较了TMF和TGMF在同相位和反相位时的疲劳寿命。
 % 可以发现，同相位和反相位的情况下TGMF寿命都要低于TMF寿命，由于两组试验的温度循环相同，唯一不同的是试件径向方向的温度梯度，因此可以认为温度梯度对材料寿命有不利的影响，同时比较图\autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a)和(b)，在同相位的情况下，温度梯度导致的寿命减少比反向位试验更加明显。
 % 根据上一节的分析可知，Chu能量模型在TMF-IP,TMF-OP和TGMF-OP的预测上有比较好的结果，表\autoref{Tab:FatigueCoefficient}列举出了Chu模型计算过程中的参数，其中$\phi$为临界面与中心截面的夹角，$\sigma_{n,max}$为该临界面上在循环过程中的最大正应力，$T$,$\partial T/\partial y$和$\partial T/\partial r$为最大正应力处所对应的温度与温度梯度。
 % 在Chu能量模型的基础上，增加温度梯度的修正项，新的寿命模型如下：
-Therefore, based on the suggested TMF model, a correction term of the temperature gradient is multiplied on the right-hand side of Equation (\autoref{Equ:TMF_model}). The fatigue life model for TGMF is suggested as:
+Therefore, based on the suggested TMF model, a correction term of the temperature gradient is multiplied on the right-hand side of Equation \eqref{Equ:TMF_model}. The fatigue life model for TGMF is suggested as:
 \begin{equation}
-f\left( {T,\nabla T} \right)\left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right) = \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}.
+\begin{aligned}
+f\left( {T,\nabla T} \right)\left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right) \\ 
+= \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}.
+\end{aligned}
 \label{Equ:TGMF_model}
 \end{equation}
 The correction term of the temperature gradient is defined as:
@@ -688,12 +679,12 @@ mean-squared error, and $g$ is determined as 3.47 mm in the present work. ${\lef
 \begin{equation}
 \left\| {\nabla T} \right\| = \sqrt {{{\left( {\frac{{\partial T}}{{\partial x}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial y}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial z}}} \right)}^2}}.
 \end{equation}
-Considering Equation (\eqref{Equ:TGMF_model}) and (\eqref{Equ:TGMF_term}), when $\left\| {\nabla T} \right\|=0$, $f\left( {T,\nabla T} \right)=1$, then Equation (\eqref{Equ:TGMF_model}) reduce to Equation (\eqref{Equ:TMF_model}).
+Considering Equation \eqref{Equ:TGMF_model} and \eqref{Equ:TGMF_term}, when $\left\| {\nabla T} \right\|=0$, $f\left( {T,\nabla T} \right)=1$, then Equation \eqref{Equ:TGMF_model} reduce to Equation \eqref{Equ:TMF_model}.
 
-Table \autoref{Tab:Temperature_gradient} lists the parameters in the calculation of the proposed TGMF model, where $\varphi$ is the angle of the critical plane, $T_{\sigma_{\rm n,\max}}$ is the maximum normal stress during the cycle on the critical plane, $T_{\sigma_{\rm n,\max}}$, $\partial T/\partial y$ and $\partial T/\partial r$ are the temperature and temperature gradients corresponding to the maximum normal stress location.
-\autoref{Fig:TGMF_model} shows the fatigue life assessment of the TGMF tests. As shown in \autoref{Fig:TGMF_model}(a), the fatigue damage parameters vs. experimental fatigue lives is illustrated. The fatigue damage parameters show good correlation with experimental fatigue lives of TGMF-IP and TGMF-OP tests. In \autoref{Fig:TGMF_model}(b), one can observe that based on the proposed model (Equation (\autoref{Equ:TGMF_model})), most of the predicted fatigue lives are within the scatter band with a factor of 2. It shows a good agreement with the experimental and predicted fatigue lives.
+\autoref{Tab:Temperature_gradient} lists the parameters in the calculation of the proposed TGMF model, where $\varphi$ is the angle of the critical plane, $T_{\sigma_{\rm n,\max}}$ is the maximum normal stress during the cycle on the critical plane, $T_{\sigma_{\rm n,\max}}$, $\partial T/\partial y$ and $\partial T/\partial r$ are the temperature and temperature gradients corresponding to the maximum normal stress location.
+\autoref{Fig:TGMF_model} shows the fatigue life assessment of the TGMF tests. As shown in \autoref{Fig:TGMF_model}(a), the fatigue damage parameters vs. experimental fatigue lives is illustrated. The fatigue damage parameters show good correlation with experimental fatigue lives of TGMF-IP and TGMF-OP tests. In \autoref{Fig:TGMF_model}(b), one can observe that based on the proposed model (Equation \eqref{Equ:TGMF_model}), most of the predicted fatigue lives are within the scatter band with a factor of 2. It shows a good agreement with the experimental and predicted fatigue lives.
 
-\autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} shows a quantitative assessment of TGMF life prediction results. As introduced in chapter 6, two statistical parameters ${T_{\rm N}}$ (Equation (\autoref{Equ:TN})) and ${T_{\rm RMS}}$ (Equation (\autoref{Equ:TRMS})) are used to evaluate the conformity of the predicted and experimental TGMF lives. The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the present TGMF model generates the best mean value in comparing with all other models, while the present TGMF model possesses the least scattering. Combining the two parameters, the present model provides the best result in predicting the fatigue life for all experiments.
+\autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} shows a quantitative assessment of TGMF life prediction results. As introduced in chapter 6, two statistical parameters ${T_{\rm N}}$ (Equation \eqref{Equ:TN}) and ${T_{\rm RMS}}$ (Equation \eqref{Equ:TRMS}) are used to evaluate the conformity of the predicted and experimental TGMF lives. The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the present TGMF model generates the best mean value in comparing with all other models, while the present TGMF model possesses the least scattering. Combining the two parameters, the present model provides the best result in predicting the fatigue life for all experiments.
 
 \begin{table*}[htbp]
   \centering
@@ -730,6 +721,30 @@ Table \autoref{Tab:Temperature_gradient} lists the parameters in the calculation
   \label{Fig:TGMF_model}
 \end{figure}
 
+\autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} shows a quantitative assessment of fatigue life prediction results. According to the Refs. \cite{KAROLCZUK201439,WALAT201473,SKIBICKI201718}, two statistical parameters are used to evaluate the conformity of the predicted $N_{\rm p}$ and experimental $N_{\rm f}$ fatigue lives. The mean scatter of fatigue life,
+\begin{equation}
+{T_{\rm N}} = {10^{\bar E}}
+\label{Equ:TN}
+\end{equation}
+with
+\begin{equation}
+\bar E = \frac{1}{n}\sum\limits_{i = 1}^n {\log \left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)},
+\end{equation}
+illustrates the comparison of the mean value of experimental and predicted lives. Above $n$ is the total number of the compared results, and the subscript $i$ indicates the $i$th. result. $T_{\rm N} = 1$ shows the mean value of experimental and predicted lives are identical. $T_{\rm N} > 1$ means the predicted fatigue lives are conservative, and $T_{\rm N} < 1$ means the predicted fatigue lives are non-conservative. The statistical parameter $T_{\rm N}$ does not provide any information on the dispersion of fatigue life.
+
+The other parameter is the root mean square error of the fatigue life,
+\begin{equation}
+{T_{\rm RMS}} = {10^{{E_{\rm RMS}}}},
+\label{Equ:TRMS}
+\end{equation}
+with
+\begin{equation}
+{E_{\rm RMS}} = \sqrt {\frac{1}{n-1}\sum\limits_{i = 1}^n {\left[{{\log }}\left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right) \right]^2}}.
+\end{equation}
+The root mean square error is applied to measure the differences between fatigue lives obtained from predictions and the results from experiments. $T_{\rm RMS} = 1$ represents the mean value and the statistical dispersion of experimental and predicted lives are equal. In other cases, $T_{\rm RMS}$ is larger than 1, and the larger value of $T_{\rm RMS}$ represents the more dispersion between the experimental and predicted lives.
+
+The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the Zamrik model generates the best mean value in comparing with all other models, while the present model possesses the least scattering. Combining the two parameters, the present model provides the best result in predicting the fatigue life for all experiments.
+
 \begin{figure}[htbp]
   \centering
   \begin{overpic}[width=8.0cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TN.pdf}
@@ -740,40 +755,6 @@ Table \autoref{Tab:Temperature_gradient} lists the parameters in the calculation
   \end{overpic}
   \caption{The quantitative evaluation of the TGMF life prediction results: (a) $T_{\rm{N}}$, (b) $T_{\rm{RMS}}$.}
   \label{Fig:plot_fatigue_life_quantitative_evaluation_tgmf}
-\end{figure}
-
-\newpage
-\subsection{Effect of the thermal barrier coating on the lifetime of TGMF}
-\noindent
-% 热障涂层涂覆于航空发动机和燃气轮机高温部件表面，具有防止高温腐蚀、延长热端部件使用寿命、提高发动机功率和减少燃油消耗等优点。通常典型的热障涂层包括表面陶瓷层(TC：top coat)和金属粘结层(BC：bond coat)。在服役过程中，粘结层会发生氧化，在粘结层和陶瓷层界面形成厚度为1~10$\mu$m的热生长氧化物(TGO：thermally grown oxide)。TGO的形成是一个体积膨胀过程，界面会限制这种体积变化，因而在TGO内部会随之产生应力。而且，陶瓷层与金属基底的热膨胀系数相差较大，在热循环过程中会在热载荷的作用下产生较大的热应力，从而在界面缺陷处引起应力集中，促进裂纹的萌生与扩展。
-Thermal barrier coating (TBC) is usually applied to metallic surfaces, such as on gas turbine and aero-engine components, operating at elevated temperatures. The thermal barrier coatings can reduce the component temperatures and protect the structural alloys against oxidation and corrosion.
-There were many studies \cite{BARTSCH2008211, GHASEMINEZHADKOUSHALI201713140, EBRAHIMI20171, SULAK2018347, ERIKSSON2013230, BOSE2018199} on the damage mechanism of the thermal barrier coatings. However, most of the studies were based on the thermal fatigue or the isothermal fatigue tests, and the effect of the TBC on the lifetime under thermal gradient mechanical fatigue loading is not carefully studied.
-
-The lifetime of the thermal gradient mechanical fatigue with TBC was investigated experimentally in this section.
-The TBCs in the investigation were coated on the tubular specimens by the air-plasma-sprayed (APS) technology, and the thickness of the TBCs was about 150 $\mu m$. Due to the limitation of researching time, only two TGMF tests with TBC were finished under in-phase thermal gradient mechanical loadings. During the tests, the temperatures on the outer surface of the specimen were measured by the thermocouples, and the temperature interval was from 300$^\circ$C to 650$^\circ$C, which is as same as the temperature interval in the TGMF tests without the TBC. The TBC reduced the temperature of the internal alloy. Therefore, during the TGMF tests, the alloy temperature of the specimen with TBC are lower than the temperature without TBC.
-
-Both specimens under TC-IP-TMGF-TBC loading were observed to fracture at the middle cross-section. Spallations of the TBC from the base alloy were found, as shown in \autoref{Fig:TGMF_TBC}.
-In \autoref{Fig:TGMF_TBC}, the fractographs in the region of stable crack propagation is shown, and the
-fracture surface of the TC-IP-TMGF-TBC specimen displays clear grain boundaries and slight fatigue striations. The investigations revealed that a mixture of transgranular and intergranular fracture mode was present. In chapter 6, the transgranular fracture is found to occur mainly under low temperature, and intergranular fracture is investigated to occur mainly under high temperature and high tensile stress.
-% Consequently, it can be concluded that the difference between the
-\autoref{Fig:plot_exp_fatigue_life_TGMF-TBC} shows that the fatigue life of TC-IP-TMGF-TBC is evident longer than the fatigue life of TC-IP-TMGF. The temperature reduction by the TBC is considered to affect the lifetime of the TGMF tests.
-
-% These 100 $\mu$m to 2 mm coatings serve to insulate components from large and prolonged heat loads by utilizing thermally insulating materials which can sustain an appreciable temperature difference between the load-bearing alloys and the coating surface. In doing so, these coatings can allow for higher operating temperatures while limiting the thermal exposure of structural components, extending part life by reducing oxidation and thermal fatigue. In conjunction with active film cooling, TBCs permit working fluid temperatures higher than the melting point of the metal airfoil in some turbine applications. Due to increasing demand for higher engine operation (efficiency increases at higher temperatures), better durability/lifetime, and thinner coatings to reduce parasitic weight for rotating/moving components, there is significant motivation to develop new and advanced TBCs.
-
-\begin{figure}[!htp]
-  \centering
-  \begin{overpic}[width=8.0cm]{TGMF_TBC.pdf}
-  \end{overpic}
-  \caption{Fracture surface of the TBC-coated specimen under mechanical strain amplitude $\Delta\varepsilon/2$=0.7\%. }
-  \label{Fig:TGMF_TBC}
-\end{figure}
-
-\begin{figure}[!htp]
-  \centering
-  \begin{overpic}[width=8.0cm]{plot_exp_fatigue_life_TGMF-TBC.pdf}
-  \end{overpic}
-  \caption{Comparison of the fatigue lifetime under in-phase TGMF loading conditions with and without TBC.}
-  \label{Fig:plot_exp_fatigue_life_TGMF-TBC}
 \end{figure}
 
 \section*{Acknowledgement:}
