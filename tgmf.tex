@@ -124,6 +124,8 @@ Thermomechanical fatigue (TMF) \sep multiaxial loading \sep non-proportional loa
 \end{frontmatter}
 
 \section{Introduction}
+The nickel-base superalloy Inconel 718 is widely used in the gas turbine engines \cite{Pollock2006}. In the past decades, isothermal fatigue (IF) tests were commonly used to predict the lifetime of the gas turbine components. Numerous investigations on the elevated temperature LCF of the nickel-based superalloy were performed \cite{Koch85, Morrow88, Mahobia2014, Chen2016}. However, a number of studies showed that the thermomechanical fatigue (TMF) loading also influenced the fatigue damage mechanisms significantly \cite{Evans2008, Bauer2009, Kulawinski2015, SCHLESINGER2017242, DENG2019813, SUN2019228}. Thermomechanical fatigue (TMF) means the mechanical loads and temperature are varying simultaneously. For different phases between the cyclic mechanical loading and temperature, the TMF lifetime can be shorter or longer than the isothermal one.
+
 The turbine blades are mainly cooled by air film and internal flow, and the turbine discs are usually cooled by the secondary flow.
 In the course of service, the turbine blades are not only subjected to the large alternating loads but also subjected to the impact of high temperature and high-pressure gas and the effect of cooling air on the surface and inside of the blades, respectively. So the turbine blades suffer from the thermomechanical fatigue damage caused by the change of load and temperature.
 Moreover, the temperature gradient brings about multiaxial loads to the parts.
@@ -669,17 +671,87 @@ Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striation
 
 \newpage
 \section{Fatigue life assessment of TGMF}
-\subsection{Fatigue life prediction based on the conventional fatigue models}
 
+In the present section, several known fatigue models are selected to evaluate the fatigue life of the nickel-based superalloy under both TMF and TMGF loading conditions. Combined with the critical plane concept the models are well developed and verified for isothermal fatigue.
+
+\subsection{Brown-Miller Model}
+Based on the critical plane concepts \cite{Brown2006}, Wang and Brown \cite{Wang1993} proposed that the Kandil, Brown and Miller fatigue model \cite{Kandil1982} can be reformulated in the form of the equivalent shear strain amplitude, as
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max}}}}{2} + S\Delta {\varepsilon _{\rm n}},
+\label{Equ:ShearStrainBM}
+\end{equation}
+where ${{\Delta \hat \gamma }}/{2}$ is the equivalent shear strain range \cite{Wang1993}. $\Delta {\varepsilon _{\rm n}}$ represents the normal strain acting on the plane with the maximum shear strain range $\Delta {\gamma _{\max}}$. The material dependent parameter $S$ represents the influence of the normal strain on the crack propagation.
+
+\subsection{Fatemi-Socie Model}
+Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Eq. (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
+The equivalent shear strain amplitude is defined as
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{\rm n,\max}}}}{{{\sigma _{\rm y}}}}} \right),
+\end{equation}
+where
+$\sigma _{\rm n,\max}$ is the maximum normal stress on the critical plane suffering from the maximum shear strain range $\Delta {\gamma _{\max}}$, and $k$ is a material parameter. The sensitivity of the material to the normal stress is reflected in the ratio $k/\sigma _{\rm y}$.
+
+\subsection{Smith-Watson-Topper Model}
+The SWT model \cite{smith1970stress} can be extended to multiaxial fatigue assessment based on the principal strain range and the maximum stress on the plane of the principal strain range, that is,
+\[
+{\sigma _{\rm n, \max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} + {\sigma '_{\rm f}}{\varepsilon '_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\]
+
+\subsection{Liu's Virtual Strain Energy Models}
+The virtual tensile strain energy based model suggested by Liu \cite{Liu1993} can be written as
+\begin{eqnarray}
+{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)_{\max }} + \left( {\Delta \tau \Delta \gamma } \right) &=& \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}}
+\\
+& & + 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\end{eqnarray}
+Above the critical plane is defined from maximizing the virtual tensile strain energy ${\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}}$, termed as Liu I model. 
+
+\subsection{Chu-Conle-Bonnen Model}
+An additional energy-based fatigue model suggested by Chu et al. \cite{Chu1993} is expressed as
+\begin{eqnarray}
+{\left( {{\tau _{\rm n}}\frac{{\Delta \gamma }}{2} + {\sigma _{\rm n }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} &=& 1.02\frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} \\
+&& + 1.04{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\end{eqnarray}
+Note the difference in the strain energy in comparing with the Liu's models. The critical plane should provide the maximum strain energy in the whole loading range and in all directions.
+ 
+\subsection{Zamrik Model}
+
+Zamrik and Renauld \cite{Zamrik2000} suggested an explicit fatigue model incorporating the effect of creep, environment, and temperature for thermomechanical fatigue, as
+\begin{equation}
+\begin{aligned}
+{N_{\rm f}} = A{\left[ {\left( {\frac{{{\varepsilon _{\rm eq,ten}}}}{{{\varepsilon _{\rm f}}}}} \right)\left( {\frac{{{\sigma _{\rm eq,\max }}}}{{{\sigma _{\rm ult}}}}} \right)} \right]^B} 
+{\left( {1 + \frac{{{t_{\rm h}}}}{{{t_{\rm c}}}}} \right)^C}\cdot \\
+\exp \left[ {\frac{{ - Q}}{{R\left( {{T_{\max }} - {T_0}} \right)}}} \right],
+\end{aligned}
+\label{Equ:StudyModel}
+\end{equation}
+where $\sigma _{\rm eq,\max }$ denotes the maximum equivalent tensile stress in the half-life hysteresis loop. $\varepsilon _{\rm eq,ten}$ is the maximum equivalent strain in the half-life hysteresis loop for which the stress is tensile. $\sigma _{\rm ult}$ is the ultimate strength, $\varepsilon _{\rm f}$ is the fracture strain. $t_{\rm h}$ is the compressive hold-time. $t_{\rm c}$ is the total cycle time including hold-time. $Q$ is the activation energy for high temperature damage. $R$ is the gas constant. $T_{\max}$ is the maximum temperature in TMF cycle and $T_0$ is the reference temperature. $A$, $B$ and $C$ are model coefficients. In the present work, the TMF tests did not have the holding time, i.e., $t_{\rm c}=0$.
+
+\subsection{TMF Model}
+Based on the Liu's virtual tension strain energy model, Sun \cite{SUN2019228} introduced a fatigue model for the multi-axial TMF life prediction, which given by,
 \begin{equation}
 \begin{aligned}
 \left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
-= \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} + 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+= \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} + 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}},
 \end{aligned}
 \label{Equ:TMF_model}
 \end{equation}
+where $A$ is defined as
+\begin{equation}
+A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \left( {\frac{{ - Q\left( t \right)}}{{RT\left( t \right)}}} \right){\rm{d}}t} } \right]^k},
+\label{Equ:A}
+\end{equation}
+in which $\eta \left( t \right)$ is stress triaxiality, $R$ is the ideal gas constant ($8.31\times10^{-3}$ kJ/mol$\cdot$K), the time integral is from the start time $t_0$ of the cycle to the end time $t_0 + t_{cyc}$, $t_{cyc}$ is the period of the tests, $C$ and $k$ are material constants.
+In Eq. (\ref{Equ:A}), $Q$ presents \cite{Warren2006,Warren2008}
+\begin{equation}
+Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _{\rm n}}\left( t \right)\left( {1 - \frac{{{\sigma _{\rm n}}\left( t \right)}}{{2{\sigma _{\rm ult}}}}} \right),
+\label{Equ:creep_activation_energy}
+\end{equation}
+where $Q_0$ is the the intrinsic activation energy, $\upsilon _0^*$ represents the intrinsic activation volume, $\sigma_{\rm ult}$ is the ultimate stress at the maximum temperature and $\sigma_{\rm n}(t)$ is the normal stress of the critical plane.
+As given in \cite{Warren2008}, the activation energy $Q_0$ is set to 240 kJ/mol and the intrinsic activation volume $\upsilon _0^*$ is $3.51\times10^{-4}$ $\rm{m}^{3}/\rm{mol}$. The ultimate strength $\sigma_{\rm ult}$ of Inconel 718 at 650$^\circ$C was measured as $1305$ MPa in monotonic tensile tests. The coefficients $k$, $B$ and $C$ are determined from minimizing the life prediction mean square error. Finally, $k$ equals 1.2, $B$ is 0.49, and $C$ is set to $1.29\times10^{12}$ s$^{-1}$.
 
-As introduced in chapter 6, the Brown-Miller's model, Fatemi-Socie's model, Smith-Watson-Topper's model, Chu-Conle-Bonnen's model, Liu's Energy model and Zamrik's model are tried to evaluate the thermal gradient mechanical fatigue.
+\subsection{Fatigue life prediction based on the conventional fatigue models}
+The Brown-Miller's model, Fatemi-Socie's model, Smith-Watson-Topper's model, Chu-Conle-Bonnen's model, Liu's Energy model and TMF model are tried to evaluate the thermal gradient mechanical fatigue.
 \autoref{Fig:life_prediction_TGMF} shows the comparison between predicted and experimental fatigue life of the IF, TMF-IP, TMF-OP, TGMF-IP and TGMF-OP tests. It is observed that the predicted fatigue lives of all models are too much non-conservative for the thermal gradient mechanical fatigue tests.
 \begin{figure*}
    \centering
@@ -701,18 +773,18 @@ As introduced in chapter 6, the Brown-Miller's model, Fatemi-Socie's model, Smit
      \put(70,20){\fcolorbox{white}{white}{(e) Liu I}}
    \end{overpic}
    \begin{overpic}[width=7.0cm]{NF-NP-TGMF-Study.pdf}
-     \put(50,20){\fcolorbox{white}{white}{(f) Present TMF}}
+     \put(50,20){\fcolorbox{white}{white}{(f) TMF}}
    \end{overpic}
-  \caption{Comparison between predicted fatigue life and experimental results of multiaxial thermomechanical fatigue tests. (a) Brown-Miller model; (b) Fatemi-Socie model; (c) Smith-Watson-Topper model; (d) Chu-Conle-Bonnen model; (e) Liu Tension Energy model; (f) Present TMF model (Equation \eqref{Equ:TMF_model}).}
+  \caption{Comparison between predicted fatigue life and experimental results of multiaxial thermomechanical fatigue tests. (a) Brown-Miller model; (b) Fatemi-Socie model; (c) Smith-Watson-Topper model; (d) Chu-Conle-Bonnen model; (e) Liu Tension Energy model; (f) TMF model (Equation \eqref{Equ:TMF_model}).}
   \label{Fig:life_prediction_TGMF}
 \end{figure*}
 
-According to the analysis in chapter 6, the suggested TMF model (Equation \eqref{Equ:TMF_model}) has good agreement in the prediction of multiaxial TMF tests.
+It can be observed that the TMF model (Equation \eqref{Equ:TMF_model}) has the best agreement in the prediction of the TMF and TGMF tests.
 % 图\autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}分别比较了TMF和TGMF在同相位和反相位时的疲劳寿命。
 % 可以发现，同相位和反相位的情况下TGMF寿命都要低于TMF寿命，由于两组试验的温度循环相同，唯一不同的是试件径向方向的温度梯度，因此可以认为温度梯度对材料寿命有不利的影响，同时比较图\autoref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a)和(b)，在同相位的情况下，温度梯度导致的寿命减少比反向位试验更加明显。
 % 根据上一节的分析可知，Chu能量模型在TMF-IP,TMF-OP和TGMF-OP的预测上有比较好的结果，表\autoref{Tab:FatigueCoefficient}列举出了Chu模型计算过程中的参数，其中$\phi$为临界面与中心截面的夹角，$\sigma_{n,max}$为该临界面上在循环过程中的最大正应力，$T$,$\partial T/\partial y$和$\partial T/\partial r$为最大正应力处所对应的温度与温度梯度。
 % 在Chu能量模型的基础上，增加温度梯度的修正项，新的寿命模型如下：
-Therefore, based on the suggested TMF model, a correction term of the temperature gradient is multiplied on the right-hand side of Equation \eqref{Equ:TMF_model}. The fatigue life model for TGMF is suggested as:
+Therefore, based on the TMF model, a correction term of the temperature gradient is multiplied on the right-hand side of Equation \eqref{Equ:TMF_model}. The fatigue life model for TGMF is suggested as:
 \begin{equation}
 \begin{aligned}
 f\left( {T,\nabla T} \right)\left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right) \\ 
@@ -794,7 +866,7 @@ with
 \end{equation}
 The root mean square error is applied to measure the differences between fatigue lives obtained from predictions and the results from experiments. $T_{\rm RMS} = 1$ represents the mean value and the statistical dispersion of experimental and predicted lives are equal. In other cases, $T_{\rm RMS}$ is larger than 1, and the larger value of $T_{\rm RMS}$ represents the more dispersion between the experimental and predicted lives.
 
-The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the Zamrik model generates the best mean value in comparing with all other models, while the present model possesses the least scattering. Combining the two parameters, the present model provides the best result in predicting the fatigue life for all experiments.
+The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the present model generates the best mean value in comparing with all other models, while the present model possesses the least scattering. Combining the two parameters, the present model provides the best result in predicting the fatigue life for all experiments.
 
 \begin{figure}[htbp]
   \centering
