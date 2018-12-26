@@ -110,13 +110,14 @@
 \ead{yuan.huang@tsinghua.edu.cn}
 
 \begin{abstract}
-A radiation furnace was developed for the thermal gradients mechanical fatigue (TGMF). The heat transfer behavior of the radiation furnace was systematically studied by the experimental and analytical methods, to determine the optical structure and optimize the temperature cycling. The radiation furnace together with the loading, and cooling subsystems enables a cyclic and at the same time thermal and mechanical load with controlled temperature gradients on the wall of tubular specimens. The temperature gradient is achieved by heating the outer surface with the radiation furnace that emits concentrated radiation and simultaneously cooling the inner surface with compressed air. As a consequence, a TGMF experiment system on the tubular specimen is constructed, and the TGMF experimental methods are systematically studied. TGMF experiments were performed under both in-phase and out-of-phase loading conditions to quantify the influence of the thermal gradient. Comparison of the TMF and TGMF experimental results showed that, in the same mechanical strain amplitude and thermal phase angle conditions, the fatigue life could be decreased by the thermal gradient. The proposed TMF life model show seriously deviations and do not consider the effects of the thermal gradient in fatigue. Therefore, a correction term of the temperature gradient is suggested to assess the fatigue failure. The suggested TGMF life model was verified to be reasonably accurate when predicting the TGMF lifetime of Inconel 718 and most of the predicted fatigue lives are within the scatter band with a factor of 2.
+Gas turbine blades and discs are subjected to thermomechanical fatigue loadings as well as the temperature gradient induced by the internal cooling during operation. Therefore, it is necessary to evaluate the lifetime under the thermal gradient mechanical fatigue (TGMF) loading conditions.
+In this study, a radiation furnace was developed for the TGMF tests. The temperature gradient is achieved by heating the specimen's outer surface with the radiation furnace and simultaneously cooling the inner surface with the compressed air. The TGMF experiments were performed under both in-phase and out-of-phase loading conditions. Comparison of the TMF and TGMF experimental results showed that, in the same mechanical strain amplitude and thermal phase angle conditions, the fatigue life could be decreased by the thermal gradient. The traditional models show seriously deviations and do not consider the effects of the thermal gradient in fatigue. Therefore, a correction term of the temperature gradient is suggested to assess the fatigue failure. The suggested TGMF life model was verified to be reasonably accurate when predicting the TGMF lifetime of Inconel 718 and most of the predicted fatigue lives are within the scatter band with a factor of 2.
 \end{abstract}
 
 %\include{debut}
 \begin{keyword}
 % keywords here, in the form: keyword \sep keyword
-Thermomechanical fatigue (TMF) \sep multiaxial loading \sep non-proportional loading \sep phase angle \sep nickel-based superalloy
+Thermomechanical fatigue (TMF) \sep thermal gradient mechanical fatigue (TGMF) \sep internal cooling \sep phase angle \sep nickel-based superalloy
 
 % PACS codes here, in the form: \PACS code \sep code
 % \PACS
@@ -220,7 +221,7 @@ Fatigue testing specimens were in thin-walled tubular shape. The geometry of the
 \subsection{TGMF testing system}
 The TGMF testing system for the thin-walled tubular specimen is shown in \autoref{Fig:tgmf_testing}. The testing system includes multiple subsystems such as loading, heating, air cooling, and water cooling. These subsystems work cooperatively to ensure the mechanical load and temperature over the specimen gauge section are simultaneously varied and independently controlled. 
 \begin{figure}[!htp]
-\centering{\includegraphics[height=12.0cm]{tgmf_testing.pdf}}
+\centering{\includegraphics[height=12.0cm]{tgmf_testing.jpg}}
 \caption{Experimental apparatus of TGMF test system.}
 \label{Fig:tgmf_testing}
 \end{figure}
@@ -277,7 +278,7 @@ Recently, there are no relevant standards for TGMF testing. Because of the test 
 
 \begin{figure}[!htp]
 	\centering
-	\includegraphics[width=8.0cm]{temperature_monitors_tgmf.pdf}
+	\includegraphics[width=8.0cm]{temperature_monitors_tgmf.jpg}
 	\caption{Locations of the temperature monitors.}
 	\label{Fig:temperature_monitors_tgmf}
 \end{figure}
@@ -608,7 +609,7 @@ The constitutive behavior of the superalloy Inconel 718 under multiaxial thermom
 \end{figure*}
 
 \begin{figure*}[htbp]
-  \centering{\includegraphics[width=14cm]{FEM_result.pdf}}
+  \centering{\includegraphics[width=14cm]{FEM_result.jpg}}
   \caption{Diagram of simulated axial temperature gradients and the resulting, thermally induced axial stress components at maximum temprature (650$^{\circ}$C) during the TGMF-IP test with the mechanical strain amplitude of 0.8\% (NT11: temperature in ℃, S22: axial stress in MPa, S33: hoop stress in MPa).}
   \label{Fig:FEM_result}
 \end{figure*}
@@ -666,7 +667,7 @@ Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striation
 % 而三种载荷条件下的瞬间失稳断裂区则非常相似，与拉伸试样的断口形貌相似。
 
 \begin{figure*}[htbp]
-  \centering{\includegraphics[width=16cm]{Fractography.pdf}}
+  \centering{\includegraphics[width=16cm]{Fractography.jpg}}
   \caption{Fractographs of fracture surfaces from the area of stable crack propagation.}
   \label{Fig:fatigue_striations_TGMF}
 \end{figure*}
@@ -859,10 +860,10 @@ The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illu
 
 \begin{figure}[htbp]
   \centering
-  \begin{overpic}[width=8.0cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TN.pdf}
+  \begin{overpic}[width=8.0cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TN.png}
   \put(84,65){\fcolorbox{white}{white}{(a)}}
   \end{overpic}
-  \begin{overpic}[width=8.0cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TRMS.pdf}
+  \begin{overpic}[width=8.0cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TRMS.png}
   \put(84,65){\fcolorbox{white}{white}{(b)}}
   \end{overpic}
   \caption{The quantitative evaluation of the TGMF life prediction results: (a) $T_{\rm{N}}$, (b) $T_{\rm{RMS}}$.}
