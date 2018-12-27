@@ -2,7 +2,7 @@
 
 \usepackage{amssymb}
 \usepackage{amsthm}
-\setlength{\mathindent}{0pt}
+% \setlength{\mathindent}{0pt}
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -127,12 +127,17 @@ Thermomechanical fatigue (TMF) \sep thermal gradient mechanical fatigue (TGMF) \
 \section{Introduction}
 In the course of service, the turbine blades are not only subjected to the large alternating loads but also subjected to the impact of high temperature and high-pressure gas and the effect of cooling air on the surface and inside of the blades, respectively \cite{WRIGHT20073610}. So the turbine blades suffer from the thermal gradient mechanical fatigue (TGMF) damage caused by the change of load and temperature. Moreover, the temperature gradient brings about multiaxial loads to the parts. For internally cooled parts, the temperature gradient can produce additional stress, which is expressed as a multiaxial compressive load on the hotter surface, while a multiaxial tensile load is displayed on the colder surface. 
 
-The nickel-base superalloy Inconel 718 is widely used in the gas turbine engines \cite{Pollock2006}. In the past decades, isothermal fatigue (IF) tests were commonly used to predict the lifetime of the gas turbine components. Numerous investigations on the elevated temperature LCF of the nickel-based superalloy were performed \cite{Koch85, Morrow88, Mahobia2014, Chen2016}. However, a number of studies showed that the thermomechanical fatigue (TMF) loading also influenced the fatigue damage mechanisms significantly. For different phases between the cyclic mechanical loading and temperature, the TMF lifetime can be shorter or longer than the isothermal one \cite{Evans2008, Bauer2009, LEE201462, Kulawinski2015, SCHLESINGER2017242, DENG2019813, SUN2019228}. Few works on the TGMF fatigue life were published. Brendel et al. \cite{BRENDEL2008234} and Prasad et al. \cite{PRASAD2013131} investigated temperature gradients in TMF specimens. The results showed that the temperature gradients had the remarkable influence on the TMF lifetime. Baufeld et al. \cite{BAUFELD2008219} and Bartsch et al. \cite{BARTSCH2008211} carried out the thermal gradient mechanical fatigue testing for the single-crystalline superalloy CMSX-4 with a NiPtAl oxidation protection coating. Microstructural changes, defects, phase evolution of the metal coatings and rafting of the $\gamma$/$\gamma'$ substrate morphology were investigated. They detected the cracks at the inner specimen surface and substrate pores. However, none of these researches focused on the fatigue lifetime of the TGMF.
+In the past, the low-cycle fatigue (LCF) test and the Manson–Coffin equation were widely used to evaluate the reliability of the substrates of gas turbine blades. However, the LCF test, which only can simulate fatigue conditions under high isothermal temperatures, cannot model actual operating conditions. For that reason, thermo-mechanical fatigue (TMF) tests, which can simulate both mechanical fatigue and thermal fatigue simultaneously, are preferred.
 
-Under the action of the internal cooling air, a large temperature gradient between the inner surface and the outer surface of the component was produced. The thermal gradients cause multiaxial loads in cooled components. For example of rotors in the first stage of a jet engine, the thermal gradient induced stresses cannot be relaxed by macroscopic deformations. The stresses occurring at the component lead to multiaxial pressure loads on the hot surface and multiaxial tensile loads on the cooled surface. Because the TGMF test is the most appropriate experiment to simulate the actual loading conditions of gas turbine engines in the laboratory, the research was necessary to understand the damage mechanism of the turbine blades and discs. 
+The nickel-base superalloy Inconel 718 is widely used in the gas turbine engines \cite{Pollock2006}. In the past decades,  the low-cycle fatigue (LCF) tests and the Manson–Coffin equation were commonly used to predict the lifetime of the gas turbine components. Numerous investigations on the elevated temperature LCF of the nickel-based superalloy were performed \cite{Koch85, Morrow88, Mahobia2014, Chen2016}. However, a number of studies showed that the thermomechanical fatigue (TMF) loading also influenced the fatigue damage mechanisms significantly. For different phases between the cyclic mechanical loading and temperature, the TMF lifetime can be shorter or longer than the isothermal one \cite{Evans2008, Bauer2009, LEE201462, Kulawinski2015, SCHLESINGER2017242, DENG2019813, SUN2019228}. However, the TMF test, which can simulate both mechanical fatigue and thermal fatigue simultaneously, cannot investigate the temperature gradient effect. 
+
+Few works on the temperature gradient effect and TGMF fatigue life were published. Brendel et al. \cite{BRENDEL2008234} and Prasad et al. \cite{PRASAD2013131} investigated temperature gradients in TMF specimens. The results showed that the temperature gradients had a remarkable influence on the TMF lifetime. Baufeld et al. \cite{BAUFELD2008219} and Bartsch et al. \cite{BARTSCH2008211} carried out the thermal gradient mechanical fatigue testing for the single-crystalline superalloy CMSX-4 with a NiPtAl oxidation protection coating. Microstructural changes, defects, phase evolution of the metal coatings and rafting of the $\gamma$/$\gamma'$ substrate morphology were investigated. They detected the cracks at the inner specimen surface and substrate pores. 
+
+However, the assessment of the TGMF lifetime has been rarely reported. In this study, the thin-walled tubular specimen is used to simulate the influence of the temperature gradient. Under the action of the internal cooling air, a temperature gradient between the inner surface and the outer surface of the component was produced. The thermal gradients cause multiaxial loads in the specimen, and the thermal gradient induced stresses cannot be relaxed by macroscopic deformations. The stresses occurring at the specimen lead to multiaxial pressure loads on the outer surface and multiaxial tensile loads on the inner surface. The TGMF test is the most appropriate experiment to simulate the actual loading conditions of gas turbine engines in the laboratory, and the research was necessary to understand the damage mechanism of the turbine blades and discs. 
+
+In the experiment, the conventional induction heating equipment only heated the inner metal layer, which is not conducive to the generation of the temperature gradient between the outer and inner surface of the specimen. Therefore, a radiation heating system was developed for the TGMF testing. However, there are many obstacles to TGMF lifetime assessment, such as the determination of temperature and local stress-strain evolution of the specimen during the TGMF testing. Sun \cite{SUN2019228} introduced a plasticity modeling of nickel-based superalloy Inconel 718 under multiaxial thermomechanical fatigue loading conditions. The constitutive law was used to determine the local stress and strain response during the TGMF testing. In the study, comparing the TMF \cite{SUN201989} and TGMF experimental results, the thermal gradient effect on the fatigue lifetime was investigated.
 
 
-% 
 % In the experiment, the conventional induction heating equipment only heated the inner metal layer, which made the temperature of the inner metal layer higher than the external ceramic layer temperature. It did not conform to the temperature distribution of the thermal barrier coating components under the actual working state.
 % The engine start-up phase heating process only takes a few seconds, and the cooling stage is also very rapid. These are coating thermal barrier coatings on the heat gradient mechanical fatigue test equipment has put forward higher requirements, but also restricted the research.
 
@@ -179,7 +184,7 @@ In order to enhance the engine cooling effect and improve the engine efficiency,
 For thin-walled tubular specimen, the heating methods include resistance furnace, induction, flame \cite{MAUGET2017225}, radiation \cite{BAUFELD2008219}, etc. The resistance furnace can reach a uniform temperature field in the furnace cavity. It has a high accuracy of temperature and is widely used in isothermal tests, such as creep, low cycle fatigue, and creep-fatigue. However, the heating rate of the resistance furnace is slow and can not meet the requirement of rapid temperature varying during the TMF testing. Also, the resistance furnace is an enclosed cavity, and it is difficult to perform forced air cooling of the specimen, and thus it is not suitable for the TMF test. The induction heating has the advantages of high heating rate and high efficiency. It is widely used in TMF testing. Due to the skin effect of the induced current, induction heating usually only heats the surface of the specimen, and the higher the induction frequency, the shallower the heating depth. In the present study, the heating depth of the induced current is about 1-2 mm, and thus the inner and outer surfaces of the specimen are heated simultaneously. Considering the internal cooling process, the induction heating is not conducive to produce the temperature gradient between the internal and external surface of the specimen. Furthermore, considering a specimen covered with a thermal barrier coating (TBC) on its outer surface, the induction heating can only heat the metal part of the specimen, and the TBC (typically a ceramic material) will not be heated. This will cause the temperature inside the specimen to be higher than the outside temperature, which does not meet the temperature distribution in actual working condition \cite{BRENDEL2008234}. The flame heating is the use of high-temperature gas generated in the combustion of fuel in the combustion chamber to heat the specimen. It can simulate the heat exchange, oxidation, corrosion and other processes of the gas and specimen. Flame heating has no special requirements for the material of the specimen (metal, non-metal composites, etc.) and allows the specimen to be heated to very high temperature. However, it requires the combustion chamber and sophisticated control system. The flame heating is significantly affected by the environment, and the uniformity of the temperature field of the specimen is reduced, which is far from the requirements of the TMF test \cite{MAUGET2017225}. Therefore, the radiation heating method is used in the study.
 
 \subsection{TGMF testing system}
-A radiation furnace was developed for the TGMF testing. And a TGMF testing system was designed and developed with the radiation heating furnace, the TGMF testing system is shown in \autoref{Fig:tgmf_testing}, which allows simultaneous cyclic thermal and mechanical loading with controlled thermal gradients over the wall of thin-walled tubular specimens. The testing system includes multiple subsystems such as loading, heating, air cooling, and water cooling. These subsystems work cooperatively to ensure the mechanical load and temperature over the specimen gauge section are simultaneously varied and independently controlled. The thermal gradient is obtained by heating of the outer surface with a concentrating radiation furnace and simultaneous internal cooling with pressurized air. The high heat flux of the radiation furnace allows heating rates comparable to those in real turbine blades of a jet engine. The radiation furnace has a power of 16 kW and consists of 16 quartz lamps. A hollow cylindrical specimen from nickel base superalloy can be heated from 100$^\circ$C to 1000$^\circ$C in about 20 seconds. 
+A radiation furnace was developed for the TGMF testing. And a TGMF testing system was designed and developed with the radiation heating furnace, the TGMF testing system is shown in \autoref{Fig:tgmf_testing}, which allows simultaneous cyclic thermal and mechanical loading with controlled thermal gradients over the wall of thin-walled tubular specimens. The testing system includes multiple subsystems such as loading, heating, air cooling, and water cooling. These subsystems work cooperatively to ensure the mechanical load and temperature over the specimen gauge section are simultaneously varied and independently controlled. The thermal gradient is obtained by heating of the outer surface with a concentrating radiation furnace and simultaneous internal cooling with pressurized air. The high heat flux of the radiation furnace allows heating rates comparable to those in real turbine blades of a jet engine. The radiation furnace has a power of 6.4 kW and consists of 16 quartz lamps. A tubular specimen from nickel base superalloy can be heated from 100$^\circ$C to 1000$^\circ$C in about 20 seconds. 
 
 \begin{figure}[!htp]
 \centering{\includegraphics[height=12.0cm]{tgmf_testing.jpg}}
@@ -278,7 +283,7 @@ It is observed that the maximum axial temperature gradients during the TMF test 
 
 \section{Experimental results of TGMF tests}
 
-The experimental conditions and results of IF, TMF and TGMF tests are summarized in \autoref{Tab:test_matrix_TGMF}. The isothermal fatigue (IF) tests were performed at 650$^\circ$C, and the in-phase thermomechanical fatigue (TMF-IP) and the out-of-phase thermomechanical fatigue (TMF-OP) tests were carried out with a temperature range of 300–650$^\circ$C, as introduced in Refs. \cite{SUN2019228, SUN201989}. In order to compare with the TMF testing results, the TGMF tests with the same temperature range of 300–650$^\circ$C and two kinds of phase angles were carried out: 0$^\circ$ (IP) and 180$^\circ$ (OP). Each kind of TGMF tests was conducted with four or five different mechanical strain amplitudes. The load type TGMF-IP is short for the tension-compression in-phase thermal gradient mechanical fatigue, and TGMF-OP means the tension-compression out-of-phase thermal gradient mechanical fatigue. The nickle-based superalloy Inconel 718 used in Refs. \cite{SUN2019228, SUN201989} were as same as the superalloy used in this study, therefore it is reasonable to compare the fatigue lifetime of these tests.
+The experimental conditions and results of IF, TMF and TGMF tests are summarized in \autoref{Tab:test_matrix_TGMF}. The isothermal fatigue (IF) tests were performed at 650$^\circ$C, and the in-phase thermomechanical fatigue (TMF-IP) and the out-of-phase thermomechanical fatigue (TMF-OP) tests were carried out with a temperature range of 300-650$^\circ$C, as introduced in Refs. \cite{SUN2019228, SUN201989}. In order to compare with the TMF testing results, the TGMF tests with the same temperature range of 300-650$^\circ$C and two kinds of phase angles were carried out: 0$^\circ$ (IP) and 180$^\circ$ (OP). Each kind of TGMF tests was conducted with four or five different mechanical strain amplitudes. The load type TGMF-IP is short for the tension-compression in-phase thermal gradient mechanical fatigue, and TGMF-OP means the tension-compression out-of-phase thermal gradient mechanical fatigue. The nickle-based superalloy Inconel 718 used in Refs. \cite{SUN2019228, SUN201989} were as same as the superalloy used in this study, therefore it is reasonable to compare the fatigue lifetime of these tests.
 % The abbreviation TBC means the specimen is covered with the thermal barrier coating.
 Because of the thermal gradients in radial and axial directions, the axial stress is not constant on the cross-section of the specimen.
 Therefore, the stress distribution of the specimen during the test has to be obtained by the finite element method.
@@ -647,7 +652,7 @@ Based on the critical plane concepts \cite{Brown2006}, Wang and Brown \cite{Wang
 where ${{\Delta \hat \gamma }}/{2}$ is the equivalent shear strain range \cite{Wang1993}. $\Delta {\varepsilon _{\rm n}}$ represents the normal strain acting on the plane with the maximum shear strain range $\Delta {\gamma _{\max}}$. The material dependent parameter $S$ represents the influence of the normal strain on the crack propagation.
 
 \subsection{Fatemi-Socie Model}
-Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Eq. (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
+Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Equation (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
 The equivalent shear strain amplitude is defined as
 \begin{equation}
 \frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{\rm n,\max}}}}{{{\sigma _{\rm y}}}}} \right),
@@ -657,25 +662,28 @@ $\sigma _{\rm n,\max}$ is the maximum normal stress on the critical plane suffer
 
 \subsection{Smith-Watson-Topper Model}
 The SWT model \cite{smith1970stress} can be extended to multiaxial fatigue assessment based on the principal strain range and the maximum stress on the plane of the principal strain range, that is,
-\[
+\begin{equation}
 {\sigma _{\rm n, \max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} + {\sigma '_{\rm f}}{\varepsilon '_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
-\]
+\end{equation}
 
 \subsection{Chu-Conle-Bonnen Model}
 An additional energy-based fatigue model suggested by Chu et al. \cite{Chu1993} is expressed as
-\begin{eqnarray}
-{\left( {{\tau _{\rm n}}\frac{{\Delta \gamma }}{2} + {\sigma _{\rm n }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} &=& 1.02\frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} \\
-&& + 1.04{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
-\end{eqnarray}
+\begin{equation}
+\begin{aligned}
+{\left( {{\tau _{\rm n}}\frac{{\Delta \gamma }}{2} + {\sigma _{\rm n }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} = 1.02\frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} \\
+ + 1.04{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\end{aligned}
+\end{equation}
 Note the difference in the strain energy in comparing with the Liu's models. The critical plane should provide the maximum strain energy in the whole loading range and in all directions.
 
 \subsection{Liu's Virtual Strain Energy Models}
 The virtual tensile strain energy based model suggested by Liu \cite{Liu1993} can be written as
-\begin{eqnarray}
-{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)_{\max }} + \left( {\Delta \tau \Delta \gamma } \right) &=& \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}}
-\\
-& & + 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
-\end{eqnarray}
+\begin{equation}
+\begin{aligned}
+{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)_{\max }} + \left( {\Delta \tau \Delta \gamma } \right) = \frac{{4{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} \\
++ 4{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
+\end{aligned}
+\end{equation}
 Above the critical plane is defined from maximizing the virtual tensile strain energy ${\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}}$, termed as Liu I model. 
 
 \subsection{TMF Model}
@@ -693,7 +701,7 @@ A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \l
 \label{Equ:A}
 \end{equation}
 in which $\eta \left( t \right)$ is stress triaxiality, $R$ is the ideal gas constant ($8.31\times10^{-3}$ kJ/mol$\cdot$K), the time integral is from the start time $t_0$ of the cycle to the end time $t_0 + t_{cyc}$, $t_{cyc}$ is the period of the tests, $C$ and $k$ are material constants.
-In Eq. (\ref{Equ:A}), $Q$ presents \cite{Warren2006,Warren2008}
+In Equation (\ref{Equ:A}), $Q$ presents \cite{Warren2006,Warren2008}
 \begin{equation}
 Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _{\rm n}}\left( t \right)\left( {1 - \frac{{{\sigma _{\rm n}}\left( t \right)}}{{2{\sigma _{\rm ult}}}}} \right),
 \label{Equ:creep_activation_energy}
