@@ -19,7 +19,7 @@
 \usepackage{framed}
 \usepackage{threeparttable}
 \usepackage{booktabs}
-% \usepackage{xeCJK}
+\usepackage{xeCJK}
 % \usepackage{ctex}
 
 \newcommand{\bfsigma}{{\mbox{\boldmath{$\sigma$}}}}
@@ -56,7 +56,7 @@
 
 \graphicspath{{figures/}}
 
-\journal{International Journal of Fatigue}
+\journal{\rm International Journal of Fatigue}
 
 \begin{document}
 
@@ -101,12 +101,11 @@
 \author{Huang YUAN\corref{cor1}}
 
 \address{School of Aerospace Engineering, Tsinghua University, Beijing, China\fnref{label1}}
-%\address[label2]{Department of Civil Engineering, Technical University of Darmstadt, Germany\fnref{label2}}
 \cortext[cor1]{Corresponding author.}
 \ead{yuan.huang@tsinghua.edu.cn}
 
 \begin{abstract}
-Turbine components generally work under thermomechanical loading conditions with varying temperature and significant thermal gradients. In the present work, a radiation heating system was developed to simulate thermal gradient mechanical fatigue (TGMF) loads in turbines. The specimen is externally heated by radiation and internally cooled by compressed air. Experiments showed that the TGMF life of the nickel-based superalloy is significantly shorter than that of the thermomechanical and the isothermal fatigue, although the thermal stress amplitude related to the temperature gradient is small. It was confirmed that the conventional fatigue models generated seriously deviations and could not catch effects of the thermal gradients. The modified TGMF introduced a correction term of the temperature gradient effects and can describe the TGMF lifetime of Inconel 718. The new model provides a uniform description of isothermal and complex thermomechanical fatigue. 
+Turbine components generally work under thermomechanical loading conditions with varying temperature and significant thermal gradients. In the present work, a radiation heating system was developed to simulate thermal gradient mechanical fatigue (TGMF) loads in turbines. The specimen is externally heated by radiation and internally cooled by compressed air. Experiments showed that the TGMF life of the nickel-based superalloy is significantly shorter than that of the thermomechanical and the isothermal fatigue, although the thermal stress amplitude related to the temperature gradient is small. It was confirmed that the conventional fatigue models generated seriously deviations and could not catch effects of the thermal gradients. The modified TGMF model introduced a correction term of the temperature gradient effects and can describe the TGMF lifetime of Inconel 718 reasoanly. The new model provides a uniform description of isothermal and complex thermomechanical fatigue. 
 \end{abstract}
 
 %\include{debut}
@@ -121,27 +120,27 @@ Thermal gradient mechanical fatigue (TGMF) \sep transient temperature analysis \
 
 \section{Introduction}
 
-The nickel-base superalloy Inconel 718 is widely used in the gas turbine engines \cite{Pollock2006}. In the past decades, isothermal fatigue (IF) tests were commonly used to predict the lifetime of the gas turbine components, which work generally under varying thermomechanical loading conditions. Numerous investigations on the elevated temperature LCF of the nickel-based superalloy were performed \cite{Koch85, Morrow88, Mahobia2014, Chen2016}. However, a number of studies showed that the thermomechanical fatigue (TMF) loads influenced the fatigue damage mechanisms significantly \cite{Evans2008, Bauer2009, Kulawinski2015, SCHLESINGER2017242, DENG2019813}. Thermomechanical fatigue means the mechanical loads and temperature are varying simultaneously. For different phases between the cyclic mechanical loading and temperature, the TMF lifetime can be shorter or longer than the isothermal one \cite{SUN2019228}.
+The nickel-base superalloy Inconel 718 is widely used in the gas turbine engines \cite{Pollock2006}. In the past decades, isothermal fatigue (IF) tests were commonly used to predict the lifetime of the gas turbine components, which work generally under varying thermomechanical loading conditions. Numerous investigations on the elevated temperature LCF of the nickel-based superalloy were performed \cite{Koch85, Morrow88, Mahobia2014, Chen2016}. However, a number of studies showed that the thermomechanical fatigue (TMF) loads influenced the fatigue damage mechanisms significantly \cite{Evans2008, Bauer2009, Kulawinski2015, SCHLESINGER2017242, DENG2019813}. Thermomechanical fatigue means the mechanical loads and temperature are varying simultaneously. For different phases between the cyclic mechanical loading and temperature, the TMF lifetime can be significantly shorter or longer than the isothermal one \cite{SUN2019228}.
 
 The turbine blades are cooled by internal flow and the turbine discs are usually cooled by the secondary air system.
 In the course of service, the turbine components are not only subjected to alternating mechanical loads, but also to the impact of high temperature and the effect of cooling air on the surface and inside of the components, respectively. So the turbine parts suffer from thermomechanical fatigue damage caused by the varying loads and temperatures.
-Moreover, the temperature gradient brings the multiaxial stress state to the parts and makes the fatigue multiaxial.
-For internally cooled parts, the temperature gradient can produce additional stress, which is expressed as a multiaxial compressive load on the hotter surface, while a multiaxial tensile load is displayed on the colder surface.
-Few works on the TGMF fatigue life were published.
+Moreover, the temperature gradient brings the multiaxial stress state into the mechanical parts and makes the fatigue multiaxial.
+For internally cooled parts, the temperature gradients produce additional stresses, which are expressed as multiaxial compressive loads on the hotter surface, while a multiaxial tensile load is displayed on the colder surface.
+Few works on the TGMF fatigue were published.
 
 Brendel et al. \cite{BRENDEL2008234} and Prasad et al. \cite{PRASAD2013131} investigated temperature gradients in TMF specimens. The results showed that the temperature gradients had a remarkable influence on the TMF lifetime.
-Baufeld et al. \cite{BAUFELD2008219} and Bartsch et al. \cite{BARTSCH2008211} carried out the thermal gradient mechanical fatigue testing for the single-crystalline superalloy CMSX-4 with a NiPtAl oxidation protection coating.
-Microstructural changes, defects, phase evolution of the metal coatings and rafting of the $\gamma$/$\gamma'$ substrate morphology were investigated. They detected the cracks at the inner specimen surface and substrate pores. However, the fatigue life of the TGMF was not studied. To quantify effects of temperature gradients in thermomechanical fatigue and to establish a uniform fatigue life prediction model for complex thermomechanical fatigue, extensive TGMF testing is necessary.
+Baufeld et al. \cite{BAUFELD2008219} and Bartsch et al. \cite{BARTSCH2008211} carried out the thermal gradient mechanical fatigue testing for the single crystal superalloy CMSX-4 with a NiPtAl oxidation protection coating.
+Microstructural changes, defects, phase evolution of the metal coatings and rafting of the $\gamma$/$\gamma'$ substrate morphology were investigated. They detected the cracks at the inner specimen surface and substrate pores. However, the fatigue life of the TGMF was not estimated. To quantify effects of temperature gradients in thermomechanical fatigue and to establish a uniform fatigue life prediction model for complex thermomechanical fatigue, extensive TGMF testing is necessary, in combining with investigation of constitutive modeling.
 
 However, most published works on fatigue were performed in a standardized material testing systems, such as MTS and INSTRON etc. Such test machines provide two typical heating systems: Silicon carbide heating elements and induction coils. The former is not suitable for transient varying temperature. 
-The resistance furnace with the heating elements can reach a uniform temperature field in the furnace cavity. It has a high accuracy of homogeneous temperature and is widely used in isothermal tests, such as creep, low cycle fatigue, and creep-fatigue. However, the heating rate of the resistance furnace is slow and can not meet the requirement of rapid temperature varying in TMF testing. Additionally, the resistance furnace is an enclosed cavity, and it is difficult to perform forced air cooling of the specimen.
+The resistance furnace with the heating elements can reach a uniform temperature field in the cavity. It has a high accuracy of homogeneous temperature and is widely used in isothermal tests, such as creep, low cycle fatigue, and creep-fatigue. However, the heating/cooling rate of the resistance furnace is slow and can not meet the requirement of rapid temperature varying in TMF testing. Additionally, the resistance furnace is an enclosed cavity, and it is difficult to perform forced air cooling of the specimen.
 
-The induction heating has the advantages of high heating rate and high efficiency. It is widely used in TMF testing.
-Due to the skin effect of the induced current, however, the induction heating usually only heats the surface of the specimen, and the higher the induction frequency, the shallower the heating depth. For thin-walled specimens with a thickness of ca. 1 mm, the inner and outer surfaces of the specimen are heated simultaneously, which makes homogeneous temperature distribution in the thickness. Furthermore, considering a specimen covered with a thermal barrier coating (TBC), the induction heating can only heat the metallic substrate, and the TBC (typically a ceramic material) will not be heated. This will cause the temperature inside the specimen to be higher than the outside temperature, which does not meet the temperature distribution in actual working condition \cite{BRENDEL2008234}. The TGMF test apparatus has not been standardized. 
+The induction heating has the advantage of the high heating rate and the high efficiency. It is widely used in TMF testing \cite{Mao2015, Wang2017, SUN2019228,DENG2019813,BRENDEL2008234}.
+Due to the skin effect of the induced current, however, the induction heating usually only heats the surface of the specimen, and the higher the induction frequency, the shallower the heating depth. For thin-walled specimens with a thickness of ca. 1 mm, the inner and outer surfaces of the specimen are heated simultaneously, which makes homogeneous temperature distribution in the thickness. Furthermore, considering a specimen covered with a thermal barrier coating (TBC), the induction heating can only heat the metallic substrate, and the TBC (typically a ceramic material) will not be heated. This causes the temperature inside the specimen to be higher than the outside temperature of TBC, which does not meet the temperature distribution in real working condition \cite{BRENDEL2008234}. The TGMF test apparatus has not been standardized. 
 
-Deutsches Zentrum f\"{u}r Luft- und Raumfahrt (DLR) \cite{BAUFELD2008219} developed a thermal gradient mechanical fatigue (TGMF) test facilities which allow simultaneous cyclic thermal and mechanical loading with controlled thermal gradients over the wall of hollow specimens. 
-The radiation heating is the use of quartz lamps to irradiate the specimen or workpiece to achieve the predetermined temperature field. Radiant heating can heat metals, non-metals, composites, etc., and can obtain complex temperature fields through multi-temperature zone control.
-The thermal gradient is obtained by heating of the outer surface with a concentrating radiation furnace and simultaneous internal cooling with pressurized air. The high heat flux of the radiation furnace allows heating rates comparable to those in real turbine blades of a jet engine. The radiation furnace has a power of 16 kW and consists of 16 quartz lamps. A hollow cylindrical specimen from nickel base superalloy can be heated from 100$^\circ$C to 1000$^\circ$C in about 20 seconds. This design provides a new concept for the TGMF heating system.
+Deutsches Zentrum f\"{u}r Luft- und Raumfahrt (DLR) \cite{BARTSCH2008211, BAUFELD2008219} developed a thermal gradient mechanical fatigue (TGMF) test facility which allowed simultaneous cyclic thermal and mechanical loading with controlled thermal gradients over the wall of hollow specimens. 
+The radiation heating is  using quartz lamps to irradiate the specimen or workpiece to achieve the predetermined temperature field. Radiant heating can heat metals, non-metals, composites, etc., and can obtain complex temperature fields through multi-temperature zone control.
+The thermal gradient is obtained by heating of the outer surface with a concentrating radiation furnace and simultaneous internal cooling with pressurized air. The high heat flux of the radiation furnace allows heating rates comparable to those in real turbine blades.  A hollow cylindrical specimen from nickel base superalloy can be heated from 100$^\circ$C to 1000$^\circ$C in about 20 seconds. This design provides a new concept for the TGMF heating system.
 
 In the present work, a radiation heating system is developed based on the DLR concept. Based on extensive finite element computations the transient temperature distributions in the thin-walled tubular specimens are optimized for thermal gradient mechanical fatigue tests. The numerical results are verified by experimental measurements and provide the basis for TGMF tests. LCF behavior of the nickel-based superalloy is experimentally tested under given both thermomechanical and thermal gradient mechanical loading conditions. The systematical experimental results provide a database for assessing fatigue life models and for establishing new TGMF fatigue life concepts. 
 
@@ -185,8 +184,8 @@ Fatigue testing specimens were in the thin-walled tubular shape. The geometry of
 \label{Fig:IN718_Axial_Specimen_TGMF}
 \end{figure}
 
-\subsection{TGMF testing system}
-The thermal gradient mechanical fatigue (TGMF) testing system for the thin-walled tubular specimen was developed, as shown in \autoref{Fig:tgmf_testing}. The specimen in the TGMF tests were heated by focused radiation heating from quartz lamps. Radiant heating can heat metals, non-metals, composites, etc., and can obtain complex temperature fields through multi-temperature zone control \autoref{Fig:cooling}. The total power of the radiation furnace is 6.4 kW and can heat the tubular specimens to melt within seconds.
+\subsection{The TGMF testing system}
+The thermal gradient mechanical fatigue (TGMF) testing system for the thin-walled tubular specimen was developed, as shown in \autoref{Fig:tgmf_testing}. The specimen in the TGMF tests were heated by focused radiation heating from quartz lamps. Radiant heating can heat metals, non-metals, composites, etc., and can obtain complex temperature fields through multi-temperature zone control (\autoref{Fig:cooling}). The total power of the radiation furnace is 6.4 kW and can heat the tubular specimens to melt within seconds.
 The system includes multiple subsystems such as loading, heating, air cooling, and water cooling. These subsystems work cooperatively to ensure the mechanical load and temperature over the specimen gauge section are simultaneously varied and independently controlled. 
 \begin{figure}[!ht]
 \centering{\includegraphics[height=10.0cm]{tgmf_testing.jpg}}
@@ -203,7 +202,7 @@ A MTS hydraulic servo fatigue test machine was used to apply a tension/compressi
     \label{Fig:cooling}
 \end{figure}
 
-The temperature of the specimen was measured by the thermocouples. In practice, the choice of the diameter of the thermocouple wire is significant. A thick thermocouple will cause a delay in the temperature measurement. It leads to a temperature deviation between the thermocouple and the specimen, and it affects the response of the feedback control system. In order to improve the accuracy of temperature measurement and increase the response speed of thermocouples, the diameter of the thermocouple should be as small as possible. Therefore, the thermocouple with a diameter of 0.25 mm was used.
+The temperature of the specimen was measured by the thermocouples. In practice, the choice of the diameter of the thermocouple wire is significant. A thick thermocouple will cause a delay in the temperature measurement. It leads to temperature deviations between the thermocouple and the specimen, and it affects the response of the feedback control system. In order to improve the accuracy of temperature measurement and to increase the response speed of thermocouples, the diameter of the thermocouple should be as small as possible. Therefore, the thermocouple with a diameter of 0.25 mm was used.
 
 The temperature controller was used to control the temperature of the specimen.
 The controller accepted the temperature sensor (thermocouple or infrared thermometer) as input and compared the actual temperature with the desired temperature. It then provided an output to the power regulator to control the luminance of the lamps, i.e. the heat power of the specimen. 
@@ -246,27 +245,13 @@ There are no relevant standards for TGMF testing. Since the test processes of th
 \end{figure}
 
 The light reflected on the different gold-coated mirrors focuses on the specimen and induces temperature gradients along the specimen outer surface. The highest temperature occurs in the middle section of the specimen during the TGMF test.
-Unlike the induction heating, the axial temperature gradient of the specimen is difficult to adjust by modifying the radiation furnace.
-Therefore, the influence of the axial temperature gradients has to be considered in the computation.
+Unlike the induction heating, the axial temperature gradient of the specimen is difficult to be adjusted by modifying the radiation furnace.
+Therefore, the influence of the axial temperature gradients has to be considered with help of finite element computations.
 
 In order to obtain the temperature distribution of the specimen during the TGMF testing, temperatures at the upper, center and lower positions in the 12 mm gauge section of the specimen were measured by three thermocouples wrapped around the specimen. \autoref{Fig:temperature_monitors_tgmf} shows the locations of the thermocouples. In the present work, the temperature of the TGMF testing varies between 300$^\circ$C and 650$^\circ$C. The cycle period was predetermined as 240 s with a triangular shape temperature cycle, thus the heating and cooling rates were about 2.2$^\circ$C/s.
 \autoref{Fig:thermal_stability_TGMF}(a) shows the transient temperature measurement during a TGMF cycle and \autoref{Fig:thermal_stability_TGMF}(b) shows the temperature deviations between the upper/lower thermocouple and the temperature command.
 The maximum axial temperature difference during the TMF test is less than $\pm30$$^\circ$C. The deviations in the center of the specimen, where the fatigue failure occurs, are obviously smaller, less than $\pm 10^\circ$C. 
 
-
-\section{Results of TGMF tests}
-
-The experimental conditions and results of thermo-mechanical fatigue tests are summarized in \autoref{Tab:test_matrix_TGMF}. The isothermal fatigue (IF) tests were performed at 650$^\circ$C, and the in-phase thermo-mechanical fatigue (TMF-IP) and the out-of-phase thermo-mechanical fatigue (TMF-OP) tests were carried out with a temperature range of 300$\sim$650$^\circ$C, as introduced in \cite{SUN2019228, SUN201989}. In order to compare with the TMF testing results, the TGMF tests with the same temperature range of 300$\sim$650$^\circ$C and two kinds of phase angles were carried out: 0$^\circ$ (IP) and 180$^\circ$ (OP). Each kind of TGMF tests was conducted with four or five different mechanical strain amplitudes. The load type TGMF-IP stands for the in-phase thermal gradient mechanical fatigue, and TGMF-OP means the out-of-phase thermal gradient mechanical fatigue. The nickel-based superalloy Inconel 718 used in \cite{SUN2019228, SUN201989} were investigated in the present work under the TGMF loading conditions, therefore, it is reasonable to compare the fatigue lifetime of those tests.
-
-Because of the thermal gradients in radial and axial directions, the axial stress is not constant on the cross-section of the specimen.
-Therefore, the stress distribution of the specimen during the test has to be obtained by the finite element method computation.
-In order to facilitate the comparison and analysis between the computational and experimental results, the nominal axial stress $\sigma$ on the cross-section is used in the following figures, defined as
-\begin{equation}
-\sigma = F/A.
-\end{equation}
-Figs. \ref{Fig:plot_exp_TCTGMF}(a) and (c) show the stable hysteresis loops of TGMF tests under IP and OP loading conditions, respectively.
-Since there is a phase difference between the temperature cycle and the load cycle in the fatigue test, the tensile half cycle and the compressive half cycle have different cycle softening behaviors.
-For the TGMF-IP test, an evident cyclic softening was observed during the tensile half cycle, whereas for the TGMF-OP test, the alloy performed a significant cyclic softening during the compressive half cycle.
 
 % 如果是右对齐，那么只需要将\centering换成\raggedleft，如果左对齐，那么换成\raggedright即可。
 \begin{table}[!ht]
@@ -310,6 +295,21 @@ For the TGMF-IP test, an evident cyclic softening was observed during the tensil
   \label{Tab:test_matrix_TGMF}%
 \end{table}%
 
+
+\section{Results of TGMF tests}
+
+The experimental conditions and results of thermomechanical fatigue tests are summarized in \autoref{Tab:test_matrix_TGMF}. The isothermal fatigue (IF) tests were performed at 650$^\circ$C, and the in-phase thermomechanical fatigue (TMF-IP) and the out-of-phase thermomechanical fatigue (TMF-OP) tests were carried out with a temperature range of 300$\sim$650$^\circ$C, as introduced in \cite{SUN2019228, SUN201989}. In order to compare with the TMF testing results, the TGMF tests with the same temperature range of 300$\sim$650$^\circ$C and two kinds of phase angles were carried out: 0$^\circ$ (IP) and 180$^\circ$ (OP). Each kind of TGMF tests was conducted with four or five different mechanical strain amplitudes. The load type TGMF-IP stands for the in-phase thermal gradient mechanical fatigue, and TGMF-OP means the out-of-phase thermal gradient mechanical fatigue. The nickel-based superalloy Inconel 718 used in \cite{SUN2019228, SUN201989} was investigated in the present work under the TGMF loading conditions, therefore, it is reasonable to compare the fatigue performance each other.
+
+Because of the thermal gradients in radial and axial directions, the axial stress is not constant on the cross-section of the specimen.
+Therefore, the stress distribution of the specimen during the test has to be obtained with help of finite element  computations.
+In order to facilitate the comparison and analysis between the computational and experimental results, the nominal axial stress $\sigma$ on the cross-section is used in the following figures, defined as
+\begin{equation}
+\sigma = F/A.
+\end{equation}
+Figs. \ref{Fig:plot_exp_TCTGMF}(a) and (c) show the stable hysteresis loops of TGMF tests under IP and OP loading conditions, respectively.
+Since there is a phase difference between the temperature cycle and the load cycle in the fatigue test, the tensile half cycle and the compressive half cycle have different cycle softening behaviors.
+For the TGMF-IP test, an evident cyclic softening was observed during the tensile half cycle, whereas for the TGMF-OP test, the alloy performed a significant cyclic softening during the compressive half cycle.
+
 \begin{figure*}[!ht]
   \centering
   \begin{overpic}[width=7.5cm]{plot_exp_half_life_cycle_TCIPTGMF.pdf}
@@ -341,14 +341,14 @@ For the TGMF-IP test, an evident cyclic softening was observed during the tensil
 \end{figure}
 
 Figures \ref{Fig:plot_exp_TCTGMF}(b) and (d) illustrate the peak, valley and mean values of the stress response in the TGMF-IP and TGMF-OP tests, respectively.
-Cyclic softening were observed during in in-phase and out-of-phase thermal gradient mechanical fatigue tests, but the phase difference between the temperature cycle and the load cycle leads to the different cycle softening behavior. In the temperature range of 300$^\circ$C to 650$^\circ$C, the higher is the temperature, the more obvious the cyclic softening of the material becomes. Therefore, under the TGMF-IP loading condition, the cyclic softening of the superalloy in the tensile half cycle is more evident, whereas the TGMF-OP load made the cyclic softening behavior more clear in the compressive half cycle. 
+Cyclic softening was observed during in in-phase and out-of-phase thermal gradient mechanical fatigue tests, but the phase difference between the temperature cycle and the load cycle leads to the different cycle softening behavior. In the temperature range of 300$^\circ$C $\sim$ 650$^\circ$C, the higher is the temperature, the more obvious cyclic softening is the material. Therefore, under the TGMF-IP loading condition, the cyclic softening of the superalloy in the tensile half cycle is more evident, whereas the TGMF-OP load made the cyclic softening behavior more clear in the compressive half cycle. 
 
-The mean stress cannot be ignored in low cycle fatigue. Especially for nickel-based superalloys with high strength and low toughness, the mean stress is an important factor affecting the fatigue life, as shown in \autoref{Fig:plot_exp_mean_TCTGMF}. The mean stress response curve for the Inconel 718 alloy under the in-phase and reverse phase TGMF test conditions. It can be seen that for TGMF-IP, the mean stress is compressive stress, and the increase of the mechanical strain amplitude has few effects on the mean stress. For TGMF-IP test, the mean stress becomes compression stress since the lower temperature stress is compressive. When $\Delta \varepsilon=0.8\%$, the mean stress at the half-life cycle is about -30 MPa. For TGMF-OP test, the mean stress becomes tensile and increases with the mechanical strain amplitude.
+It is known that the mean stress cannot be ignored in low cycle fatigue. Especially for nickel-based superalloys with high strength and low toughness, the mean stress is an important factor affecting the fatigue life, as shown in \autoref{Fig:plot_exp_mean_TCTGMF}. The mean stress response curve for the Inconel 718 alloy under the in-phase and reverse phase TGMF test conditions. It can be seen that for TGMF-IP, the mean stress is compressive stress, and the increase of the mechanical strain amplitude has few effects on the mean stress. For TGMF-IP test, the mean stress becomes compression stress since the lower temperature stress is compressive. When $\Delta \varepsilon=0.8\%$, the mean stress at the half-life cycle is about -30 MPa. For TGMF-OP test, the mean stress becomes tensile and increases with the mechanical strain amplitude.
 When $\Delta \varepsilon=0.8\%$, the mean stress at the half-life cycle is about 50 MPa. The asymmetry of cyclic softening in tension and compression results in variations of the mean stress in the fatigue tests towards the lower temperature loading direction. For different mechanical strain amplitudes, the mean stress evolution rate is similar, and the mean stress value increases with the number of cycles.
 
-The evolution of mean stress in TGMF is that the strength of the alloy changes with temperature. Both in-phase and out-of-phase TGMF tests, the temperature cycles in the interval of 300$^\circ$C to 650$^\circ$C. When the temperature is high, the strength of the alloy is low. On the contrary, when the temperature is low, the strength of the alloy becomes high. It results in the stress asymmetry of the hysteresis loop. The mean stress develops towards the low-temperature half cycle.
-The reason is that with the increase of the mechanical strain amplitude, the plastic deformation of the alloy at the high-temperature half cycle increases, which aggravates the asymmetry of tensile and compressive stress.
-Additionally, it can be observed that the absolute value of the mean stresses increases gradually with cycling under TGMF loading conditions, which can be considered as a result of the more intense softening of the superalloy Inconel 718 during the high-temperature half cycle. In the isothermal fatigue test, the mean stress value is generally small, so the mean stress has negligible variations on the isothermal fatigue test.
+The evolution of mean stress in TGMF changes  the strength of the alloy  with temperature. Both in-phase and out-of-phase TGMF tests, the temperature cycles in the interval of 300$^\circ$C $\sim$ 650$^\circ$C. The material strength varies with temperature. When the temperature is high, the strength of the alloy is low. It results in the stress asymmetry of the hysteresis loop. The mean stress develops towards the low-temperature half cycle.
+The reason is that, with  increasing mechanical strain amplitude, the plastic deformation of the alloy at the high temperature half cycle increases, which aggravates the asymmetry of tensile and compressive stress.
+Additionally, it can be observed that the absolute value of the mean stresses increases gradually with cycle under TGMF loading conditions, which can be considered as a result of the more intense softening of the superalloy Inconel 718 during the higher temperature half cycle. In the isothermal fatigue test, the mean stress value is generally small, so the mean stress has negligible variations on the isothermal fatigue test.
 
 \begin{figure}[!ht]
 \centering{\includegraphics[width=7.5cm]{plot_exp_fatigue_life_TGMF.pdf}}
@@ -357,10 +357,11 @@ Additionally, it can be observed that the absolute value of the mean stresses in
 \end{figure}
 
 For fatigue tests under mechanical strain control, the fatigue life can generally be expressed as a function of mechanical strain amplitude.
-\autoref{Fig:plot_exp_fatigue_life_TGMF} shows the comparison of the fatigue lifetimes of TMF and TGMF tests under in-phase and out-of-phase loading conditions, respectively. The scattering of the experimental data is dramatic, although the isothermal fatigue life (IF) was obtained from the material for the higher temperature 650\degreeC. All the TMF and TGMF results show lower fatigue lives than the IF. The assessment based on the isothermal fatigue at the higher temperature is not conservative for the Inconel 718.
+\autoref{Fig:plot_exp_fatigue_life_TGMF} shows the comparison of the fatigue lifetimes of TMF and TGMF tests under in-phase and out-of-phase loading conditions, respectively. The scattering of the experimental data is dramatic, although the isothermal fatigue life (IF) was obtained from the material at the upper temperature 650\degreeC. All the TMF and TGMF results show much lower fatigue lives than the IF. This result confirms that the fatigue life assessment based on the isothermal fatigue  is generally not conservative for the Inconel 718.
+
 The TGMF-IP life is much smaller than the TMF-IP life, as shown in \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(a) and the TGMF-OP life is smaller than the TMF-OP life, as shown in \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(b). However, the difference is substantial. In the figures
 the temperature cycles of the TMF and TGMF tests are the same, the only difference between the TMF and TGMF tests is the temperature gradient in the specimen.
-Therefore, the temperature gradient is considered to have a significant effect on the fatigue life under the thermo-mechanical loading condition.
+Therefore, the temperature gradient is considered to have a significant effect on the fatigue life under the thermomechanical loading condition.
 Comparing \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(a) with \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(b), the reduction of TGMF-IP life due to the temperature gradient is more evident than the reduction of TGMF-OP life.
 
 \begin{figure}[!ht]
@@ -377,12 +378,11 @@ Comparing \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF_TC}(a) with \autoref{Fig:p
 
 \section{FEM analysis of thermal gradients}
 
-\subsection{Internal cooling in tabular specimens}
 
 The internal surface of the specimen was cooled with compressed air, as mentioned before.
-Because of the small internal diameter of 6.5 mm in the specimen, it is difficult to measure the temperature of the specimen surface during tests. 
-A variety of measurement options were tried to measure the surface temperature.
-It was found that the internal cooling air has a significant effect on the thermocouple temperature of the inner surface of the specimen.
+Because of the small internal diameter of 6.5 mm in the specimen, it is difficult to measure the temperature of the internal specimen surface during tests. 
+A variety of measurement options was tried.
+The internal cooling air has a significant effect on the thermocouple temperature of the inner surface of the specimen.
 The thermocouple measurement is not the temperature of the inner surface, but the average temperature of the wall and the cooling air flow.
 Therefore, the calibrated finite element computation becomes an alternative way to obtain the temperature distribution of the specimen inner surface.
 
@@ -406,17 +406,17 @@ According to the formula of convection in turbulent pipe flow, the convective he
 %根据圆管内部的强制对流换热公式，我们计算试件内表面的对流换热系数。
 
 Nusselt number (Nu) is a dimensionless number, defined as the ratio of convective to conductive heat transfer across (normal to) the boundary.
-The Nusselt number is given as \cite{Bergman2017} \marked{(Literature was added)}
+The Nusselt number is given as \cite{Bergman2017}
 \begin{equation}
 {\rm{N}}{{\rm{u}}_L} = \frac{{hL}}{k},
 \end{equation}
 where $h$ is the convective heat transfer coefficient of the fluid, $L$ is the characteristic length, $k$ is the thermal conductivity of the fluid.
 
-Gnielinski's correlation for turbulent flow in tubes \cite{Gnielinski1975} \marked{(Literature was added)} is given as
+Gnielinski's correlation for turbulent flow in tubes \cite{Gnielinski1975} is given as
 \begin{equation}
 {\rm{N}}{{\rm{u}}_D} = \frac{{\left( {f/8} \right)\left( {{\rm{R}}{{\rm{e}}_D} - 1000} \right){\rm{Pr}}}}{{1 + 12.7{{(f/8)}^{1/2}}\left( {{\rm{P}}{{\rm{r}}^{2/3}} - 1} \right)}},
 \end{equation}
-where $f$ is the Darcy friction factor that can either be obtained from the Moody chart or for smooth tubes from correlation developed by Petukhov \cite{Bergman2017} \marked{(Literature was added)}
+where $f$ is the Darcy friction factor that can either be obtained from the Moody chart or for smooth tubes from correlation developed by Petukhov \cite{Bergman2017} 
 \begin{equation}
 f = {\left( {0.79\ln \left( {{\rm{R}}{{\rm{e}}_D}} \right) - 1.64} \right)^{ - 2}},
 \end{equation}
@@ -460,7 +460,7 @@ $p$ is absolute pressure,
 $T$ is absolute temperature,
 $R$ is specific gas constant and equals 287.058${\rm{J/(kg}} \cdot {\rm{K}})$.
 
-According to the measurement results of the sensors, the average pressure and temperature of the cooling air are 6.5 bar and 288.15 K, respectively.
+According to the measurement results of the sensors, the average pressure and temperature of the cooling air are 6.5 bar and 288.15K, respectively.
 
 \begin{table}[!ht]
 \centering
@@ -498,7 +498,6 @@ According to the measurement results of the sensors, the average pressure and te
   \begin{overpic}[width=7.5cm]{plot_cmp_pv_TCIPTGMF.pdf}
     \put(84,13){\fcolorbox{white}{white}{(b)}}
   \end{overpic}
-
   \begin{overpic}[width=7.5cm]{plot_cmp_half_life_cycle_TCOPTGMF.pdf}
     \put(84,13){\fcolorbox{white}{white}{(c)}}
   \end{overpic}
@@ -509,18 +508,16 @@ According to the measurement results of the sensors, the average pressure and te
   \label{Fig:plot_exp_fatigue_life_TMF_TGMF}
 \end{figure*}
 
-
-\begin{figure*}
-  \centering{\includegraphics[width=13cm]{FEM_result.jpg}}
+\begin{figure*}[!h]
+  \centering
+  \includegraphics[width=14cm]{FEM_result.jpg}
   \caption{Computational distributions of axial temperature and the temperature-gradient-induced stress components at maximum temperature (650$^{\circ}$C) during the TGMF-IP test with the mechanical strain amplitude of 0.8\%.  (a) Temperature NT11 in ℃; (b) Axial stress S22 in MPa; (c) Hoop stress S33 in MPa).}
   \label{Fig:FEM_result}
 \end{figure*}
 
 \subsection{Computational results}
-% 图\autoref{Fig:plot_temperature_along_gauge_length}为试件内、外表面温度和轴向应力在标距段内沿轴向的分布，横坐标为距离试件中心截面的距离，在TGMF-IP循环过程中，图中所示的温度与应变为温度最高点（650$^{\circ}$C）时的值。
-% 此时，试件外表面与内表面的温差为12.5$^{\circ}$C，
 
-The constitutive behavior of the superalloy Inconel 718 under multiaxial thermo-mechanical loading was studied and a constitutive equation for TMF was introduced and implemented into the commercial FEM software  ABAQUS \cite{SUN2019228, SUN201989}, which are used in the present finite element computations. Figs. \ref{Fig:plot_exp_fatigue_life_TMF_TGMF} (a) and (c) show that the experimental and computational stress-strain responses of the TGMF-IP and TGMF-OP tests, respectively. The vertical coordinates are the nominal stress, and the horizontal coordinates are the nominal mechanical strain in the center cross-section of the specimen. Because of the thermal gradient, the cyclic plastic evolutions were asymmetric in the gauge section of the specimen in the TGMF tests. In the figures, additional tensile strains were observed from the computational results of the TGMF-IP tests, and additional compressive strains were found from the computational results of the TGMF-OP tests. Figs. \ref{Fig:plot_exp_fatigue_life_TMF_TGMF} (b) and (d) show the experimental and computational peak, valley and mean nominal stresses of the TGMF-IP and TGMF-OP tests, respectively. The comparison of the experimental and computational results reveals that the proposed constitutive model can describe elastic-plastic mechanical behavior under the thermal gradient mechanical loading conditions. Therefore, the computed local stress-strain responses are used for the life assessment of TGMF. Effects of the TGMF seem not large to the constitutive behavior of the material.
+The constitutive behavior of the superalloy Inconel 718 under multiaxial thermomechanical loading was studied in the present section. The constitutive equation for TMF introduced and implemented into the commercial FEM software  ABAQUS \cite{SUN2019228, SUN201989} are used in the present finite element computations. Figs. \ref{Fig:plot_exp_fatigue_life_TMF_TGMF}(a) and (c) show that the experimental and computational stress-strain responses of the TGMF-IP and TGMF-OP tests, respectively. The vertical coordinates are the nominal stress, and the horizontal coordinates are the nominal mechanical strain in the center cross-section of the specimen. Because of the thermal gradient, the cyclic plastic evolutions were asymmetric in the gauge section of the specimen in the TGMF tests. In the figures, additional tensile strains were observed from the computational results of the TGMF-IP tests, and additional compressive strains were found from the computational results of the TGMF-OP tests. Figs. \ref{Fig:plot_exp_fatigue_life_TMF_TGMF}(b) and (d) show the experimental and computational peak, valley and mean nominal stresses of the TGMF-IP and TGMF-OP tests, respectively. The comparison of the experimental and computational results reveals that the peak and valley stresses agree each other. The stress-strain loops show, however, significant deviations in both IP and OP cases. In the figures experimental data were measured and represent the average values of the specimen, while the computational results were taken from the symmetric point of the specimen. The temperature analysis in \autoref{Fig:FEM_result} reveals that the temperature is not constant in all tests, even if it is controlled within a small interval. The maximum temperature appears in the external symmetric surface. The local temperature affects the local strain variation and the higher temperature causes higher strain for the same stress. The deviations in \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} are resulted from temperature gradients.
 
 \begin{figure}[!ht]
   \centering
@@ -534,19 +531,19 @@ The constitutive behavior of the superalloy Inconel 718 under multiaxial thermo-
   \label{Fig:plot_temperature_stress}
 \end{figure}
 
-Under TGMF-IP loading condition, the mechanical load and temperature simultaneously reach their respective maximum or minimum values. \autoref{Fig:FEM_result} shows the computational results of TGMF-IP test with the mechanical strain amplitude of 0.8\%. The maximum temperature occurs at the symmetric position of the outer surface of the specimen.
+Under the TGMF-IP loading condition, the mechanical load and temperature simultaneously reach their respective maximum or minimum values. \autoref{Fig:FEM_result} shows the computational results of TGMF-IP test with the mechanical strain amplitude of 0.8\%. The maximum temperature occurs at the symmetric position of the outer surface of the specimen.
 \autoref{Fig:plot_temperature_stress}(a) illustrates the temperature and axial stress distribution of the internal and external surface along the axial direction when the temperature reached its maximum value during the TGMF-IP cycle.
 The abscissa axis is the distance from the center section of the test specimen ($y$-axis). The temperature gradients induce an axial stress difference of ca. 25 MPa between the inner and outer surface of the specimen.
 The temperature and axial stress distribution of the internal and external surface along the radial direction are displayed in \autoref{Fig:plot_temperature_stress}(b), when the temperature reached its maximum value during the TGMF-IP cycle.
 The abscissa axis is the distance from the center axis to the outer surface of the test specimen.
-The temperature gradients induce a radial stress deviation of ca. 50 MPa between the inner and outer surface of the specimen.
+The temperature gradients induce a radial stress deviation of ca. 50 MPa between the inner and outer surface of the specimen, i.e. ca. 5\%. Additional plastic strain in the outer surface is much larger than the average strain determined in the TGMF tests.  \autoref{Fig:plot_exp_fatigue_life_TMF_TGMF} shows that the maximum difference between local strain and the average strain may exceed 30\%. From such results, the TGMF life prediction cannot be made directly based on the stress and strain data obtained from experimental measurements.
 
-Obviously, the computational results do not contain the influence of the gravitation in heat convection. Due to thermal expansion in the air both ends of the specimen are cooled differently, which is not included in the present analysis. However, the present computations give a reliable estimate of the temperature distribution during the TGMF tests.
+Obviously, the computational results do not contain the influence of the gravitation in heat convection. Due to thermal expansion in the air both ends of the specimen are cooled differently, which is not included in the present analysis. However, the present computations give a reasonable estimate of the temperature distribution during the TGMF tests.
 
 
 \begin{figure}[ht]
   \centering
-    \begin{overpic}[width=7.5cm]{7206-1.jpg}
+   \begin{overpic}[width=7.5cm]{7206-1.jpg}
       \put(0,65){\fcolorbox{white}{white}{(a)}}
       \put(70,40){\color{white}\thicklines\vector(3,-1){20}}
     \end{overpic}
@@ -568,7 +565,7 @@ Typical fractographs in the region of crack initiation are shown in \autoref{Fig
 
 Figure \ref{Fig:fatigue_striations_TGMF} shows the fractography of stable crack propagation. For the TGMF tests, the SEM investigations reveal that the dominant failure mechanism is changing with the phase angle of the thermal loading and mechanical loading, $\theta_{T-\varepsilon}$.
 In \autoref{Fig:fatigue_striations_TGMF}(a) and (b), the fracture surfaces under TGMF-IP loading displays evident grain boundaries and slight fatigue striations. Consequently, it can be concluded that a mixture of transgranular and intergranular fracture mode is present in the TGMF-IP test, and the intergranular fracture plays a dominant role.
-Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striations_TGMF}(c) and (d), which reveal transgranular crack growth is predominant during out-of-phase thermo-mechanical tests.
+Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striations_TGMF}(c) and (d), which reveal transgranular crack growth is predominant during out-of-phase thermomechanical tests.
 
 \begin{figure*}[!ht]
   \centering{\includegraphics[width=14cm]{Fractography.jpg}}
@@ -576,7 +573,7 @@ Well-developed fatigue striations are observed in \autoref{Fig:fatigue_striation
   \label{Fig:fatigue_striations_TGMF}
 \end{figure*}
 
-The present fractographic analysis confirms that the TGMF failure mechanisms are similar to the high-temperature fatigue. All specimens show fatigue crack nucleation occurs in the specimen surfaces, which implies that the TGMF could be assessed by the conventional or TMF fatigue failure models. In the present section, several known fatigue models are selected to evaluate the fatigue life of the nickel-based superalloy under both TMF and TMGF loading conditions. Combined with the critical plane concept the models are well developed and verified for isothermal fatigue.
+The present fractographic analysis confirms that the TGMF failure mechanisms are similar to the high temperature fatigue. All specimens show fatigue crack nucleation occurs in the outer specimen surfaces, which implies that the TGMF could be assessed by the conventional or TMF fatigue failure models. In the present section, several known fatigue models are selected to evaluate the fatigue life of the nickel-based superalloy under both TMF and TMGF loading conditions. Combined with the critical plane concept the models are well developed and verified for isothermal fatigue.
 
 
 \subsection{Brown-Miller Model}
@@ -643,10 +640,10 @@ The critical plane is calculated from the virtual shear strain energy \cite{Liu1
 
 \subsection{Chu-Conle-Bonnen model}
 An additional energy-based fatigue model suggested by Chu et al. \cite{Chu1993} is expressed as
-\begin{eqnarray*}
+\begin{eqnarray}
 {\left( {{\tau _{\rm n}}\frac{{\Delta \gamma }}{2} + {\sigma _{\rm n }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} &=& 1.02\frac{{{{\sigma '}_{\rm f}}^2}}{E}{\left( {2{N_{\rm f}}} \right)^{2b}} \\
-&& + 1.04{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}.
-\end{eqnarray*}
+&& + 1.04{{\sigma '}_{\rm f}}{{\varepsilon '}_{\rm f}}{\left( {2{N_{\rm f}}} \right)^{b + c}}. \nonumber
+\end{eqnarray}
 Note the difference in the strain energy in comparing with the Liu's models. The critical plane should provide the maximum strain energy in the whole loading range and in all directions.
 
 
@@ -675,7 +672,7 @@ As given in \cite{Warren2008}, the activation energy $Q_0$ is set to 240 kJ/mol 
 
 \subsection{Fatigue life prediction based on the known fatigue models}
 The Brown-Miller's model, Fatemi-Socie's model, Smith-Watson-Topper's model, Chu-Conle-Bonnen's model, Liu's Energy model and TMF model (Eq. \eqref{Equ:TMF_model}) are tried to evaluate the thermal gradient mechanical fatigue.
-\autoref{Fig:life_prediction_TGMF} summarizes the comparison between predicted and experimental fatigue life of the IF, TMF-IP, TMF-OP, TGMF-IP, and TGMF-OP tests. 
+\autoref{Fig:life_prediction_TGMF} summarizes the comparison between predicted and experimental fatigue life of the IF, TMF-IP, TMF-OP, TGMF-IP, and TGMF-OP tests. In assessments the computational stresses and strains are used to reduce effects of inhomogeneous stress and strain distributions induced by the temperature gradients. 
 
 \begin{figure*}
    \centering
@@ -729,7 +726,7 @@ with
 A quantitative assessment of fatigue life prediction results is illustrated in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf}(b). 
 The results in the figures illustrate that besides TGMF model to be introduced in the next section, the TMF model introduced in \cite{SUN2019228} provides the best result. 
 
-\begin{figure}[!htp]
+\begin{figure}[!ht]
   \centering
   \begin{overpic}[width=7.5cm]{plot_fatigue_life_quantitative_evaluation_tgmf_TN.png}
   \put(84,65){\fcolorbox{white}{white}{(a)}}
@@ -747,7 +744,7 @@ The results in the figures illustrate that besides TGMF model to be introduced i
 The previous section confirms that all known models do not give reasonable conservative predictions for the thermal gradient mechanical fatigue tests, since effects of the thermal gradients are too strong to be considered in the conventional fatigue models. In fact, the thermal stress is induced by the temperature gradient and cannot be represented by the applied mechanical stress, which is the major difference to the TMF. To give a reasonable prediction of the TGMF life, the temperature gradient has to be included in the life model in a suitable way. 
 
 The TMF model \cite{SUN2019228} seems to give the best agreement to both TMF and TGMF tests, but not conservative, and will be extended for TGMF in the present work.
-Based on the TMF model, a correction term relying on the temperature gradient is to be included on the right-hand side of Eq. \eqref{Equ:TMF_model}. The fatigue life model for TGMF is suggested as
+Based on the TMF model, a correction term relying on the temperature gradient is to be included on the left-hand side of Eq. \eqref{Equ:TMF_model}. The fatigue life model for TGMF is suggested as
 \begin{equation}
 \begin{aligned}
 f\left( {T,\nabla T} \right)\left[ {A{{\left( {\Delta {\sigma _{\rm n}}\Delta {\varepsilon _{\rm n}}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right) \\ 
@@ -760,7 +757,7 @@ The correction term $f$ is introduced for considering temperature gradient, as
 f\left( {T,\nabla T} \right) = \left( {1 + g\frac{{\left\| {\nabla T} \right\|}}{{{T_{{\rm{melt}}}} - {T_{{\sigma _{\rm n,\max }}}}}}} \right),
 \label{Equ:TGMF_term}
 \end{equation}
-where ${T_{{\rm{melt}}}}$ is the melting point of the material, and ${T_{{\sigma _{\rm n,\max }}}}$ is the temperature corresponding to the maximum normal stress, $g$ is a model parameter in the unit of mm. Introducing $f$ should account for the temperature gradient effects normalized by the maximum temperature. For the Nickel-based superalloy Inconel 718, ${T_{{\rm{melt}}}}=1300$ $^\circ$C \marked{(melting point is 1260-1336$^\circ$C.)}. The model parameter $g$ is determined by the optimization algorithm to minimize the life prediction
+where ${T_{{\rm{melt}}}}$ is the melting point of the material, and ${T_{{\sigma _{\rm n,\max }}}}$ is the temperature corresponding to the maximum normal stress, $g$ is a model parameter in the unit of mm. Introducing $f$ should account for the temperature gradient effects normalized by the maximum temperature. For the Nickel-based superalloy Inconel 718, ${T_{{\rm{melt}}}}=1300$ $^\circ$C. The model parameter $g$ is determined by the optimization algorithm to minimize the life prediction
 mean-squared error, and $g$ is determined as 3.47 mm in the present work. ${\left\| {\nabla T} \right\|}$ is the modulus of the temperature gradient, as
 \begin{equation}
 \left\| {\nabla T} \right\| = \sqrt {{{\left( {\frac{{\partial T}}{{\partial x}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial y}}} \right)}^2} + {{\left( {\frac{{\partial T}}{{\partial z}}} \right)}^2}}.
@@ -791,11 +788,11 @@ For $\left\| {\nabla T} \right\|=0$, $f\left( {T,\nabla T} \right)=1$, the GTMF 
 \end{table*}%
 
 \autoref{Tab:Temperature_gradient} lists the parameters of the proposed TGMF model, where $\varphi$ is the angle of the critical plane, $T_{\sigma_{\rm n,\max}}$ is the maximum normal stress during the cycle on the critical plane, $T_{\sigma_{\rm n,\max}}$, $\partial T/\partial y$ and $\partial T/\partial r$ are the temperature and temperature gradients corresponding to the maximum normal stress location.
-\autoref{Fig:TGMF_model} shows the fatigue life assessment results of the TGMF tests. \autoref{Fig:TGMF_model}(a) shows fatigue life curves for all fatigue tests and confirms the rather unique correlation between the fatigue damage parameter and life for both TMF and TGMF. Effects of temperature gradients are considered in the fatigue model properly. In \autoref{Fig:TGMF_model}(b), one can observe that deviations of the proposed model (Eq. \eqref{Equ:TGMF_model})for most of the tests are within the scatter band with a factor of 2. Only two tests reach the five-time scatter band. 
+\autoref{Fig:TGMF_model} shows the fatigue life assessment results of the TGMF tests. \autoref{Fig:TGMF_model}(a) shows fatigue life curves for all fatigue tests and confirms the rather unique correlation between the fatigue damage parameter and life for both TMF and TGMF. Effects of temperature gradients are considered in the fatigue model properly. In \autoref{Fig:TGMF_model}(b), one can observe that deviations of the proposed model (Eq. \eqref{Equ:TGMF_model}) for most of the tests are within the scatter band with a factor of 2. Only two tests reach the five-time scatter band. 
 
 In \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} the assessment of the present TGMF model is compared with known fatigue models. In the figure two statistical parameters ${T_{\rm N}}$ (Eq. \eqref{Equ:TN}) and ${T_{\rm RMS}}$ (Eq. \eqref{Equ:TRMS}) are used to evaluate the conformity of the predicted and experimental TGMF lives. The results in \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} illustrate that the present TGMF model generates the best mean value in comparing with all other models, while the present TGMF model possesses the least scattering. Combining the two parameters, the present GTMF model provides the best result in predicting the fatigue life for all experiments.
 
-\begin{figure}[!htp]
+\begin{figure}[!ht]
   \centering
   \begin{overpic}[width=7.5cm]{F-NF-TGMF-Study2.pdf}
     \put(86,15){{(a)}}
@@ -809,19 +806,19 @@ In \autoref{Fig:plot_fatigue_life_quantitative_evaluation_tgmf} the assessment o
 
 \section{Conclusions}
 
-The present paper experimentally investigated fatigue and its assessment for the nickel-based superalloy Inconel 718 under 300$^\circ$C to 650$^\circ$C thermomechanical and thermal gradient mechanical fatigue loading conditions. Effects of temperature gradients in combing with the phase angle are studied. The results can be extended to different temperature regions. The following conclusions can be drawn from the present work:
+The present paper experimentally investigated fatigue and its assessment for the nickel-based superalloy Inconel 718 under 300$^\circ$C $\sim$ 650$^\circ$C thermomechanical and thermal gradient mechanical fatigue loading conditions. Effects of temperature gradients in combing with the phase angle are studied. The results can be extended to different temperature regions. The following conclusions can be drawn from the present work:
 \begin{itemize}
-\item A new radiation heating system is developed based on the DLR concept. Finite element computations confirm that the temperature difference in a thin-walled tubular specimen may reach 12\degreeC/mm in the nickel-based superalloy Inconel 718. The corresponding thermal stress amplitude exceeds $\pm$25 MPa. \marked{(data modified)}
+\item A new radiation heating system with automatic compensation is developed based on the DLR concept and used for study TGMF in Inconel718. The finite element computations reveal that the temperature gradient in a simple tubular specimen is not constant and varies in the whole specimen.  Local temperature distribution can induce significant deviations in the strain distribution.
 
 \item Experimental results show that the temperature gradients change {fatigue performance} of the nickel-based alloy significantly and cannot be identified to the thermomechanical fatigue. The phase angle additionally affects the fatigue life assessment. The fractographic analysis reveals different failure mechanisms depending on TGMF loads.
 
-\item Conventional isothermal fatigue life models and TMF life models fail to account for TGMF influence and do not provide a satisfactory life prediction. Maximum deviations are larger than 10-times of the fatigue life.
+\item Conventional isothermal fatigue life models and TMF life models fail to account for TGMF influence and do not provide a satisfactory life prediction.  Maximum deviations are larger than 10-times of the fatigue life. Effects of temperature gradients have to be considered in the fatigue model.
 
-\item The mean stress in TMF tests varies with loading cycles and develops towards lower temperature loads. The variation of the mean stress makes it necessary to include characteristic features of the TGMF into the fatigue life model.
+\item Temperature gradients may introduce significant additional strains into the material. The mean stress in TMF tests varies with loading cycles and develops towards lower temperature loads. The variation of the mean stress makes it necessary to include characteristic features of the TGMF into the fatigue life model.
 
 \item A modified TGMF life model is proposed to consider influences from the temperature gradient, by introducing a correction term for the TMF loads. The modified TGMF model provides a significantly better agreement to the performed experiments and gives a uniform prediction for both TMF and TGMF fatigue.
 
-\item Further detailed TGMF experimental and computational investigations are necessary to understand the fatigue mechanisms, to quantify effects of temperature variations as well as distributions and to establish a reliable life prediction model for mechanical parts under complex thermomechanical loading conditions.
+\item Further detailed TGMF experimental and computational investigations are necessary to understand the fatigue mechanisms, to quantify effects of temperature distributions and to establish a reliable life prediction model for mechanical parts under complex thermomechanical loading conditions.
 
 \end{itemize}
 
